@@ -1,2 +1,2 @@
 # ProjetoLoja
-teste de commit thiago teste 2
+teste de commit de usuário teste 2
