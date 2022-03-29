@@ -1,8 +1,16 @@
 namespace Model;
 public class Owner : Person
 {
+    private static Owner instance;
+    private Owner(Address address) {
+        this.address = address;
+    }
     public static Owner getInstance()
     {
-        return new Owner();
+        if (instance == null)
+        {
+            instance = new Client(address);
+        }
+        return instance;
     }
 }
