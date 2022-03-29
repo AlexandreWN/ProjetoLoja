@@ -10,13 +10,9 @@ public class Person
     protected string phone;
     protected string login;
 
-    protected Person()
+    protected Person(Address addres)
     {
-
-    }
-    protected Person(Addres addres)
-    {
-        this.address = addres.address;
+        this.address = addres;
     }
 
     public string getName()
