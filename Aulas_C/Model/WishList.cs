@@ -1,5 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
 namespace Model;
-public class WishList
+class WishList
 {
-    public void addProductToWishList(Product product) { }
+    private Product product;
+
+    public void addProductToWishList(Product product) {
+        List<Product> products = new List<Product>();
+    }
+
 }
