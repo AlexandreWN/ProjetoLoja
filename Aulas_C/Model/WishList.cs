@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace Model;
 class WishList
 {
-    private Product product;
+    private Client client;
+    private List<Product> products = new List<Product>();
 
     public void addProductToWishList(Product product) {
-        List<Product> products = new List<Product>();
+        products.Add(product);
     }
 
 }
