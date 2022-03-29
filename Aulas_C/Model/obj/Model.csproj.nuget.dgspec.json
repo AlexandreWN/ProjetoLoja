@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Aulas_C\\Model\\Model.csproj": {}
+    "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Aulas_C\\Model\\Model.csproj": {
+    "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Aulas_C\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Aulas_C\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Aulas_C\\Model\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
