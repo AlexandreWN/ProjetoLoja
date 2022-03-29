@@ -11,6 +11,11 @@ class WishList
     private Client client;
     private List<Product> products = new List<Product>();
 
+    public WishList(Client client)
+    {
+        this.client = client;
+    }
+
     public void addProductToWishList(Product product) {
         products.Add(product);
     }
