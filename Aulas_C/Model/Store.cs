@@ -35,4 +35,7 @@ public class Store
         this.cnpj = cnpj; 
     }
 
+    public List<Purchase> GetPurchases() { 
+        return purchases; 
+    }
 }

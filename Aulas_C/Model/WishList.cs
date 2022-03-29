@@ -15,5 +15,7 @@ class WishList
         products.Add(product);
     }
 
-    public List<Product> getProduct() { return products; }
+    public List<Product> getProduct() { 
+        return products; 
+    }
 }
