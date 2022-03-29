@@ -11,14 +11,40 @@ public class Purchace
     private string payment;
     private int number_confirmation;
     private int number_nf;
-    //GETS
-    public void getDatePurchase() { return date_purchace; }
-    public void getPayment() { return payment;  }
-    public void getNumberConfirmation() { return number_confirmation; }
-    public void getNumberNf() { return number_nf; }
-    //SETS
-    public DateTime setDatePurchase(DateTime date_purchace) { this.date_purchace = date_purchace; }
-    public string setPayment(string payment) { this.payment = payment; }
-    public int setNumberConfirmation(int number_confirmation) { this.number_confirmation = number_confirmation; }
-    public int setNummberNf(int number_nf) { this.number_nf = number_nf; }
+
+    public void getDatePurchase() 
+    { 
+        return date_purchace; 
+    }
+    public DateTime setDatePurchase(DateTime date_purchace)
+    {
+        this.date_purchace = date_purchace;
+    }
+
+    public void getPayment() 
+    {
+        return payment;  
+    }
+    public string setPayment(string payment)
+    {
+        this.payment = payment;
+    }
+
+    public void getNumberConfirmation() 
+    {
+        return number_confirmation; 
+    }
+    public int setNumberConfirmation(int number_confirmation)
+    {
+        this.number_confirmation = number_confirmation;
+    }
+
+    public void getNumberNf() 
+    { 
+        return number_nf; 
+    }
+    public int setNummberNf(int number_nf)
+    { 
+        this.number_nf = number_nf; 
+    }
 }

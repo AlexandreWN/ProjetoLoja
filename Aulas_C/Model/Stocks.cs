@@ -5,9 +5,12 @@ public class Stocks
     private Product product;// dependencia de Product com Stocks
     private int quantity;
 
-    //GETS
-    public int getQuantity() { return quantity; }
-
-    //SETS
-    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public int getQuantity() 
+    { 
+        return quantity; 
+    }
+    public void setQuantity(int quantity) 
+    { 
+        this.quantity = quantity; 
+    }
 }
