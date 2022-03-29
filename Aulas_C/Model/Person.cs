@@ -15,6 +15,15 @@ public class Person
         this.address = addres;
     }
 
+    public Address getAddress()
+    {
+        return address;
+    }
+    public void setAddress(Address address)
+    {
+        this.address = address;
+    }
+
     public string getName()
     {
         return name;
