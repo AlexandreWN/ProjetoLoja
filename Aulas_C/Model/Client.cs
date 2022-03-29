@@ -1,5 +1,15 @@
 namespace Model;
-public class Client
+public class Client : Person
 {
-    public static Client getInstance() { return new Client(); }
+    private static Client instance;
+    private Client(Address address) : base (address) { 
+        this.address = address; 
+    }
+    public static Client getInstance(Address address) {
+        if (instance == null)
+        {
+            instance = new Client(address);
+        }
+        return instance;
+    }
 }
