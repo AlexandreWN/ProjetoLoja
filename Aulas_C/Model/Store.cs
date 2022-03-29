@@ -8,4 +8,5 @@ public class Store
     {
 
     }
+    private Owner owner;
 }
