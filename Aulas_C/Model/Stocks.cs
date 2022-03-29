@@ -5,6 +5,13 @@ public class Stocks
     private Product product;// dependencia de Product com Stocks
     private int quantity;
 
+    public  Stocks(Store store, Product product)
+    {
+        this.store = store;
+        this.product = product;
+    }
+
+
     public int getQuantity() 
     { 
         return quantity; 
