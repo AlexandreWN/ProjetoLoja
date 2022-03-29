@@ -18,4 +18,12 @@ public class Store
         purchases.Add(purchase);
     }
     
+    //GETS
+    public string getName() { return name; }
+    public string getCnpj() { return cnpj; }
+
+    //SETS
+    public void setName(string name) { this.name = name; }
+    public void setCnpj(string cnpj) { this.cnpj = cnpj; }
+
 }
