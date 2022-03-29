@@ -6,15 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 public class Purchace
 {
+    private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
     private DateTime date_purchace;
     private string payment;
     private int number_confirmation;
     private int number_nf;
+    
     public Purchace(Client client)
     {
         this.client = client;
     }
+
+    public List<Product> getProduct()
+    {
+        return products;
+    }
+
     public void getDatePurchase() 
     { 
         return date_purchace; 
