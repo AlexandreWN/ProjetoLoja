@@ -2,7 +2,7 @@ namespace Model;
 public class Client : Person
 {
     private static Client instance;
-    private Client(Address address) { 
+    private Client(Address address) : base(address) { 
         this.address = address; 
     }
     public static Client getInstance(Address address) {
