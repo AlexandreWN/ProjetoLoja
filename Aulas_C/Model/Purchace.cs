@@ -11,7 +11,10 @@ public class Purchace
     private string payment;
     private int number_confirmation;
     private int number_nf;
-
+    public Purchace(Client client)
+    {
+        this.client = client;
+    }
     public void getDatePurchase() 
     { 
         return date_purchace; 
