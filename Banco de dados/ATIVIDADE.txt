@@ -1,0 +1,55 @@
+- Criar um diagrama DER a partir do diagrama UML usado em sala.
+
+- Criar query de criação das tabelas do diagrama DER.
+
+- Inserir pelo menos 5 lojas na base de dados.
+
+- Inserir pelo menos 5 produtos diferentes para cada loja.
+
+- Inserir pelo menos 5 clientes na base de dados.
+
+- Inserir endereços diferentes para todos os clientes e donos de lojas. 
+
+- Inserir uma wishlist para cada cliente com pelo menos 5 produtos em cada uma delas.
+
+- Inserir estoques para todas as lojas.
+
+- Criar compras para cada cliente com quantidades diferentes de produtos.
+
+- Selecionar as compras de uma loja.
+
+- Selecionar as compras de um determinado produto.
+
+- Selecionar as compras de um determinado cliente.
+
+- Selecionar as compras de um determinado cliente pelo CPF.
+
+- Selecionar as vendas de um determinado dono de loja.
+
+- Selecionar a quantidade de determinado produto dos estoques de todas as lojas.
+
+-  Selecionar quais clientes têm em suas WishList um determinado produto pelo nome do produto.
+
+- Selecionar quais clientes têm em seus históricos de compras determinado produto pelo nome do produto.
+
+- Apagar um cliente criado.
+
+- Apagar um dono criado.
+
+-  Apagar uma loja criada.
+
+-  Apagar uma wishlist criada.
+
+- Atualizar o método de pagamento de uma compra.
+
+- Atualizar o método de pagamento de todas compras de determinada loja onde o cliente que realizou a compra tenha idade entre 18 e 25 anos.
+
+- Selecionar todas as compras que tenham como remetente determinado país.
+
+- Selecionar todas as compras que tenham como destinatário determinada cidade. 
+
+- Selecionar a quantidade em estoque de determinado produto organizando por país onde se encontra. 
+
+- Selecionar quantidade de clientes por países.
+
+- Selecionar quantidade de lojas por países.  
