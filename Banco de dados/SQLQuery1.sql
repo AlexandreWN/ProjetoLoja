@@ -1,6 +1,3 @@
-CREATE DATABASE ProjetoLoja;
-USE ProjetoLoja;
-
 CREATE TABLE Person(
 person_id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 person_name varchar(50),
@@ -20,6 +17,15 @@ country varchar(50),
 poste_code varchar(50),
 person_id int not null,
 FOREIGN KEY (person_id) REFERENCES Person (person_id)
+);
+
+CREATE TABLE Owner(
+owner_id int not null,
+FOREIGN KEY (owner_id) REFERENCES Person (person_id)
+);
+CREATE TABLE Client(
+client_id int not null,
+FOREIGN KEY (client_id) REFERENCES Person (person_id)
 );
 
 CREATE TABLE Store(
