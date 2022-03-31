@@ -67,7 +67,9 @@ payment varchar(30),
 number_confirmation int,
 number_nf int,
 client_id int not null,
-FOREIGN KEY (client_id) REFERENCES Client (client_id)
+store_id int,
+FOREIGN KEY (client_id) REFERENCES Client (client_id),
+FOREIGN KEY (store_id) REFERENCES Store (store_id)
 );
 
 CREATE TABLE ShoppingCart(
@@ -76,10 +78,10 @@ amount int,
 total decimal(8,2),
 product_id int,
 purchase_id int,
-store_id int,
+
 FOREIGN KEY (product_id) REFERENCES Product (product_id),
 FOREIGN KEY (purchase_id) REFERENCES Purchase (purchase_id),
-FOREIGN KEY (store_id) REFERENCES Store (store_id)
+
 );
 
 INSERT INTO Person (person_name,age,document,email,phone,person_login)
@@ -277,56 +279,114 @@ VALUES
   (10,10);
 
 
-INSERT INTO Purchase (date_purchase,payment,number_confirmation,number_nf,client_id)
+INSERT INTO Purchase (date_purchase,payment,number_confirmation,number_nf,client_id,store_id)
 VALUES
-  ('Mar 24, 2021','Débito',5651,'597416780',6),
-  ('Mar 21, 2021','Débito',8897,'785782442',7),
-  ('Mar 26, 2021','PayPal',5695,'385307901',8),
-  ('Mar 15, 2021','Crédito',8344,'249252214',9),
-  ('Mar 19, 2021','Débito',8385,'508917624',10),
-  ('Mar 6, 2021','Débito',9890,'498689423',11),
-  ('Mar 12, 2021','PayPal',3533,'589115432',12),
-  ('Mar 16, 2021','PayPal',4058,'782034609',13),
-  ('Mar 12, 2021','PIX',9830,'172688625',14),
-  ('Mar 6, 2021','Crédito',1631,'758628808',15),
-  ('Mar 2, 2021','PayPal',9688,'848605467',16),
-  ('Mar 11, 2021','PayPal',4689,'782818850',17),
-  ('Mar 11, 2021','Boleto',6307,'945075667',18),
-  ('Mar 5, 2021','Boleto',3996,'402187668',19),
-  ('Mar 19, 2021','Crédito',1592,'917023786',20);
+  ('Mar 24, 2021','Débito',5651,'597416780',6,1),
+  ('Mar 21, 2021','Débito',8897,'785782442',7,4),
+  ('Mar 26, 2021','PayPal',5695,'385307901',8,5),
+  ('Mar 15, 2021','Crédito',8344,'249252214',9,5),
+  ('Mar 19, 2021','Débito',8385,'508917624',10,1),
+  ('Mar 6, 2021','Débito',9890,'498689423',11,3),
+  ('Mar 12, 2021','PayPal',3533,'589115432',12,2),
+  ('Mar 16, 2021','PayPal',4058,'782034609',13,3),
+  ('Mar 12, 2021','PIX',9830,'172688625',14,4),
+  ('Mar 6, 2021','Crédito',1631,'758628808',15,1),
+  ('Mar 2, 2021','PayPal',9688,'848605467',16,2),
+  ('Mar 11, 2021','PayPal',4689,'782818850',17,2),
+  ('Mar 11, 2021','Boleto',6307,'945075667',18,1),
+  ('Mar 5, 2021','Boleto',3996,'402187668',19,5),
+  ('Mar 19, 2021','Crédito',1592,'917023786',20,6);
 
- INSERT INTO ShoppingCart (amount,total,product_id,purchase_id,store_id)
+ INSERT INTO ShoppingCart (amount,total,product_id,purchase_id)
 VALUES
-  (2,'88.51',13,10,1),
-  (5,'36.80',20,13,4),
-  (5,'12.17',24,5,3),
-  (3,'17.14',3,3,2),
-  (5,'63.35',16,7,3),
-  (2,'55.59',15,13,5),
-  (3,'24.14',3,10,4),
-  (1,'63.78',7,10,1),
-  (4,'83.66',2,6,4),
-  (4,'21.55',9,2,2),
-  (2,'43.87',8,3,1),
-  (2,'33.37',9,9,4),
-  (1,'43.41',20,8,3),
-  (3,'47.83',22,8,3),
-  (2,'46.66',23,10,3),
+  (2,'88.51',13,10),
+  (5,'36.80',20,13),
+  (5,'12.17',24,5),
+  (3,'17.14',3,3),
+  (5,'63.35',16,7),
+  (2,'55.59',15,13),
+  (3,'24.14',3,10),
+  (1,'63.78',7,10),
+  (4,'83.66',2,6),
+  (4,'21.55',9,2),
+  (2,'43.87',8,3),
+  (2,'33.37',9,9),
+  (1,'43.41',20,8),
+  (3,'47.83',22,8),
+  (2,'46.66',23,10),
   (2,'37.89',6,6,3),
   (5,'72.65',9,2,3),
-  (2,'62.11',18,10,1),
-  (4,'07.03',19,5,4),
-  (2,'97.22',5,3,3),
-  (4,'96.25',9,12,3),
-  (2,'52.62',10,14,2),
-  (2,'23.52',14,6,3),
-  (3,'95.60',19,12,2),
-  (4,'42.86',8,3,2),
-  (3,'15.83',5,12,3),
-  (3,'66.89',23,4,4),
-  (4,'04.40',13,5,2),
-  (3,'42.50',21,12,4),
-  (4,'19.07',21,1,2);
+  (2,'62.11',18,10),
+  (4,'07.03',19,5),
+  (2,'97.22',5,3),
+  (4,'96.25',9,12),
+  (2,'52.62',10,14),
+  (2,'23.52',14,6),
+  (3,'95.60',19,12),
+  (4,'42.86',8,3),
+  (3,'15.83',5,12),
+  (3,'66.89',23,4),
+  (4,'04.40',13,5),
+  (3,'42.50',21,12),
+  (4,'19.07',21,1);
 
 
   
+  /*DELETE*/
+  
+/* Apagar um cliente criado*/
+/*APAGA PURCHACE DO SHOPPING CARD*/
+DELETE  s
+FROM ShoppingCart s
+INNER JOIN Purchase p ON s.purchase_id = p.purchase_id
+WHERE client_id = 6;
+/*APAGA PURCHACE*/
+DELETE FROM Purchase WHERE client_id = 6
+/*APAGAR DA WISHLIST*/
+DELETE FROM WishList WHERE client_id = 6
+/*APAGA DA TABELA CLIENT*/
+DELETE FROM Client WHERE client_id = 6
+/*APAGA DA TABELA PERSON*/
+DELETE p
+FROM Person p 
+INNER JOIN Client c
+ON p.person_id = c.client_id
+WHERE client_id = 6;
+
+
+/*APAGA DONO DE LOJA*/
+
+/*apaga as compras vinculadas ao carrinho*/
+DELETE p
+FROM Purchase p
+INNER JOIN ShoppingCart s ON s.purchase_id = p.purchase_id
+INNER JOIN Store t ON s.store_id = t.store_id
+Where owner_id = 5
+
+select *
+FROM Purchase p
+INNER JOIN ShoppingCart s ON s.purchase_id = p.purchase_id
+INNER JOIN Store t ON s.store_id = t.store_id
+Where owner_id = 5
+/*apaga as compras do carrinho vinculadas a loja*/
+DELETE s 
+FROM ShoppingCart s
+INNER JOIN Store t ON s.store_id = t.store_id
+Where owner_id = 5
+/*apaga o estoque da loja vinculada ao dono*/
+DELETE s 
+FROM Stocks s
+INNER JOIN Store t ON s.store_id = t.store_id
+Where owner_id = 5
+
+/*apaga a store vinculada ao dono*/
+DELETE FROM Store WHERE owner_id = 5;
+
+DELETE FROM Owner WHERE owner_id = 5;
+/*Apagar um dono criado*/
+DELETE p
+FROM Person p 
+INNER JOIN Owner o
+ON p.person_id = o.owner_id
+WHERE owner_id = 5;
+
