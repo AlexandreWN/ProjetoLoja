@@ -20,11 +20,11 @@ FOREIGN KEY (person_id) REFERENCES Person (person_id)
 );
 
 CREATE TABLE Owner(
-owner_id int not null,
+owner_id int  PRIMARY KEY NOT NULL,
 FOREIGN KEY (owner_id) REFERENCES Person (person_id)
 );
 CREATE TABLE Client(
-client_id int not null,
+client_id int  PRIMARY KEY NOT NULL,
 FOREIGN KEY (client_id) REFERENCES Person (person_id)
 );
 
@@ -57,7 +57,7 @@ wishlist_id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 product_id int not null,
 client_id int not null,
 FOREIGN KEY (product_id) REFERENCES Product (product_id),
-FOREIGN KEY (client_id) REFERENCES Person (Client)
+FOREIGN KEY (client_id) REFERENCES Client (client_id)
 );
 
 CREATE TABLE Purchase(
@@ -67,19 +67,20 @@ payment varchar(30),
 number_confirmation int,
 number_nf int,
 client_id int not null,
-FOREIGN KEY (client_id) REFERENCES Person (Client)
+FOREIGN KEY (client_id) REFERENCES Client (client_id)
 );
 
-CREATE TABLE Shopping_cart(
+CREATE TABLE ShoppingCart(
 cart_id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 amount int,
 total decimal(8,2),
 product_id int,
 purchase_id int,
+store_id int,
 FOREIGN KEY (product_id) REFERENCES Product (product_id),
-FOREIGN KEY (purchase_id) REFERENCES Purchase (purchase_id)
+FOREIGN KEY (purchase_id) REFERENCES Purchase (purchase_id),
+FOREIGN KEY (store_id) REFERENCES Store (store_id)
 );
-
 
 INSERT INTO Person (person_name,age,document,email,phone,person_login)
 VALUES
@@ -155,7 +156,7 @@ VALUES
   (20);
 
 
-  INSERT INTO Store (store_name,cnpj,person_id)
+  INSERT INTO Store (store_name,cnpj,owner_id)
 VALUES
   ('Cum Sociis LLC','48.453.428/0001-82',1),
   ('Egestas Hendrerit LLC','42.697.646/0001-76',2),
@@ -219,3 +220,113 @@ VALUES
   (4,1,23),
   (21,3,24),
   (8,4,25);
+
+
+
+INSERT INTO WishList (product_id,client_id)
+VALUES
+  (23,9),
+  (22,12),
+  (11,19),
+  (3,11),
+  (9,14),
+  (2,8),
+  (17,14),
+  (23,13),
+  (20,13),
+  (7,14),
+  (16,16),
+  (2,10),
+  (10,10),
+  (11,6),
+  (5,15),
+  (7,16),
+  (14,11),
+  (24,7),
+  (18,19),
+  (24,16),
+  (10,18),
+  (18,6),
+  (14,8),
+  (11,15),
+  (7,13),
+  (23,14),
+  (24,9),
+  (20,18),
+  (13,7),
+  (17,11),
+  (12,14),
+  (8,16),
+  (5,10),
+  (14,20),
+  (3,8),
+  (8,20),
+  (24,16),
+  (13,16),
+  (17,17),
+  (18,12),
+  (24,11),
+  (6,15),
+  (4,20),
+  (8,16),
+  (7,17),
+  (3,6),
+  (18,13),
+  (23,11),
+  (8,12),
+  (10,10);
+
+
+INSERT INTO Purchase (date_purchase,payment,number_confirmation,number_nf,client_id)
+VALUES
+  ('Mar 24, 2021','Débito',5651,'597416780',6),
+  ('Mar 21, 2021','Débito',8897,'785782442',7),
+  ('Mar 26, 2021','PayPal',5695,'385307901',8),
+  ('Mar 15, 2021','Crédito',8344,'249252214',9),
+  ('Mar 19, 2021','Débito',8385,'508917624',10),
+  ('Mar 6, 2021','Débito',9890,'498689423',11),
+  ('Mar 12, 2021','PayPal',3533,'589115432',12),
+  ('Mar 16, 2021','PayPal',4058,'782034609',13),
+  ('Mar 12, 2021','PIX',9830,'172688625',14),
+  ('Mar 6, 2021','Crédito',1631,'758628808',15),
+  ('Mar 2, 2021','PayPal',9688,'848605467',16),
+  ('Mar 11, 2021','PayPal',4689,'782818850',17),
+  ('Mar 11, 2021','Boleto',6307,'945075667',18),
+  ('Mar 5, 2021','Boleto',3996,'402187668',19),
+  ('Mar 19, 2021','Crédito',1592,'917023786',20);
+
+ INSERT INTO ShoppingCart (amount,total,product_id,purchase_id,store_id)
+VALUES
+  (2,'88.51',13,10,1),
+  (5,'36.80',20,13,4),
+  (5,'12.17',24,5,3),
+  (3,'17.14',3,3,2),
+  (5,'63.35',16,7,3),
+  (2,'55.59',15,13,5),
+  (3,'24.14',3,10,4),
+  (1,'63.78',7,10,1),
+  (4,'83.66',2,6,4),
+  (4,'21.55',9,2,2),
+  (2,'43.87',8,3,1),
+  (2,'33.37',9,9,4),
+  (1,'43.41',20,8,3),
+  (3,'47.83',22,8,3),
+  (2,'46.66',23,10,3),
+  (2,'37.89',6,6,3),
+  (5,'72.65',9,2,3),
+  (2,'62.11',18,10,1),
+  (4,'07.03',19,5,4),
+  (2,'97.22',5,3,3),
+  (4,'96.25',9,12,3),
+  (2,'52.62',10,14,2),
+  (2,'23.52',14,6,3),
+  (3,'95.60',19,12,2),
+  (4,'42.86',8,3,2),
+  (3,'15.83',5,12,3),
+  (3,'66.89',23,4,4),
+  (4,'04.40',13,5,2),
+  (3,'42.50',21,12,4),
+  (4,'19.07',21,1,2);
+
+
+  
