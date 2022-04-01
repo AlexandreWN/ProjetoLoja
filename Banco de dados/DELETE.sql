@@ -41,3 +41,16 @@ DELETE FROM Store WHERE owner_id = 5;
 /*apaga da tabela de donos*/
 DELETE FROM Owner WHERE owner_id = 5;
 
+/*APAGA LOJA*/
+
+/*apaga loja do estoque*/
+DELETE FROM Stocks WHERE store_id = 5
+/*apaga  as compras de shoppingcart vinculadas a loja*/
+DELETE s
+FROM ShoppingCart s
+INNER JOIN Purchase p ON p.purchase_id = s.purchase_id 
+WHERE store_id = 5
+/*apaga as compras vinculadas a loja*/
+DELETE  FROM Purchase  WHERE store_id = 5
+/*apaga a loja*/
+DELETE FROM Store WHERE store_id = 5
