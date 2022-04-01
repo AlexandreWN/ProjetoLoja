@@ -295,7 +295,7 @@ VALUES
   ('Mar 11, 2021','PayPal',4689,'782818850',17,2),
   ('Mar 11, 2021','Boleto',6307,'945075667',18,1),
   ('Mar 5, 2021','Boleto',3996,'402187668',19,5),
-  ('Mar 19, 2021','Crédito',1592,'917023786',20,6);
+  ('Mar 19, 2021','Crédito',1592,'917023786',20,4);
 
  INSERT INTO ShoppingCart (amount,total,product_id,purchase_id)
 VALUES
@@ -314,8 +314,6 @@ VALUES
   (1,'43.41',20,8),
   (3,'47.83',22,8),
   (2,'46.66',23,10),
-  (2,'37.89',6,6,3),
-  (5,'72.65',9,2,3),
   (2,'62.11',18,10),
   (4,'07.03',19,5),
   (2,'97.22',5,3),
@@ -329,64 +327,3 @@ VALUES
   (4,'04.40',13,5),
   (3,'42.50',21,12),
   (4,'19.07',21,1);
-
-
-  
-  /*DELETE*/
-  
-/* Apagar um cliente criado*/
-/*APAGA PURCHACE DO SHOPPING CARD*/
-DELETE  s
-FROM ShoppingCart s
-INNER JOIN Purchase p ON s.purchase_id = p.purchase_id
-WHERE client_id = 6;
-/*APAGA PURCHACE*/
-DELETE FROM Purchase WHERE client_id = 6
-/*APAGAR DA WISHLIST*/
-DELETE FROM WishList WHERE client_id = 6
-/*APAGA DA TABELA CLIENT*/
-DELETE FROM Client WHERE client_id = 6
-/*APAGA DA TABELA PERSON*/
-DELETE p
-FROM Person p 
-INNER JOIN Client c
-ON p.person_id = c.client_id
-WHERE client_id = 6;
-
-
-/*APAGA DONO DE LOJA*/
-
-/*apaga as compras vinculadas ao carrinho*/
-DELETE p
-FROM Purchase p
-INNER JOIN ShoppingCart s ON s.purchase_id = p.purchase_id
-INNER JOIN Store t ON s.store_id = t.store_id
-Where owner_id = 5
-
-select *
-FROM Purchase p
-INNER JOIN ShoppingCart s ON s.purchase_id = p.purchase_id
-INNER JOIN Store t ON s.store_id = t.store_id
-Where owner_id = 5
-/*apaga as compras do carrinho vinculadas a loja*/
-DELETE s 
-FROM ShoppingCart s
-INNER JOIN Store t ON s.store_id = t.store_id
-Where owner_id = 5
-/*apaga o estoque da loja vinculada ao dono*/
-DELETE s 
-FROM Stocks s
-INNER JOIN Store t ON s.store_id = t.store_id
-Where owner_id = 5
-
-/*apaga a store vinculada ao dono*/
-DELETE FROM Store WHERE owner_id = 5;
-
-DELETE FROM Owner WHERE owner_id = 5;
-/*Apagar um dono criado*/
-DELETE p
-FROM Person p 
-INNER JOIN Owner o
-ON p.person_id = o.owner_id
-WHERE owner_id = 5;
-
