@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Enums;
 namespace Model;
 public class Purchase
 {
@@ -13,12 +13,17 @@ public class Purchase
     private string payment;
     private string number_confirmation;
     private string number_nf;
-    
-    public Purchase(Client client)
+    private PaymentEnum paymentEnum;
+
+
+    public Client getClient()
+    {
+        return client;
+    }
+    public void setClient(Client client)
     {
         this.client = client;
     }
-
     public List<Product> getProducts()
     {
         return products;
