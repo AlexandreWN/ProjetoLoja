@@ -1,5 +1,6 @@
+using Interfaces;
 namespace Model;
-public class Product
+public class Product: IValidateDataObject<Product>
 { 
     private string name;
     private double unit_price;
@@ -30,5 +31,14 @@ public class Product
     public void setBarCode(string bar_code)
     { 
         this.bar_code = bar_code; 
+    }
+
+    public bool validateObject(Product obj)
+    {
+        if (obj.getBarCode == null) return false;
+        if (obj.getName == null) return false;
+        if (obj.getUnitprice == null) return false;
+        if (obj.GetHashCode == null) return false;
+        return true;
     }
 }

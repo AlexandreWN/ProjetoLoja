@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Enums
 {
-    internal class PurchaseStatusEnum
+    public enum PurchaseStatusEnum
     {
+        awaitingPayment,
+        confirmedPayment,
+        initial
     }
 }

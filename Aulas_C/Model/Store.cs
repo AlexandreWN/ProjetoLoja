@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Interfaces;
 namespace Model;
-public class Store
+public class Store:IValidateDataObject<Store>
 {
     private Owner owner; // dependencia a Owner
     private string name;
@@ -47,5 +47,15 @@ public class Store
     public Owner getOwner()
     {
         return owner;
+    }
+
+    public bool validateObject(Store obj)
+    {
+        if (obj.getCNPJ == null) return false;
+        if (obj.getName == null) return false;
+        if (obj.getOwner == null) return false;
+        if (obj.GetHashCode == null) return false;
+        if (obj.GetPurchases == null) return false;
+        return true;
     }
 }

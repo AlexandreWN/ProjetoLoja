@@ -1,5 +1,6 @@
+using Interfaces;
 namespace Model;
-public class Stocks
+public class Stocks: IValidateDataObject<Stocks>
 {
     private Store store; // dependencia a Store
     private Product product;// dependencia de Product com Stocks
@@ -19,5 +20,12 @@ public class Stocks
     public void setQuantity(int quantity) 
     { 
         this.quantity = quantity; 
+    }
+
+    public bool validateObject(Stocks obj)
+    {
+        if (obj.getQuantity == null) return false;
+        if (obj.GetHashCode == null) return false;
+        return true;    
     }
 }

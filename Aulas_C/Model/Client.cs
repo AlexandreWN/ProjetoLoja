@@ -1,5 +1,6 @@
+using Interfaces;
 namespace Model;
-public class Client : Person
+public class Client : Person, IValidateDataObject<Client>
 {
     private static Client instance;
     private Client(Address address) : base(address) { }
@@ -9,5 +10,18 @@ public class Client : Person
             Client.instance = new Client(address);
         }
         return instance;
+    }
+
+    public bool validateObject(Client obj)
+    {
+        if (obj.getAddress == null) return false;
+        if (obj.getAge == null) return false;
+        if (obj.getDocument == null) return false;
+        if (obj.getEmail == null) return false;
+        if (obj.getLogin == null) return false;
+        if (obj.getName == null) return false;
+        if (obj.getPhone == null) return false;
+        return true;
+
     }
 }
