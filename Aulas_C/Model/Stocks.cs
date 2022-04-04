@@ -25,7 +25,6 @@ public class Stocks: IValidateDataObject<Stocks>
     public bool validateObject(Stocks obj)
     {
         if (obj.getQuantity == null) return false;
-        if (obj.GetHashCode == null) return false;
         return true;    
     }
 }

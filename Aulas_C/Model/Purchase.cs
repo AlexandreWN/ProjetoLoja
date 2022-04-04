@@ -91,7 +91,6 @@ public class Purchase : IValidateDataObject<Purchase>
         if (obj.getPaymentType == null) return false;
         if (obj.getProducts == null) return false;
         if (obj.getPurchaseStatus == null) return false;
-        if (obj.GetHashCode == null) return false;
         return true;
     }
 }
