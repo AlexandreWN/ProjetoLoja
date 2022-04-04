@@ -31,16 +31,21 @@ public class Store
     {
         this.name = name;
     }
-    public string getCnpj() 
+    public string getCNPJ() 
     { 
         return cnpj; 
     }
-    public void setCnpj(string cnpj) 
+    public void setCNPJ(string cnpj) 
     { 
         this.cnpj = cnpj; 
     }
 
     public List<Purchase> GetPurchases() { 
         return purchases; 
+    }
+
+    public Owner getOwner()
+    {
+        return owner;
     }
 }

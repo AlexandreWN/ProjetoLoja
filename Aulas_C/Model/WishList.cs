@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 namespace Model;
-class WishList
+public class WishList
 {
     private Client client;
     private List<Product> products = new List<Product>();
@@ -20,7 +20,11 @@ class WishList
         products.Add(product);
     }
 
-    public List<Product> getProduct() { 
+    public List<Product> getProducts() { 
         return products; 
+    }
+
+    public Client getClient() {
+        return client;
     }
 }

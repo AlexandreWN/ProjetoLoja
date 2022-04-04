@@ -3,8 +3,19 @@ public class Address
 { 
     private string street;
     private string city;
+    private string state;
     private string country;
     private string post_code;
+
+    public Address(string street, string city, string state, string country, string post_code)
+    {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.post_code = post_code;
+    }
+
 
     public string getStreet() 
     {  
@@ -23,6 +34,15 @@ public class Address
         this.city = city; 
     }
 
+    public string getState()
+    {
+        return state;
+    }
+    public void setState()
+    {
+        this.state = state;
+    }
+
     public string getCountry() 
     { 
         return country; 
@@ -32,11 +52,11 @@ public class Address
         this.country = country; 
     }
 
-    public string getPostCode() 
+    public string getPostalCode() 
     {
         return post_code; 
     }
-    public void setPostCode(string post_code) 
+    public void setPostalCode(string post_code) 
     { 
         this.post_code = post_code; 
     }   

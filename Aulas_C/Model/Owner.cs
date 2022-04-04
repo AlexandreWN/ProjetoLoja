@@ -3,11 +3,11 @@ public class Owner : Person
 {
     private static Owner instance;
     private Owner(Address address) : base(address)  { }
-    public static Owner getInstance()
+    public static Owner getInstance(Address address)
     {
-        if (instance == null)
+        if (Owner.instance == null)
         {
-            instance = new Owner(address);
+            Owner.instance = new Owner(address);
         }
         return instance;
     }

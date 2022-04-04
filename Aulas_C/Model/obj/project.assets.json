@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Enums/1.0.0": {
+      "type": "project",
+      "path": "../Enums/Enums.csproj",
+      "msbuildProject": "../Enums/Enums.csproj"
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces/Interfaces.csproj",
+      "msbuildProject": "../Interfaces/Interfaces.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Enums >= 1.0.0",
+      "Interfaces >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\disrct\\.nuget\\packages\\": {}
@@ -13,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Source\\Repos\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +68,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Enums\\Enums.csproj": {
+              "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Enums\\Enums.csproj"
+            },
+            "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Interfaces\\Interfaces.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

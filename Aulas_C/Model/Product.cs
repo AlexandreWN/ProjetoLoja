@@ -2,7 +2,7 @@ namespace Model;
 public class Product
 { 
     private string name;
-    private decimal unit_price;
+    private double unit_price;
     private string bar_code;
 
     public string getName() 
@@ -14,11 +14,11 @@ public class Product
         this.name = name;
     }
 
-    public decimal getUnitePrice() 
+    public double getUnitprice() 
     { 
         return unit_price; 
     }
-    public void setUnitPrice(decimal unit_price)
+    public void setUnitPrice(double unit_price)
     {
         this.unit_price = unit_price;
     }

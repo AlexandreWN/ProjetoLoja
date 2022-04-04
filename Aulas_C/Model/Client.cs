@@ -4,9 +4,9 @@ public class Client : Person
     private static Client instance;
     private Client(Address address) : base(address) { }
     public static Client getInstance(Address address) {
-        if (instance == null)
+        if (Client.instance == null)
         {
-            instance = new Client(address);
+            Client.instance = new Client(address);
         }
         return instance;
     }

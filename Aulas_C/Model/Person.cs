@@ -1,7 +1,7 @@
 namespace Model;
 public class Person
 {
-    private Address address; //dependencia
+    protected Address address; //dependencia
 
     protected string name;
     protected int    age;
@@ -55,7 +55,7 @@ public class Person
     {
         return email;
     }
-    public void setEmail()
+    public void setEmail(string email)
     {
         this.email = email;
     }
@@ -64,7 +64,7 @@ public class Person
     {
         return phone;
     }
-    public void setPhone()
+    public void setPhone(string phone)
     {
         this.phone = phone;
     }
