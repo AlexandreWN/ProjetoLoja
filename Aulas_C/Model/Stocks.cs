@@ -16,12 +16,6 @@ public class Stocks: IValidateDataObject<Stocks>
         this.quantity = quantity; 
     }
 
-    public bool validateObject(Stocks obj)
-    {
-        if (obj.getQuantity == null) return false;
-        return true;    
-    }
-
     public Store getStore()
     {
         return store;
@@ -38,5 +32,12 @@ public class Stocks: IValidateDataObject<Stocks>
     public void setProduct(Product product)
     {
         this.product = product;
+    }
+
+     public bool validateObject(Stocks obj)
+    {
+        if (obj.getProduct() == null) return false;
+        if (obj.getQuantity() == 0) return false;
+        return true;
     }
 }
