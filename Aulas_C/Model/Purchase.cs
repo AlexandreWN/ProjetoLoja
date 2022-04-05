@@ -84,13 +84,13 @@ public class Purchase : IValidateDataObject<Purchase>
 
     public bool validateObject(Purchase obj)
     {
-        if (obj.getClient == null) return false;
-        if (obj.getDatePurchase == null) return false;
-        if (obj.getNumberConfirmation == null) return false;
-        if (obj.getNumberNf == null) return false;
-        if (obj.getPaymentType == null) return false;
-        if (obj.getProducts == null) return false;
-        if (obj.getPurchaseStatus == null) return false;
+        if (obj.getClient() == null) return false;
+        if (obj.getDatePurchase() == null) return false;
+        if (obj.getNumberConfirmation() == null) return false;
+        if (obj.getNumberNf() == null) return false;
+        if (obj.getPaymentType() == null) return false;
+        if (obj.getProducts() == null) return false;
+        if (obj.getPurchaseStatus() == null) return false;
         return true;
     }
 }

@@ -64,11 +64,11 @@ public class Address : IValidateDataObject<Address>
 
     public bool validateObject(Address obj)
     {
-        if(obj.getCity == null)return false;
-        if(obj.getCountry == null)return false;
-        if(obj.getPostalCode == null)return false;
-        if(obj.getState == null)return false;
-        if(obj.getStreet == null)return false;
+        if(obj.getCity() == null)return false;
+        if(obj.getCountry() == null)return false;
+        if(obj.getPostalCode() == null)return false;
+        if(obj.getState() == null)return false;
+        if(obj.getStreet() == null)return false;
         return true;
     }
 }
