@@ -51,10 +51,10 @@ public class Store:IValidateDataObject<Store>
 
     public bool validateObject(Store obj)
     {
-        if (obj.getCNPJ == null) return false;
-        if (obj.getName == null) return false;
-        if (obj.getOwner == null) return false;
-        if (obj.GetPurchases == null) return false;
+        if (obj.getCNPJ() == null) return false;
+        if (obj.getName() == null) return false;
+        if (obj.getOwner() == null) return false;
+        if (obj.GetPurchases() == null) return false;
         return true;
     }
 }

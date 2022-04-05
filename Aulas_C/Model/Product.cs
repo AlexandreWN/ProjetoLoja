@@ -35,9 +35,9 @@ public class Product: IValidateDataObject<Product>
 
     public bool validateObject(Product obj)
     {
-        if (obj.getBarCode == null) return false;
-        if (obj.getName == null) return false;
-        if (obj.getUnitprice == null) return false;
+        if (obj.getBarCode() == null) return false;
+        if (obj.getName() == null) return false;
+        if (obj.getUnitprice() == null) return false;
         return true;
     }
 }

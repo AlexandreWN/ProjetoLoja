@@ -15,13 +15,13 @@ public class Owner : Person, IValidateDataObject<Owner>
 
     public bool validateObject(Owner obj)
     {
-        if(obj.getAddress == null) return false;
-        if(obj.getAge == null) return false;
-        if(obj.getDocument == null) return false;
-        if(obj.getEmail == null) return false;
-        if(obj.getLogin == null) return false;
-        if(obj.getName == null) return false;
-        if(obj.getPhone == null) return false;
+        if(obj.getAddress() == null) return false;
+        if(obj.getAge() == null) return false;
+        if(obj.getDocument() == null) return false;
+        if(obj.getEmail() == null) return false;
+        if(obj.getLogin() == null) return false;
+        if(obj.getName() == null) return false;
+        if(obj.getPhone() == null) return false;
         return true;
   
     }
