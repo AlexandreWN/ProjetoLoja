@@ -37,7 +37,7 @@ public class Product: IValidateDataObject<Product>
     {
         if (obj.getBarCode() == null) return false;
         if (obj.getName() == null) return false;
-        if (obj.getUnitprice() == null) return false;
+        if (obj.getUnitprice() == 0.0) return false;
         return true;
     }
 }
