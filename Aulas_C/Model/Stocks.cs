@@ -6,12 +6,6 @@ public class Stocks: IValidateDataObject<Stocks>
     private Product product;// dependencia de Product com Stocks
     private int quantity;
 
-    public  Stocks(Store store, Product product)
-    {
-        this.store = store;
-        this.product = product;
-    }
-
 
     public int getQuantity() 
     { 
@@ -26,5 +20,23 @@ public class Stocks: IValidateDataObject<Stocks>
     {
         if (obj.getQuantity == null) return false;
         return true;    
+    }
+
+    public Store getStore()
+    {
+        return store;
+    }
+    public void setStore(Store store)
+    {
+        this.store = store;
+    }
+
+    public Product getProduct()
+    {
+        return product;
+    }
+    public void setProduct(Product product)
+    {
+        this.product = product;
     }
 }
