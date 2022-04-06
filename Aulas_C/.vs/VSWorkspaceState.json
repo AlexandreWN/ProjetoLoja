@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Model"
   ],
   "SelectedNode": "\\Model\\Model.csproj",
+=======
+    "\\Model",
+    "\\testesAutomatizados"
+  ],
+  "SelectedNode": "\\Model\\ModelContext.cs",
+>>>>>>> eeee132241aea7d16f994f8b300ce55f0fa13493
   "PreviewInSolutionExplorer": false
 }
