@@ -27,7 +27,50 @@ public class ModelContext : DbContext
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Properties<string>().Where(p => p.Name == "document").Configure(p => p.IsKey());
+            
+            //REFERENTES A ADDRESS
+            modelBuilder.Properties<string>().Where(a => a.Name == "street");
+            modelBuilder.Properties<string>().Where(a => a.Name) == "city");
+            modelBuilder.Properties<string>().Where(a => a.Name) == "state");
+            modelBuilder.Properties<string>().Where(a => a.Name) == "country");
+            modelBuilder.Properties<string>().Where(a => a.Name) == "post_code");
+
+            //REFERENTES A CLIENT
+            
+
+            //REFERENTES A OWNER
+            
+
+            //REFERENTES A PERSON
+            modelBuilder.Properties<string>().Where(per => per.Name) == "name");
+            modelBuilder.Properties<int>().Where(per => per.Name) == "age");
+            modelBuilder.Properties<string>().Where(per => per.Name) == "document");
+            modelBuilder.Properties<string>().Where(per => per.Name) == "email");
+            modelBuilder.Properties<string>().Where(per => per.Name) == "phone");
+            modelBuilder.Properties<string>().Where(per => per.Name) == "login");
+
+            //REFERENTES A PRODUCT
+            modelBuilder.Properties<string>().Where(pro => pro.Name) == "name");
+            modelBuilder.Properties<double>().Where(pro => pro.Name) == "unit_price");
+            modelBuilder.Properties<string>().Where(pro => pro.Name) == "bar_code");
+
+            //REFERENTES A PURCHASE
+            modelBuilder.Properties<DateTime>().Where(pur => pur.Name) == "date_purchase");
+            modelBuilder.Properties<string>().Where(pur => pur.Name) == "payment");
+            modelBuilder.Properties<string>().Where(pur => pur.Name) == "number_confirmation");
+            modelBuilder.Properties<string>().Where(pur => pur.Name) == "number_nf");
+            modelBuilder.Properties<int>().Where(pur => pur.Name) == "payment_type");
+            modelBuilder.Properties<int>().Where(pur => pur.Name) == "purchaseStatusEnum");
+
+            //REFERENTES A STOCKS
+            modelBuilder.Properties<int>().Where(stoc => stoc.Name) == "quantity");
+
+            //REFERENTES A STORE
+            modelBuilder.Properties<int>().Where(stor => stor.Name) == "name");
+            modelBuilder.Properties<int>().Where(stor => stor.Name) == "cnpj");
+
+            //REFERENTES A WISHLIST
+
         }
     }
 }
