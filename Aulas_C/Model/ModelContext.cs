@@ -33,16 +33,18 @@ public class ModelContext : DbContext
             modelBuilder.Properties<string>().Where(a => a.Name) == "city");
             modelBuilder.Properties<string>().Where(a => a.Name) == "state");
             modelBuilder.Properties<string>().Where(a => a.Name) == "country");
-            modelBuilder.Properties<string>().Where(a => a.Name) == "post_code");
+            modelBuilder.Properties<string>().Where(a => a.Name) == "post_code"); throw new NotImplementedException();
 
             //REFERENTES A CLIENT
-            
+            modelBuilder.Entity<Client>().Property<int>("PersonForeignKey");
+            modelBuilder.Entity<Client>().HasOne(c => c.Person).WithMany(p => p.Client).HasForeignKey("PersonForeignKey");
 
             //REFERENTES A OWNER
-            
+            modelBuilder.Entity<Owner>().Property<int>("PersonForeignKey");
+            modelBuilder.Entity<Ownert>().HasOne(c => c.Person).WithMany(own => own.Owner).HasForeignKey("PersonForeignKey");
 
-            //REFERENTES A PERSON
-            modelBuilder.Properties<string>().Where(per => per.Name) == "name");
+        //REFERENTES A PERSON
+        modelBuilder.Properties<string>().Where(per => per.Name) == "name");
             modelBuilder.Properties<int>().Where(per => per.Name) == "age");
             modelBuilder.Properties<string>().Where(per => per.Name) == "document");
             modelBuilder.Properties<string>().Where(per => per.Name) == "email");
