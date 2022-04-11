@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MySQL.EntityFrameworkCore.Extensions;
+
 
 namespace DAO;
 public class LibraryContext : DbContext
@@ -18,10 +18,9 @@ public class LibraryContext : DbContext
           //provedor e string de conexão
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local)\JVLPC0565\SQLEXPRESS;Database=ProjetoLojaTeste;Integrated Security=sspi;")
+            optionsBuilder.UseSqlServer("Data Source=(local)\\JVLPC0565\\SQLEXPRESS;Database=ProjetoLojaTeste;Integrated Security=sspi;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Person>(entity => )
         }
 }
