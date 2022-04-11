@@ -10,6 +10,16 @@ public class Store:IValidateDataObject<Store>
     private Owner owner; // dependencia a Owner
     private string name;
     private string cnpj;
+    private int id;
+
+    public int getId()
+    {
+        return id;
+    }
+    public void setId()
+    {
+        this.id = id;
+    }
 
     private List<Purchase> purchases = new List<Purchase>();
 
@@ -55,6 +65,7 @@ public class Store:IValidateDataObject<Store>
         if (obj.getName() == null) return false;
         if (obj.getOwner() == null) return false;
         if (obj.GetPurchases() == null) return false;
+        if (obj.getId() == null) return false;
         return true;
     }
 }

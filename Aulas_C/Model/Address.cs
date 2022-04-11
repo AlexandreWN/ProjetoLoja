@@ -7,9 +7,11 @@ public class Address : IValidateDataObject<Address>
     private string state;
     private string country;
     private string post_code;
+    private int id;
 
-    public Address(string street, string city, string state, string country, string post_code)
+    public Address(int id, string street, string city, string state, string country, string post_code)
     {
+        this.id = id;
         this.street = street;
         this.city = city;
         this.state = state;
@@ -17,6 +19,14 @@ public class Address : IValidateDataObject<Address>
         this.post_code = post_code;
     }
 
+    public int getId()
+    {
+        return id;
+    }
+    public void setId(int id)
+    {
+        this.id = id;
+    }
 
     public string getStreet() 
     {  
@@ -64,6 +74,7 @@ public class Address : IValidateDataObject<Address>
 
     public bool validateObject(Address obj)
     {
+        if(obj.getId() == null) return false;
         if(obj.getCity() == null)return false;
         if(obj.getCountry() == null)return false;
         if(obj.getPostalCode() == null)return false;

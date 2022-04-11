@@ -1,6 +1,7 @@
 namespace DAO;
 public class Purchase
 {
+    public int id;
     public DateTime date_purchase;
     public string payment;
     public string number_confirmation;

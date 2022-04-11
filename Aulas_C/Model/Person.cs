@@ -4,11 +4,12 @@ public class Person
     protected Address address; //dependencia
 
     protected string name;
-    protected int    age;
+    protected DateTime date_of_birth;
     protected string document;
     protected string email;
     protected string phone;
     protected string login;
+    protected int id;
 
     protected Person(Address addres)
     {
@@ -19,6 +20,16 @@ public class Person
     {
         return address;
     }
+
+    public int getId()
+    {
+        return id;
+    }
+    public void setId()
+    {
+        this.id = id;
+    }
+
     public void setAddress(Address address)
     {
         this.address = address;
@@ -33,13 +44,13 @@ public class Person
         this.name = name;
     }
 
-    public int getAge()
+    public int getDateOfBirth()
     {
-        return age;
+        return date_of_birth;
     }
-    public void setAge(int age)
+    public void setDateOfBirth(int date_of_birth)
     {
-        this.age = age;
+        this.date_of_birth = date_of_birth;
     }
 
     public string getDocument()

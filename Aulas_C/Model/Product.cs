@@ -2,9 +2,19 @@ using Interfaces;
 namespace Model;
 public class Product: IValidateDataObject<Product>
 { 
+    private int id;
     private string name;
     private double unit_price;
     private string bar_code;
+
+    public int getId()
+    {
+        return id;
+    }
+    public void setId(int id)
+    {
+        this.id = id;
+    }
 
     public string getName() 
     { 
@@ -35,6 +45,7 @@ public class Product: IValidateDataObject<Product>
 
     public bool validateObject(Product obj)
     {
+        if (obj.getId() == null) return false;
         if (obj.getBarCode() == null) return false;
         if (obj.getName() == null) return false;
         if (obj.getUnitprice() == 0.0) return false;
