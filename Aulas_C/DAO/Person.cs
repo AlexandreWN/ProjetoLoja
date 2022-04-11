@@ -1,4 +1,4 @@
-namespace Model;
+namespace DAO;
 public class Person
 {
     public string name;

@@ -1,5 +1,4 @@
-using Interfaces;
-namespace Model;
+namespace DAO;
 public class Owner : Person
 {
 }

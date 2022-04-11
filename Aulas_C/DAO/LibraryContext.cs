@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MySQL.EntityFrameworkCore.Extensions;
 
-namespace DaoContext;
+namespace DAO;
 public class LibraryContext : DbContext
 {
         //Mapeamento de entidade para tabela
@@ -22,10 +22,6 @@ public class LibraryContext : DbContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-             base.OnModelCreating(modelBuilder);
-             modelBuilder.Entity<Person> (entity =>
-                entity
-
-             )
+             
         }
 }

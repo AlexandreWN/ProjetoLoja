@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+t1rRNhN18Cl4drL6rfQOa6ugsQEnMv5c24//jJ17ZviyQgwx1MY5Qra517JzTyQgdGgDKqEORatQpsS4qjhNA==",
+  "dgSpecHash": "LQfgalnp3PNottuQOz7aW6lbxBaH2HPKASFS5S6zgjtp4jsm6y/pIhuNXa+VVTVOET5hT8A+CMaXGbQHItqw0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DaoContext\\DaoContext.csproj",
+  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
