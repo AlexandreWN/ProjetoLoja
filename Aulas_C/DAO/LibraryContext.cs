@@ -43,6 +43,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.email);
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
+                entity.HasOne(p => p.Address).WithMany(p => p.Client);
             });
             modelBuilder.Entity<Owner>(entity =>
             {
@@ -53,6 +54,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.email);
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
+                entity.HasOne(p => p.Address).WithMany(p => p.Owner);
             });
             modelBuilder.Entity<Product>(entity =>
             {
@@ -71,18 +73,25 @@ public class LibraryContext : DbContext
                 entity.Property(pu => pu.number_nf);
                 entity.Property(pu => pu.payment_type);
                 entity.Property(pu => pu.puchaseStatusEnum);
+                entity.HasOne(p => p.Product).WithMany(p => p.Purchase);
+                entity.HasOne(p => p.Client).WithMany(p => p.Purchase);
+                entity.HasOne(p => p.Store).WithMany(p => p.Purchase);
             });
             modelBuilder.Entity<Stocks>(entity =>
             {
                 entity.HasKey(s => s.id);
                 entity.Property(s => s.product);
                 entity.Property(s => s.quantity);
+                entity.HasOne(p => p.Product).WithMany(p => p.Stocks);
+                entity.HasOne(p => p.Store).WithMany(p => p.Stocks);
             });
             modelBuilder.Entity<Store>(entity =>
             {
                 entity.HasKey(st => st.id);
                 entity.Property(st => st.name);
                 entity.Property(st => st.cnpj);
+                entity.HasOne(p => p.Owner).WithMany(p => p.Store);
+
             });
             modelBuilder.Entity<WishList>(entity =>
             {
