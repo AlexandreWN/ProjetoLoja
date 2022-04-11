@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0oJ2N1yt6Zp8sgljAGCGqIj9mEO5rN1xziEWaUBaExNvA1ad3jbarQQVbjl3TNSO/pCbxaUiVGfUVma7vffb5A==",
+  "dgSpecHash": "BrkYI6fFHOOBiN9O0Is60Le3QHoQRaoXP6WjUN8RvitBov9lQjMjXzPpdonMOeqAWf3yPnec0WSfFoSR1Z2aVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
+  "projectFilePath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Interfaces\\Interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
