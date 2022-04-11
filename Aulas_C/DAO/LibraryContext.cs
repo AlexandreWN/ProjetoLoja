@@ -1,4 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6765947ef58cfb7277eeca4db0d225d34c1ee2dc
 
 namespace DAO;
 public class LibraryContext : DbContext
@@ -21,6 +25,7 @@ public class LibraryContext : DbContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+<<<<<<< HEAD
             modelBuilder.Entity<Client>(entity =>
             {
 
@@ -42,5 +47,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.phone).IsRequired();
                 entity.Property(p => p.login).IsRequired();
             });
+=======
+>>>>>>> 6765947ef58cfb7277eeca4db0d225d34c1ee2dc
         }
 }
