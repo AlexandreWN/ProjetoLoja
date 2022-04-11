@@ -22,15 +22,6 @@ public class LibraryContext : DbContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-<<<<<<< HEAD
-             
-=======
-             base.OnModelCreating(modelBuilder);
-             modelBuilder.Entity<Person> (entity =>
-                entity.Property
-                
-             )
 
->>>>>>> d07f0f5964bf9c55f94a7029eac3f6681e8e50da
         }
 }
