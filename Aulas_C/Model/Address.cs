@@ -7,6 +7,7 @@ public class Address : IValidateDataObject<Address>
     private string state;
     private string country;
     private string post_code;
+    private int id;
 
     public Address(int id, string street, string city, string state, string country, string post_code)
     {

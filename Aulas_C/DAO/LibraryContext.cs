@@ -24,8 +24,9 @@ public class LibraryContext : DbContext
         {
              base.OnModelCreating(modelBuilder);
              modelBuilder.Entity<Person> (entity =>
-                entity
-
+                entity.Property
+                
              )
+
         }
 }

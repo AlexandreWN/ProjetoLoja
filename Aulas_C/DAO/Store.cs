@@ -7,6 +7,7 @@ using Interfaces;
 namespace Model;
 public class Store
 {
+    public int id;
     public string name;
     public string cnpj;
 }
