@@ -1,6 +1,7 @@
 namespace DAO;
 public class Person
 {
+    public Address address;
     public int id;
     public string name;
     public DateTime date_of_birth;
