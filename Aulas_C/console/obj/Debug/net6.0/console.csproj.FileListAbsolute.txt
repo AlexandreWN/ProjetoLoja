@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\bin\Debug\net6.0\console.exe
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\bin\Debug\net6.0\console.deps.json
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\bin\Debug\net6.0\console.runtimeconfig.json
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\bin\Debug\net6.0\console.dll
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\bin\Debug\net6.0\console.pdb
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.csproj.AssemblyReference.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.AssemblyInfo.cs
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.dll
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\refint\console.dll
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.pdb
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\console.genruntimeconfig.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\console\obj\Debug\net6.0\ref\console.dll
