@@ -5,7 +5,16 @@ public class Stocks: IValidateDataObject<Stocks>
     private Store store; // dependencia a Store
     private Product product;// dependencia de Product com Stocks
     private int quantity;
+    private int id;
 
+    public int getId()
+    {
+        return id;
+    }
+    public void setId()
+    {
+        this.id = id;
+    }
 
     public int getQuantity() 
     { 
@@ -38,6 +47,7 @@ public class Stocks: IValidateDataObject<Stocks>
     {
         if (obj.getProduct() == null) return false;
         if (obj.getQuantity() == 0) return false;
+        if (obj.getId() == null) return false;
         return true;
     }
 }

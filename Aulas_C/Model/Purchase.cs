@@ -10,6 +10,7 @@ public class Purchase : IValidateDataObject<Purchase>
 {
     private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
+    private int id;
     private DateTime date_purchase;
     private string payment;
     private string number_confirmation;
@@ -17,7 +18,14 @@ public class Purchase : IValidateDataObject<Purchase>
     private int payment_type;
     private int purchaseStatusEnum;
 
-
+    public int getId()
+    {
+        return id;
+    }
+    public void setId()
+    {
+        this.id = id;
+    }
 
     public List<Product> getProducts()
     {
@@ -91,6 +99,7 @@ public class Purchase : IValidateDataObject<Purchase>
         if (obj.getPaymentType() == null) return false;
         if (obj.getProducts() == null) return false;
         if (obj.getPurchaseStatus() == null) return false;
+        if (obj.getId() == null) return false;
         return true;
     }
 }

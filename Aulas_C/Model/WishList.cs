@@ -34,6 +34,4 @@ public class WishList : IValidateDataObject<WishList>
         if(obj.getClient() == null) return false;
         return true;
     }
-
-
 }
