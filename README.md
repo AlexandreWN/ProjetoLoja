@@ -1,2 +1,3 @@
 # ProjetoLoja
-teste de commit de usu·rio teste 2
+teste de commit de usu√°rio teste 2
+https://devmysql.com/doc/connector-net/en/connector/-net-entityframework-core-example.html
