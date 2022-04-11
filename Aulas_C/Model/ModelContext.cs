@@ -41,10 +41,10 @@ public class ModelContext : DbContext
 
             //REFERENTES A OWNER
             modelBuilder.Entity<Owner>().Property<int>("PersonForeignKey");
-            modelBuilder.Entity<Ownert>().HasOne(c => c.Person).WithMany(own => own.Owner).HasForeignKey("PersonForeignKey");
+            modelBuilder.Entity<Owner>().HasOne(c => c.Person).WithMany(own => own.Owner).HasForeignKey("PersonForeignKey");
 
         //REFERENTES A PERSON
-        modelBuilder.Properties<string>().Where(per => per.Name) == "name");
+            modelBuilder.Properties<string>().Where(per => per.Name) == "name");
             modelBuilder.Properties<int>().Where(per => per.Name) == "age");
             modelBuilder.Properties<string>().Where(per => per.Name) == "document");
             modelBuilder.Properties<string>().Where(per => per.Name) == "email");
