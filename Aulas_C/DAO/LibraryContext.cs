@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MySQL.EntityFrameworkCore.Extensions;
 
 namespace DAO;
 public class LibraryContext : DbContext
@@ -18,10 +17,30 @@ public class LibraryContext : DbContext
           //provedor e string de conexão
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local)\JVLPC0565\SQLEXPRESS;Database=ProjetoLojaTeste;Integrated Security=sspi;")
+            optionsBuilder.UseSqlServer("Data Source=(local)\\JVLPC0565\\SQLEXPRESS;Database=ProjetoLojaTeste;Integrated Security=sspi;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Person>(entity => )
+            modelBuilder.Entity<Client>(entity =>
+            {
+
+                entity.HasKey(p => p.Id);
+                entity.Property(p => p.name).IsRequired();
+                entity.Property(p => p.date_of_birth).IsRequired();
+                entity.Property(p => p.document).IsRequired();
+                entity.Property(p => p.email).IsRequired();
+                entity.Property(p => p.phone).IsRequired();
+                entity.Property(p => p.login).IsRequired();
+            });
+            modelBuilder.Entity<Owner>(entity =>
+            {
+                entity.HasKey(p => p.Id);
+                entity.Property(p => p.name).IsRequired();
+                entity.Property(p => p.date_of_birth).IsRequired();
+                entity.Property(p => p.document).IsRequired();
+                entity.Property(p => p.email).IsRequired();
+                entity.Property(p => p.phone).IsRequired();
+                entity.Property(p => p.login).IsRequired();
+            });
         }
 }
