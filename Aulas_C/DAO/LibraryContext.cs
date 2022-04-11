@@ -22,6 +22,6 @@ public class LibraryContext : DbContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<Person>(entity => )
         }
 }
