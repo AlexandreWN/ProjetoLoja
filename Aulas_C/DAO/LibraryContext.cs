@@ -86,7 +86,8 @@ public class LibraryContext : DbContext
             });
             modelBuilder.Entity<WishList>(entity =>
             {
-
-            })
+                entity.HasOne(c => c.Client).WithMany(c => c.WishList);
+                entity.HasOne(p => p.Product).WithMany(p => p.WishList);
+            });
         }
 }
