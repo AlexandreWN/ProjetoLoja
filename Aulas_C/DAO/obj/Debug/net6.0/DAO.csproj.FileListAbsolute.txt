@@ -18,3 +18,7 @@ C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\obj\Debug\net6.0\DAO.csproj.Core
 C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\obj\Debug\net6.0\DAO.dll
 C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\obj\Debug\net6.0\refint\DAO.dll
 C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\obj\Debug\net6.0\DAO.pdb
+C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\bin\Debug\net6.0\DAO.deps.json
+C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\bin\Debug\net6.0\DAO.dll
+C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\bin\Debug\net6.0\DAO.pdb
+C:\Users\disrct\Desktop\Repositorio\Aulas_C\DAO\obj\Debug\net6.0\ref\DAO.dll

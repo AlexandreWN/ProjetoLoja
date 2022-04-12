@@ -12,7 +12,6 @@ using DAO;
         // Adds some books
         context.Product.Add(new Product
         {
-          id = 1,
           name = "The Lord of the Rings",
           unit_price = 1.1,
           bar_code = "English",

@@ -10,4 +10,5 @@ public class Purchase
     public string number_nf;
     public int payment_type;
     public int purchaseStatusEnum;
+    public Client client;
 }

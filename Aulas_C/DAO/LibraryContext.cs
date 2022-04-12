@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6765947ef58cfb7277eeca4db0d225d34c1ee2dc
-
 namespace DAO;
+
 public class LibraryContext : DbContext
 {
         //Mapeamento de entidade para tabela
@@ -20,13 +16,13 @@ public class LibraryContext : DbContext
           //provedor e string de conexão
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local)\\JVLPC0565\\SQLEXPRESS;Database=ProjetoLojaTeste;Integrated Security=sspi;");
+            optionsBuilder.UseSqlServer("Data Source = JVLPC0565\\SQLEXPRESS; Initial Catalog = ttt; Integrated Security = True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>(entity =>
             {
-                entity.Haskey(a => a.Id);
+                entity.HasKey(a => a.id);
                 entity.Property(a => a.street);
                 entity.Property(a => a.city);
                 entity.Property(a => a.state);
@@ -43,7 +39,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.email);
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
-                entity.HasOne(p => p.Address).WithMany(p => p.Client);
+                entity.HasOne(p => p.address);
             });
             modelBuilder.Entity<Owner>(entity =>
             {
@@ -54,49 +50,47 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.email);
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
-                entity.HasOne(p => p.Address).WithMany(p => p.Owner);
+                entity.HasOne(p => p.address);
             });
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.Haskey(pr => pr.id);
+                entity.HasKey(pr => pr.id);
                 entity.Property(pr => pr.name);
                 entity.Property(pr => pr.unit_price);
                 entity.Property(pr => pr.bar_code);
             });
             modelBuilder.Entity<Purchase>(entity =>
             {
-                entity.Haskey(pu => pu.id);
-                entity.HasOne(pr => pr.Product).WithMany(pu => pu.Purchase);
-                entity.HasOne(p => p.Client).WithMany(pu => pu.Purchase);
+                entity.HasKey(pu => pu.id);
                 entity.Property(pu => pu.payment);
                 entity.Property(pu => pu.number_confirmation);
                 entity.Property(pu => pu.number_nf);
                 entity.Property(pu => pu.payment_type);
-                entity.Property(pu => pu.puchaseStatusEnum);
-                entity.HasOne(p => p.Product).WithMany(p => p.Purchase);
-                entity.HasOne(p => p.Client).WithMany(p => p.Purchase);
-                entity.HasOne(p => p.Store).WithMany(p => p.Purchase);
+                entity.Property(pu => pu.purchaseStatusEnum);
+                entity.HasOne(p => p.product);
+                entity.HasOne(p => p.client);
+                entity.HasOne(p => p.store);
             });
             modelBuilder.Entity<Stocks>(entity =>
             {
                 entity.HasKey(s => s.id);
-                entity.Property(s => s.product);
                 entity.Property(s => s.quantity);
-                entity.HasOne(p => p.Product).WithMany(p => p.Stocks);
-                entity.HasOne(p => p.Store).WithMany(p => p.Stocks);
+                entity.HasOne(p => p.product);
+                entity.HasOne(p => p.store);
             });
             modelBuilder.Entity<Store>(entity =>
             {
                 entity.HasKey(st => st.id);
                 entity.Property(st => st.name);
                 entity.Property(st => st.cnpj);
-                entity.HasOne(p => p.Owner).WithMany(p => p.Store);
+                entity.HasOne(p => p.owner);
 
             });
             modelBuilder.Entity<WishList>(entity =>
             {
-                entity.HasOne(c => c.Client).WithMany(c => c.WishList);
-                entity.HasOne(p => p.Product).WithMany(p => p.WishList);
+                entity.HasNoKey();
+                entity.HasOne(c => c.client);
+                entity.HasOne(p => p.product);
             });
         }
 }
