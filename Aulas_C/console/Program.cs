@@ -2,24 +2,24 @@
 using System.Text;
 using DAO;
 
-
+      //CREATE
       using(var context = new LibraryContext())
       {
-        // Creates the database if not exists
         context.Database.EnsureCreated();
-    
-        // Adds some books
+      }
+      
+      //INSERT
+       using(var context = new LibraryContext())
+      {
         context.Product.Add(new Product
         {
           name = "The Lord of the Rings",
           unit_price = 1.1,
           bar_code = "English",
         });
-
-        // Saves changes
         context.SaveChanges();
       }
-
+     //SELECT
       using (var context = new LibraryContext())
       {
         var dados = context.Product;
@@ -33,4 +33,20 @@ using DAO;
           Console.WriteLine(data.ToString());
         }
       }
-      
+      //DELETE
+       using (var context = new LibraryContext())
+      {
+            var products = new  Product  {id = 1 };
+            context.Remove(products);
+             context.SaveChanges();
+      }
+
+       //UPDATE
+        using(var context = new LibraryContext())
+      {
+        var idP = 2;
+        var dados = context.Product.Where(a => a.id.Equals(idP)).SingleOrDefault();
+        dados.name = "batata";
+        context.SaveChanges();
+
+      }
