@@ -7,8 +7,7 @@ using DAO;
       {
         // Creates the database if not exists
         context.Database.EnsureCreated();
-
-
+    
         // Adds some books
         context.Product.Add(new Product
         {
@@ -20,7 +19,7 @@ using DAO;
         // Saves changes
         context.SaveChanges();
       }
-      
+
       using (var context = new LibraryContext())
       {
         var dados = context.Product;
