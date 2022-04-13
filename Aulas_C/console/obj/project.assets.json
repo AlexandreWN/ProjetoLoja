@@ -1790,11 +1790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\console\\console.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\console\\console.csproj",
       "projectName": "console",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\console\\console.csproj",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\console\\console.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\console\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1811,8 +1811,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
+            "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\DAO\\DAO.csproj"
             }
           }
         }
