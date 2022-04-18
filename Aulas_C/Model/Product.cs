@@ -69,6 +69,7 @@ public class Product: IValidateDataObject<Product>
         var productDTO = new ProductDTO();
         productDTO.name = this.name;
         productDTO.bar_code = this.bar_code;
+        return productDTO;
     }
     public static Product convertDTOToModel(ProductDTO obj)
     {
