@@ -11,16 +11,11 @@ public class Purchase : IValidateDataObject<Purchase>
     private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
     private DateTime date_purchase;
-    private string payment;
     private string number_confirmation;
     private string number_nf;
     private PaymentEnum payment_type;
     private purchaseStatusEnum purchaseStatus;
-
-    public void setId()
-    {
-        this.id = id;
-    }
+    private double purchase_value;
 
     public List<Product> getProducts()
     {
@@ -68,7 +63,7 @@ public class Purchase : IValidateDataObject<Purchase>
         this.number_nf = number_nf; 
     }
 
-    public int getPaymentType()
+    public PaymentEnum getPaymentType()
     {
         return payment_type;
     }
@@ -76,7 +71,8 @@ public class Purchase : IValidateDataObject<Purchase>
     {
         this.payment_type = (int)payment_type;
     } 
-    public int getPurchaseStatus()
+
+    public PurchaseStatusEnum getPurchaseStatus()
     {
         return purchaseStatusEnum;
     }
@@ -85,16 +81,91 @@ public class Purchase : IValidateDataObject<Purchase>
         this.purchaseStatusEnum =(int)purchaseStatusEnum;
     }
 
-    public bool validateObject(Purchase obj)
+    public double getValue(){
+        return value;
+    }
+    public void setValue(){
+        this.value = value;
+    }
+
+    public bool validateObject()
     {
-        if (obj.getClient() == null) return false;
-        if (obj.getDatePurchase() == null) return false;
-        if (obj.getNumberConfirmation() == null) return false;
-        if (obj.getNumberNf() == null) return false;
-        if (obj.getPaymentType() == null) return false;
-        if (obj.getProducts() == null) return false;
-        if (obj.getPurchaseStatus() == null) return false;
-        if (obj.getId() == null) return false;
+        if (this.getClient() == null) return false;
+        if (this.getDatePurchase() == null) return false;
+        if (this.getNumberConfirmation() == null) return false;
+        if (this.getNumberNf() == null) return false;
+        if (this.getPaymentType() == null) return false;
+        if (this.getProducts() == null) return false;
+        if (this.getPurchaseStatus() == null) return false;
+        if (this.getValue() == null) return false;
         return true;
+    }
+
+    public void updateStatus(){
+
+    }
+    public void delete(Purchase obj){
+
+    }
+
+    public int save(){
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var purchase = new DAO.Purchase{
+                purchase.date_purchase = this.date_purchase,
+                purchase.number_confirmation = this.number_confirmation,
+                purchase.number_nf = this.number_nf,
+                purchase.payment_type = this.payment_type,
+                purchase.purchase_status = this.purchase_status,
+                purchase.purchase_value = this.purchase_value
+            };
+
+            context.Purchase.Add(purchase);
+
+            context.SaveChanges();
+
+            id = purchase.id;
+
+        }
+         return id;
+    }
+
+    public void update(PurchaseDTO obj){
+
+    }
+
+    public PurchaseDTO findById(int id)
+    {
+
+        return new PurchaseDTO();
+    }
+
+    public List<PurchaseDTO> getAll()
+    {        
+        return this.purchaseDTO;      
+    }
+
+   
+    public PurchaseDTO convertModelToDTO()
+    {
+        var purchaseDTO = new PurchaseDTO();
+
+        purchaseDTO.street = this.street;
+
+        purchaseDTO.state = this.state;
+
+        purchaseDTO.city = this.city;
+
+        purchaseDTO.country = this.country;
+
+        purchaseDTO.postal_code = this.postal_code;
+
+        return purchaseDTO;
+    }
+
+    public static Purchase convertDTOToModel(PurchaseDTO obj){
+        return new Purchase(obj.date_purchase, obj.number_confirmation, obj.number_nf, obj.payment_type, obj.purchase_status, obj.purchase_value);
     }
 }
