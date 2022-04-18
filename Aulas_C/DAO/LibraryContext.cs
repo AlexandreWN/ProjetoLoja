@@ -79,7 +79,7 @@ public class LibraryContext : DbContext
                 entity.Property(s => s.quantity);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.store);
-                entity.HasOne(s => s.unit_price);
+                entity.Property(s => s.unit_price);
             });
             modelBuilder.Entity<Store>(entity =>
             {

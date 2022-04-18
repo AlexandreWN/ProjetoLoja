@@ -40,7 +40,7 @@ public class Product: IValidateDataObject<Product>, IDataController<ProductDTO, 
     public void save()
     {
         var id = 0;
-        using (var context = new ProductDTO)
+        using (var context = new LibraryContext())
         {
             var product = new DAO.Product
             {
@@ -56,7 +56,7 @@ public class Product: IValidateDataObject<Product>, IDataController<ProductDTO, 
     public void update(ProductDTO obj) { }
     public ProductDTO findByID()
     {
-        return new productDTO;
+        return new ProductDTO();
     }
     public List<ProductDTO> getAll()
     {

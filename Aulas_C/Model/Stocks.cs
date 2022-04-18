@@ -82,7 +82,7 @@ public class Stocks: IValidateDataObject<Stocks>,IDataController<StocksDTO, Stoc
     public void update(StoksDTO obj) { }
     public StoksDTO findByID()
     {
-        return new StoksDTO;
+        return new StoksDTO();
     }
     public List<StoksDTO> getAll()
     {
