@@ -1,4 +1,8 @@
-using Interfaces;
+using System;
+using Interfaces; 
+using DAO;
+using DTO;
+using System.Collections.Generic;
 namespace Model;
 public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 { 
@@ -15,7 +19,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
         this.city = city;
         this.state = state;
         this.country = country;
-        this.post_code = post_code;
+        this.postal_code = postal_code;
     }
 
     public string getStreet() 
