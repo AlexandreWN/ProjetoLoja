@@ -10,18 +10,13 @@ public class Purchase : IValidateDataObject<Purchase>
 {
     private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
-    private int id;
     private DateTime date_purchase;
     private string payment;
     private string number_confirmation;
     private string number_nf;
-    private int payment_type;
-    private int purchaseStatusEnum;
+    private PaymentEnum payment_type;
+    private purchaseStatusEnum purchaseStatus;
 
-    public int getId()
-    {
-        return id;
-    }
     public void setId()
     {
         this.id = id;
