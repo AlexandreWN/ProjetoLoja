@@ -4,7 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
-public class Owner : Person, IValidateDataObject<Owner> 
+public class Owner : Person, IValidateDataObject,IDataController<Owner, OwnerDTO> 
 {
     private Guid uuid;
     private static Owner instance;

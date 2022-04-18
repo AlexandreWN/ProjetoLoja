@@ -4,7 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
-public class Client : Person, IValidateDataObject, IDataController<ClientDTO, Client>
+public class Client : Person, IValidateDataObject, IDataController<Client,ClientDTO>
 {
     private Guid uuid;
     public List<Client> client = new List<Client>();

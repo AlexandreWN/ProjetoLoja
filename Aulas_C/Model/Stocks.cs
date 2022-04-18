@@ -4,7 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
-public class Stocks: IValidateDataObject<Stocks>,IDataController<StocksDTO, Address>
+public class Stocks: IValidateDataObject<Stocks>,IDataController<Stocks,StocksDTO>
 {
     private Store store;
     private Product product;
