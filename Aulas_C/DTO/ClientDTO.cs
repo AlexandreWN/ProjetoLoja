@@ -1,5 +1,5 @@
 namespace DTO;
-public class ClientDTO : Person
+public class ClientDTO
 {
     public string name;
     public DateTime date_of_birth;
@@ -7,4 +7,6 @@ public class ClientDTO : Person
     public string email;
     public string phone;
     public string login;
+    public string passwd;
+    public AddressDTO address;
 }

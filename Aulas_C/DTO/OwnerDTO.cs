@@ -7,4 +7,6 @@ public class OwnerDTO : Person
     public string email;
     public string phone;
     public string login;
+    public string passwd;
+    public AddressDTO address;
 }

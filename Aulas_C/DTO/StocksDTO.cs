@@ -3,6 +3,6 @@ public class StocksDTO
 {
     public StoreDTO store;
     public ProductDTO product;
-    public int id;
+    public double unit_price;
     public int quantity;
 }

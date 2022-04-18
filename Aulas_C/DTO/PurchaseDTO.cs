@@ -7,6 +7,6 @@ public class PurchaseDTO
     public int purchase_status;
     public string number_confirmation;
     public string number_nf;
-    public ProductDTO product;
-    public StoreDTO store;
+
+    List<ProductDTO> product = new List<ProductDTO>();
 }
