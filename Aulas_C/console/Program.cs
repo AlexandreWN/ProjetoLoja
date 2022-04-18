@@ -2,7 +2,6 @@
 using System.Text;
 using DAO;
 
-<<<<<<< HEAD
       //CREATE
       using(var context = new LibraryContext())
       {
@@ -42,13 +41,10 @@ using DAO;
             context.Remove(products);
              context.SaveChanges();
       }
-=======
-//CREATE
-using(var context = new LibraryContext())
-{
-  context.Database.EnsureCreated();
-}
->>>>>>> 100cc3aaf3afc542f273ac07bb1ceae87cc6b0d9
+      using(var context = new LibraryContext())
+      {
+            context.Database.EnsureCreated();
+      }
 
 //INSERT
   using(var context = new LibraryContext())
