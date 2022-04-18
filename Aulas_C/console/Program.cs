@@ -32,7 +32,7 @@ using DAO;
           data.AppendLine($"{dado.bar_code}");
           Console.WriteLine(data.ToString());
         }
-      }
+      }/*
       //DELETE
       
        using (var context = new LibraryContext())
@@ -45,6 +45,16 @@ using DAO;
       {
             context.Database.EnsureCreated();
       }
+
+
+      //DELETE
+using (var context = new LibraryContext())
+{
+      var products = new  Product  {id = 1 };
+      context.Remove(products);
+        context.SaveChanges();
+}
+*/
 
 //INSERT
   using(var context = new LibraryContext())
@@ -71,13 +81,7 @@ using (var context = new LibraryContext())
     Console.WriteLine(data.ToString());
   }
 }
-//DELETE
-using (var context = new LibraryContext())
-{
-      var products = new  Product  {id = 1 };
-      context.Remove(products);
-        context.SaveChanges();
-}
+/*
 
 //UPDATE
   using(var context = new LibraryContext())
@@ -87,3 +91,4 @@ using (var context = new LibraryContext())
   dados.name = "batata";
   context.SaveChanges();
 }
+*/
