@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Model
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\disrct\Desktop\Repositorio\Aulas_C\Model\
-=======
 build_property.ProjectDir = C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\
->>>>>>> 5367e8470eccafb863af6fc6cb6476d0151f3588

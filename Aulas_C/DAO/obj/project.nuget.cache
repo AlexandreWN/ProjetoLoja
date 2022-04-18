@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lo+QbcEyj4dJZzhiyVNSBqhlYh/lsHvJulwoMjNlKL07wwzjWIie7KNEXsQ8HjinVi+yXpqXKk1aZzqrNxu53g==",
+  "dgSpecHash": "n7DbTVuapmfXhxPcc01QU0wo2PG7ILwgUMuZlRiOEXHq4sR1atZhoAK2dEmLybH2ltxAVzdJXjUXGGodU4OBZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\DAO\\DAO.csproj",
+  "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\disrct\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

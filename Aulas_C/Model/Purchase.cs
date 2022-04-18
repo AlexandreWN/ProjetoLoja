@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Enums;
 using Interfaces;
 namespace Model;
-public class Purchase : IValidateDataObject, IDataController<Purchase, PurchaseDTO>
+public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
 {
     private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
