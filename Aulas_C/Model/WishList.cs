@@ -7,7 +7,7 @@ using Interfaces;
 using DAO;
 using DTO;
 namespace Model;
-public class WishList : IValidateDataObject, IDataController<WishList, WishListDTO>
+public class WishList : IValidateDataObject, IDataController<WishListDTO,WishList>
 {
     private Client client;
     private List<Product> products = new List<Product>();
