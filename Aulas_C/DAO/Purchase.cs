@@ -1,14 +1,15 @@
 namespace DAO;
 public class Purchase
 {
-    public Store store; // dependencia a Store
-    public Product product;// dependencia de Product com Stocks
+    public Store store;
+    public Product product;
+    public Client client;
+
     public int id;
-    public DateTime date_purchase;
-    public string payment;
     public string number_confirmation;
     public string number_nf;
     public int payment_type;
-    public int purchaseStatusEnum;
-    public Client client;
+    public DateTime date_purchase;
+    public string purchase_status;
+    public double purchase_value;
 }

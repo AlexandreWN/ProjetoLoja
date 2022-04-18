@@ -28,7 +28,7 @@ public class LibraryContext : DbContext
                 entity.Property(a => a.city);
                 entity.Property(a => a.state);
                 entity.Property(a => a.country);
-                entity.Property(a => a.post_code);
+                entity.Property(a => a.postal_code);
             });
             modelBuilder.Entity<Client>(entity =>
             {
@@ -41,6 +41,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
                 entity.HasOne(p => p.address);
+                entity.HasOne(p => p.password);
             });
             modelBuilder.Entity<Owner>(entity =>
             {
@@ -52,12 +53,12 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
                 entity.HasOne(p => p.address);
+                entity.HasOne(p => p.password);
             });
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(pr => pr.id);
                 entity.Property(pr => pr.name);
-                entity.Property(pr => pr.unit_price);
                 entity.Property(pr => pr.bar_code);
             });
             modelBuilder.Entity<Purchase>(entity =>
@@ -67,7 +68,8 @@ public class LibraryContext : DbContext
                 entity.Property(pu => pu.number_confirmation);
                 entity.Property(pu => pu.number_nf);
                 entity.Property(pu => pu.payment_type);
-                entity.Property(pu => pu.purchaseStatusEnum);
+                entity.Property(pu => pu.purchase_status);
+                entity.Property(pu => pu.purchase_value);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.client);
                 entity.HasOne(p => p.store);
@@ -78,20 +80,22 @@ public class LibraryContext : DbContext
                 entity.Property(s => s.quantity);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.store);
+                entity.HasOne(p => p.unit_price);
             });
             modelBuilder.Entity<Store>(entity =>
             {
                 entity.HasKey(st => st.id);
                 entity.Property(st => st.name);
-                entity.Property(st => st.cnpj);
+                entity.Property(st => st.CNPJ);
                 entity.HasOne(p => p.owner);
 
             });
             modelBuilder.Entity<WishList>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(w => w.id);
                 entity.HasOne(c => c.client);
                 entity.HasOne(p => p.product);
+               
             });
         }
 }
