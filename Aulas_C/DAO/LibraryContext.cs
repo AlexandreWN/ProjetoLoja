@@ -64,7 +64,6 @@ public class LibraryContext : DbContext
             modelBuilder.Entity<Purchase>(entity =>
             {
                 entity.HasKey(pu => pu.id);
-                entity.Property(pu => pu.payment);
                 entity.Property(pu => pu.number_confirmation);
                 entity.Property(pu => pu.number_nf);
                 entity.Property(pu => pu.payment_type);
@@ -80,7 +79,7 @@ public class LibraryContext : DbContext
                 entity.Property(s => s.quantity);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.store);
-                entity.HasOne(p => p.unit_price);
+                entity.HasOne(s => s.unit_price);
             });
             modelBuilder.Entity<Store>(entity =>
             {

@@ -7,7 +7,7 @@ using DAO;
       {
         context.Database.EnsureCreated();
       }
-      
+      /*
       //INSERT
        using(var context = new LibraryContext())
       {
@@ -54,19 +54,8 @@ using (var context = new LibraryContext())
       context.Remove(products);
         context.SaveChanges();
 }
-*/
 
-//INSERT
-  using(var context = new LibraryContext())
-{
-  context.Product.Add(new Product
-  {
-    name = "The Lord of the Rings",
-    unit_price = 1.1,
-    bar_code = "English",
-  });
-  context.SaveChanges();
-}
+
 //SELECT
 using (var context = new LibraryContext())
 {
@@ -81,7 +70,7 @@ using (var context = new LibraryContext())
     Console.WriteLine(data.ToString());
   }
 }
-/*
+
 
 //UPDATE
   using(var context = new LibraryContext())
