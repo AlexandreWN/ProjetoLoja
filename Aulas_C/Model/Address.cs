@@ -68,7 +68,6 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
     public bool validateObject()
     {
-        if(this.getId() == null) return false;
         if(this.getCity() == null)return false;
         if(this.getCountry() == null)return false;
         if(this.getPostalCode() == null)return false;

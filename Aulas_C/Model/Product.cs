@@ -30,7 +30,6 @@ public class Product: IValidateDataObject<Product>
 
     public bool validateObject(Product obj)
     {
-        if (obj.getId() == null) return false;
         if (obj.getBarCode() == null) return false;
         if (obj.getName() == null) return false;
         if (obj.getUnitprice() == 0.0) return false;
