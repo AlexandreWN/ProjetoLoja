@@ -1,14 +1,15 @@
 using Interfaces;
 namespace Model;
-public class Address : IValidateDataObject<Address>
+public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 { 
     private string street;
     private string city;
     private string state;
     private string country;
-    private string post_code;
+    private string postal_code;
+    public List<AddressDTO> addressDTO = new List<AddressDTO>();
 
-    public Address(string street, string city, string state, string country, string post_code)
+    public Address(string street, string city, string state, string country, string postal_code)
     {
         this.street = street;
         this.city = city;
@@ -61,18 +62,78 @@ public class Address : IValidateDataObject<Address>
         this.post_code = post_code; 
     }
 
-    public bool validateObject(Address obj)
+    public bool validateObject()
     {
-        if(obj.getId() == null) return false;
-        if(obj.getCity() == null)return false;
-        if(obj.getCountry() == null)return false;
-        if(obj.getPostalCode() == null)return false;
-        if(obj.getState() == null)return false;
-        if(obj.getStreet() == null)return false;
+        if(this.getId() == null) return false;
+        if(this.getCity() == null)return false;
+        if(this.getCountry() == null)return false;
+        if(this.getPostalCode() == null)return false;
+        if(this.getState() == null)return false;
+        if(this.getStreet() == null)return false;
         return true;
     }
 
-    public static Address convertDTOToModel(AddressDTO addressDTO){
-        
+    public void delete(AddressDTO obj){
+
+    }
+
+    public int save(){
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var address = new DAO.Address{
+                street = this.street,
+                city = this.city,
+                state = this.state,
+                country = this.country,
+                postal_code = this.postal_code
+            };
+
+            context.Address.Add(address);
+
+            context.SaveChanges();
+
+            id = address.id;
+
+        }
+         return id;
+    }
+
+    public void update(AddressDTO obj){
+
+    }
+
+    public AddressDTO findById(int id)
+    {
+
+        return new AddressDTO();
+    }
+
+    public List<AddressDTO> getAll()
+    {        
+        return this.addressDTO;      
+    }
+
+   
+    public AddressDTO convertModelToDTO()
+    {
+        var addressDTO = new AddressDTO();
+
+        addressDTO.street = this.street;
+
+        addressDTO.state = this.state;
+
+        addressDTO.city = this.city;
+
+        addressDTO.country = this.country;
+
+        addressDTO.postal_code = this.postal_code;
+
+        return addressDTO;
+    }
+
+    public static Address convertDTOToModel(AddressDTO obj){
+        return new Address(obj.street, obj.city, obj.state, obj.country, obj.postal_code);
     }
 }
