@@ -41,7 +41,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
                 entity.HasOne(p => p.address);
-                entity.HasOne(p => p.password);
+                entity.Property(p => p.password);
             });
             modelBuilder.Entity<Owner>(entity =>
             {
@@ -53,7 +53,7 @@ public class LibraryContext : DbContext
                 entity.Property(p => p.phone);
                 entity.Property(p => p.login);
                 entity.HasOne(p => p.address);
-                entity.HasOne(p => p.password);
+                entity.Property(p => p.password);
             });
             modelBuilder.Entity<Product>(entity =>
             {
@@ -77,9 +77,10 @@ public class LibraryContext : DbContext
             {
                 entity.HasKey(s => s.id);
                 entity.Property(s => s.quantity);
+                entity.Property(s => s.unit_price);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.store);
-                entity.HasOne(s => s.unit_price);
+               
             });
             modelBuilder.Entity<Store>(entity =>
             {
