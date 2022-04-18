@@ -16,8 +16,8 @@ public class LibraryContext : DbContext
           //provedor e string de conexão
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          // optionsBuilder.UseSqlServer("Data Source = JVLPC0565\\SQLEXPRESS; Initial Catalog = ttt; Integrated Security = True");
-           optionsBuilder.UseSqlServer("Data Source = CTPC3616; Initial Catalog = ProjetoLoja; Integrated Security = True");
+            optionsBuilder.UseSqlServer("Data Source = JVLPC0565\\SQLEXPRESS; Initial Catalog = dd; Integrated Security = True");
+           //optionsBuilder.UseSqlServer("Data Source = CTPC3616; Initial Catalog = ProjetoLoja; Integrated Security = True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -64,7 +64,6 @@ public class LibraryContext : DbContext
             modelBuilder.Entity<Purchase>(entity =>
             {
                 entity.HasKey(pu => pu.id);
-                entity.Property(pu => pu.payment);
                 entity.Property(pu => pu.number_confirmation);
                 entity.Property(pu => pu.number_nf);
                 entity.Property(pu => pu.payment_type);

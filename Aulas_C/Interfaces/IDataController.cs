@@ -1,12 +1,18 @@
 using System;
+using System.Collections.Generic;
 
-namespace Interfaces{
-    public interface IDataController<T>{
-        T findByID(T obj);
-        List<T> getAll(T obj);
-        int save(T obj);
-        void update(T obj);
-        void delete(T obj);
-        T convertModelToDTO(T obj);
-    }
+namespace Interfaces;
+public interface IDataController<T, O>
+{
+    public T findById(int id);
+
+    public List<T> getAll();
+
+    public int save();
+
+    public void update(T obj);
+
+    public void delete(T obj);
+
+    public T convertModelToDTO();
 }

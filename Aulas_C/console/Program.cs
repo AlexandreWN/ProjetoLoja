@@ -7,7 +7,7 @@ using DAO;
       {
         context.Database.EnsureCreated();
       }
-      
+      /*
       //INSERT
        using(var context = new LibraryContext())
       {
@@ -55,7 +55,7 @@ using (var context = new LibraryContext())
         context.SaveChanges();
 }
 */
-
+/*
 //INSERT
   using(var context = new LibraryContext())
 {
