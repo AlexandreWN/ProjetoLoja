@@ -1,5 +1,5 @@
 namespace DTO;
-public class OwnerDTO : Person
+public class OwnerDTO
 {
     public string name;
     public DateTime date_of_birth;

@@ -54,8 +54,6 @@ using (var context = new LibraryContext())
       context.Remove(products);
         context.SaveChanges();
 }
-
-
 //SELECT
 using (var context = new LibraryContext())
 {
