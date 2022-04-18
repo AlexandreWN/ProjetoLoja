@@ -54,6 +54,7 @@ using (var context = new LibraryContext())
       context.Remove(products);
         context.SaveChanges();
 }
+<<<<<<< HEAD
 */
 /*
 //INSERT
@@ -67,6 +68,10 @@ using (var context = new LibraryContext())
   });
   context.SaveChanges();
 }
+=======
+
+
+>>>>>>> dac2263ee7a8a584447b883b3dba0d97d325bcd2
 //SELECT
 using (var context = new LibraryContext())
 {
@@ -81,7 +86,7 @@ using (var context = new LibraryContext())
     Console.WriteLine(data.ToString());
   }
 }
-/*
+
 
 //UPDATE
   using(var context = new LibraryContext())
