@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Enums;
 using Interfaces;
+using DAO;
+using DTO;
 namespace Model;
-public class Purchase : IValidateDataObject<Purchase>
+public class Purchase : IValidateDataObject, IDataController<AddressDTO, Address>
 {
     private List<Product> products = new List<Product>();
     private Client client;// dependencia com Client
