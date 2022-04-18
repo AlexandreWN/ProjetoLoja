@@ -1,12 +1,18 @@
-using Interfaces;
+using System;
+using Interfaces; 
+using DAO;
+using DTO;
+using System.Collections.Generic;
 namespace Model;
-public class Stocks: IValidateDataObject<Stocks>
+public class Stocks: IValidateDataObject<Stocks>,IDataController<StocksDTO, Address>
 {
     private Store store;
     private Product product;
 
     private int quantity;
     private double unit_price;
+    public List<StocksDTO> stocksDTO = new List<StocksDTO>();
+
 
     public int getQuantity() 
     { 
@@ -16,7 +22,6 @@ public class Stocks: IValidateDataObject<Stocks>
     { 
         this.quantity = quantity; 
     }
-
     public double getUnitPrice()
     {
         return unit_price;
@@ -25,9 +30,6 @@ public class Stocks: IValidateDataObject<Stocks>
     {
         this.unit_price = unit_price;
     }
-
-
-
     public Store getStore()
     {
         return store;
@@ -36,7 +38,6 @@ public class Stocks: IValidateDataObject<Stocks>
     {
         this.store = store;
     }
-
     public Product getProduct()
     {
         return product;
@@ -57,41 +58,46 @@ public class Stocks: IValidateDataObject<Stocks>
 
 
 
-        public void seve()
+    public void seve()
     {
         var id = 0;
-        using (var context = new ProductDTO)
+        using (var context = new StoksDTO)
         {
-            var product = new DAO.Product
+            var stoks = new DAO.Stoks
             {
-                name = this.name,
-                bar_code = this.bar_code
+                quantity = this.quantity,
+                unit_price = this.unit_price,
+                store = this.store,
+                product = this.product
             };
-            context.Product.Add(product);
+            context.Product.Add(stoks);
             context.SaveChanges();
-            id = product.id;
+            id = stoks.id;
         }
     }
-    public void delete(ProductDTO obj) { }
-    public void update(ProductDTO obj) { }
-    public ProductDTO findByID()
+    public void delete(StoksDTO obj) { }
+    public void update(StoksDTO obj) { }
+    public StoksDTO findByID()
     {
-        return new productDTO;
+        return new StoksDTO;
     }
-    public List<ProductDTO> getAll()
+    public List<StoksDTO> getAll()
     {
-        return this.productDTO;
+        return this.StoksDTO;
     }
 
 
-    public ProductDTO convertModelToDTO()
+    public StoksDTO convertModelToDTO()
     {
-        var productDTO = new ProductDTO();
-        productDTO.name = this.name;
-        productDTO.bar_code = this.bar_code;
+        var stoksDTO = new StoksDTO();
+        stocksDTO.quantity = this.quantity;
+        stocksDTO.unit_price = this.unit_price;
+        stocksDTO.product = this.product;
+        stocksDTO.store = this.store;
+        return stoksDTO;
     }
-    public static Product convertDTOToModel(ProductDTO obj)
+    public static Stocks convertDTOToModel(StoksDTO obj)
     {
-        return new Product(obj.name,obj.bar_code);
+        return new Stocks(obj.quantity,obj.unit_price,obj.product,obj.store);
     }
 }
