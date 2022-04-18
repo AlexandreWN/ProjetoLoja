@@ -19,7 +19,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
         this.city = city;
         this.state = state;
         this.country = country;
-        this.post_code = post_code;
+        this.postal_code = postal_code;
     }
 
     public string getStreet() 
@@ -68,7 +68,6 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
     public bool validateObject()
     {
-        if(this.getId() == null) return false;
         if(this.getCity() == null)return false;
         if(this.getCountry() == null)return false;
         if(this.getPostalCode() == null)return false;

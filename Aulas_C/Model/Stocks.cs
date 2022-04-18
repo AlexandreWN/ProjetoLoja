@@ -2,19 +2,11 @@ using Interfaces;
 namespace Model;
 public class Stocks: IValidateDataObject<Stocks>
 {
-    private Store store; // dependencia a Store
-    private Product product;// dependencia de Product com Stocks
-    private int quantity;
-    private int id;
+    private Store store;
+    private Product product;
 
-    public int getId()
-    {
-        return id;
-    }
-    public void setId()
-    {
-        this.id = id;
-    }
+    private int quantity;
+    private double unit_price;
 
     public int getQuantity() 
     { 
@@ -24,6 +16,17 @@ public class Stocks: IValidateDataObject<Stocks>
     { 
         this.quantity = quantity; 
     }
+
+    public double getUnitPrice()
+    {
+        return unit_price;
+    }
+    public void setUnitPrice(double unit_price)
+    {
+        this.unit_price = unit_price;
+    }
+
+
 
     public Store getStore()
     {
@@ -47,7 +50,48 @@ public class Stocks: IValidateDataObject<Stocks>
     {
         if (obj.getProduct() == null) return false;
         if (obj.getQuantity() == 0) return false;
-        if (obj.getId() == null) return false;
+        if (obj.getStore() == null) return false;
+        if (obj.getUnitPrice() == null) return false;
         return true;
+    }
+
+
+
+        public void seve()
+    {
+        var id = 0;
+        using (var context = new ProductDTO)
+        {
+            var product = new DAO.Product
+            {
+                name = this.name,
+                bar_code = this.bar_code
+            };
+            context.Product.Add(product);
+            context.SaveChanges();
+            id = product.id;
+        }
+    }
+    public void delete(ProductDTO obj) { }
+    public void update(ProductDTO obj) { }
+    public ProductDTO findByID()
+    {
+        return new productDTO;
+    }
+    public List<ProductDTO> getAll()
+    {
+        return this.productDTO;
+    }
+
+
+    public ProductDTO convertModelToDTO()
+    {
+        var productDTO = new ProductDTO();
+        productDTO.name = this.name;
+        productDTO.bar_code = this.bar_code;
+    }
+    public static Product convertDTOToModel(ProductDTO obj)
+    {
+        return new Product(obj.name,obj.bar_code);
     }
 }
