@@ -85,7 +85,8 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
 
         using(var context = new DAOContext())
         {
-            var address = new DAO.Address{
+            var address = new DAO.Address
+            {
                 street = this.street,
                 city = this.city,
                 state = this.state,
@@ -94,9 +95,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO, Address>
             };
 
             context.Address.Add(address);
-
             context.SaveChanges();
-
             id = address.id;
 
         }

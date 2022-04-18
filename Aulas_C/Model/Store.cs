@@ -4,24 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Interfaces;
+using DAO;
+using DTO;
 namespace Model;
-public class Store:IValidateDataObject<Store>
+public class Store:IValidateDataObject<Store>,IDataController<StoreDTO, Store>
 {
-    private Owner owner; // dependencia a Owner
+    private Owner owner;
+    private Purchase purchase;
     private string name;
-    private string cnpj;
-    private int id;
-
-    public int getId()
-    {
-        return id;
-    }
-    public void setId()
-    {
-        this.id = id;
-    }
+    private string CNPJ;
 
     private List<Purchase> purchases = new List<Purchase>();
+    public  List<StoreDTO> storeDTO = new List<StoreDTO>();
+
 
     public Store(Owner owner)
     {
@@ -43,11 +38,11 @@ public class Store:IValidateDataObject<Store>
     }
     public string getCNPJ() 
     { 
-        return cnpj; 
+        return CNPJ; 
     }
-    public void setCNPJ(string cnpj) 
+    public void setCNPJ(string CNPJ) 
     { 
-        this.cnpj = cnpj; 
+        this.CNPJ = CNPJ; 
     }
 
     public List<Purchase> GetPurchases() { 
@@ -65,7 +60,62 @@ public class Store:IValidateDataObject<Store>
         if (obj.getName() == null) return false;
         if (obj.getOwner() == null) return false;
         if (obj.GetPurchases() == null) return false;
-        if (obj.getId() == null) return false;
         return true;
     }
+
+
+    public int save(){
+        var id = 0;
+
+        using(var context = new DAOContext())
+        {
+            var store = new DAO.Store
+            {
+                name = this.name,
+                CNPJ = this.CNPJ,
+                owner = this.owner,
+                purchase = this.purchase
+
+            };
+
+            context.Store.Add(store);
+            context.SaveChanges();
+            id = store.id;
+
+        }
+         return id;
+    }
+
+    public void update(StoreDTO obj){
+
+    }
+
+    public StoreDTO findById(int id)
+    {
+
+        return new StoreDTO();
+    }
+
+    public List<StoreDTO> getAll()
+    {        
+        return this.storeDTO;      
+    }
+
+   
+    public StoreDTO convertModelToDTO()
+    {
+        var StoreDTO = new StoreDTO();
+
+        StoreDTO.name = this.name;
+        StoreDTO.CNPJ = this.CNPJ;    
+        StoreDTO.Owner = this.owner;
+        StoreDTO.Purchase = this.purchase;
+
+        return StoreDTO;
+    }
+
+    public static Store convertDTOToModel(StoreDTO obj){
+        return new Store(obj.name,obj.CNPJ.obj.Owner,obj.Purchase);
+    }
+
 }
