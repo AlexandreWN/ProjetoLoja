@@ -6304,11 +6304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\testesAutomatizados\\testesAutomatizados.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\testesAutomatizados\\testesAutomatizados.csproj",
       "projectName": "testesAutomatizados",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\testesAutomatizados\\testesAutomatizados.csproj",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\testesAutomatizados\\testesAutomatizados.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\testesAutomatizados\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\testesAutomatizados\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6325,8 +6325,8 @@
         "net6.0": {
           "targetAlias": "netcoreapp6.0",
           "projectReferences": {
-            "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\disrct\\Desktop\\Repositorio\\Aulas_C\\Model\\Model.csproj"
+            "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
             }
           }
         }
