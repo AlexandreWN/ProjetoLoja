@@ -54,24 +54,6 @@ using (var context = new LibraryContext())
       context.Remove(products);
         context.SaveChanges();
 }
-<<<<<<< HEAD
-*/
-/*
-//INSERT
-  using(var context = new LibraryContext())
-{
-  context.Product.Add(new Product
-  {
-    name = "The Lord of the Rings",
-    unit_price = 1.1,
-    bar_code = "English",
-  });
-  context.SaveChanges();
-}
-=======
-
-
->>>>>>> dac2263ee7a8a584447b883b3dba0d97d325bcd2
 //SELECT
 using (var context = new LibraryContext())
 {
