@@ -5,7 +5,7 @@ using DTO;
 using System.Collections.Generic;
 namespace Model;
 
-public class Stocks: IValidateDataObject<Stocks>,IDataController<StocksDTO, Stocks>
+public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
 
 {
     private Store store;
@@ -78,28 +78,28 @@ public class Stocks: IValidateDataObject<Stocks>,IDataController<StocksDTO, Stoc
         }
        return id;
     }
-    public void delete(StoksDTO obj) { }
-    public void update(StoksDTO obj) { }
-    public StoksDTO findByID()
+    public void delete(StocksDTO obj) { }
+    public void update(StocksDTO obj) { }
+    public StocksDTO findByID()
     {
-        return new StoksDTO();
+        return new StocksDTO();
     }
-    public List<StoksDTO> getAll()
+    public List<StocksDTO> getAll()
     {
-        return this.StoksDTO;
+        return this.StocksDTO;
     }
 
 
-    public StoksDTO convertModelToDTO()
+    public StocksDTO convertModelToDTO()
     {
-        var stoksDTO = new StoksDTO();
+        var StocksDTO = new StocksDTO();
         stocksDTO.quantity = this.quantity;
         stocksDTO.unit_price = this.unit_price;
         stocksDTO.product = this.product;
         stocksDTO.store = this.store;
-        return stoksDTO;
+        return StocksDTO;
     }
-    public static Stocks convertDTOToModel(StoksDTO obj)
+    public static Stocks convertDTOToModel(StocksDTO obj)
     {
         return new Stocks(obj.quantity,obj.unit_price,obj.product,obj.store);
     }

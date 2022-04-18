@@ -7,7 +7,7 @@ using Interfaces;
 using DAO;
 using DTO;
 namespace Model;
-public class Store:IValidateDataObject<Store>,IDataController<StoreDTO, Store>
+public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
 {
     private Owner owner;
     private Purchase purchase;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Enums;
+
 using Interfaces;
 namespace Model;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
@@ -14,7 +15,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private string number_confirmation;
     private string number_nf;
     private PaymentEnum payment_type;
-    private purchaseStatusEnum purchaseStatus;
+    private purchaseStatusEnum purchase_status;
     private double purchase_value;
 
     public List<Product> getProducts()
@@ -74,11 +75,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
     public PurchaseStatusEnum getPurchaseStatus()
     {
-        return purchaseStatusEnum;
+        return purchase_status;
     }
-    public void setPurchaseStatus(PurchaseStatusEnum purchaseStatusEnum)
+    public void setPurchaseStatus(PurchaseStatusEnum purchase_status)
     {
-        this.purchaseStatusEnum =(int)purchaseStatusEnum;
+        this.purchase_status =(int)purchase_status;
     }
 
     public double getValue(){
@@ -144,25 +145,25 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
     public List<PurchaseDTO> getAll()
     {        
-        return this.purchaseDTO;      
+        return this.PurchaseDTO;      
     }
 
    
     public PurchaseDTO convertModelToDTO()
     {
-        var purchaseDTO = new PurchaseDTO();
+        var PurchaseDTO = new PurchaseDTO();
 
-        purchaseDTO.street = this.street;
+        PurchaseDTO.street = this.street;
 
-        purchaseDTO.state = this.state;
+        PurchaseDTO.state = this.state;
 
-        purchaseDTO.city = this.city;
+        PurchaseDTO.city = this.city;
 
-        purchaseDTO.country = this.country;
+        PurchaseDTO.country = this.country;
 
-        purchaseDTO.postal_code = this.postal_code;
+        PurchaseDTO.postal_code = this.postal_code;
 
-        return purchaseDTO;
+        return PurchaseDTO;
     }
 
     public static Purchase convertDTOToModel(PurchaseDTO obj){
