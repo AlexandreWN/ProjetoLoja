@@ -65,7 +65,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     {
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
           
             var ownerDAO = context.Owner.Where(c => c.id == owner).Single();

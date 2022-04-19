@@ -90,7 +90,7 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     }
 
     public static Client convertDTOToModel(ClientDTO obj){
-        Client client = new Client(Address.convertDTOToModel(obj.Address));
+        Client client = new Client(Address.convertDTOToModel(obj.address));
         client.name = obj.name;
         client.date_of_birth = obj.date_of_birth;
         client.document = obj.document;

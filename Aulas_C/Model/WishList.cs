@@ -19,11 +19,11 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public void addProductToWishList(Product product) {
-        products.Add(product);
+        product.Add(product);
     }
 
     public List<Product> getProducts() { 
-        return products; 
+        return product; 
     }
 
     public Client getClient() {
