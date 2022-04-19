@@ -67,7 +67,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     public int save(){
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
             var store = new DAO.Store
             {

@@ -43,7 +43,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     public int save(){
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
             var wishList = new DAO.WishList{
 
@@ -82,6 +82,6 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public static WishList convertDTOToModel(WishListDTO obj){
-        return new WishList();
+        return new WishList(obj.wishList);
     }
 }

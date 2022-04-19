@@ -46,10 +46,10 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     public int save(){
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
             var client = new DAO.Client{
-                uuid = this.uuid
+                id = this.id
             };
 
             context.Client.Add(client);
@@ -79,12 +79,12 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     public ClientDTO convertModelToDTO()
     {
         var clientDTO = new ClientDTO();
-        clientDTO.uuid = this.uuid;
+        clientDTO.id = this.id;
 
         return clientDTO;
     }
 
     public static Client convertDTOToModel(ClientDTO obj){
-        return new Client(obj.uuid);
+        return new Client(obj.id);
     }
 }

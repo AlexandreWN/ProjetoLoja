@@ -48,10 +48,10 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
     public int save(){
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
             var owner = new DAO.Owner{
-                uuid = this.uuid
+                id = this.id
             };
 
             context.Owner.Add(owner);
