@@ -115,7 +115,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     }
 
     public static Store convertDTOToModel(StoreDTO obj){
-        return new Store(obj.name,obj.CNPJ.obj.Owner,obj.Purchase);
+        return new Store(obj.name,obj.CNPJ.obj.Owner,obj.purchases);
     }
 
 }

@@ -11,6 +11,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
 {
     private Client client;
     private List<Product> products = new List<Product>();
+    private List<WishListDTO> wishListDTO = new List<WishListDTO>();
 
     public WishList(Client client)
     {
@@ -73,7 +74,6 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     {        
         return this.wishListDTO;      
     }
-
    
     public WishListDTO convertModelToDTO()
     {
@@ -82,6 +82,6 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public static WishList convertDTOToModel(WishListDTO obj){
-        return new WishList(obj.wishList);
+        return new WishList(obj.client);
     }
 }
