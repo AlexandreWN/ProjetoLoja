@@ -4,8 +4,9 @@
     "\\console",
     "\\DAO",
     "\\DTO",
-    "\\Model"
+    "\\Model",
+    "\\testesAutomatizados"
   ],
-  "SelectedNode": "\\console\\Program.cs",
+  "SelectedNode": "\\Model\\Purchase.cs",
   "PreviewInSolutionExplorer": false
 }

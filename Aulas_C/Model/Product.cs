@@ -4,7 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
-public class Product: IValidateDataObject<Product>, IDataController<ProductDTO, Product>
+public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
 { 
     private string name;
     private string bar_code;
