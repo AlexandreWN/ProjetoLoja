@@ -82,12 +82,26 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
     public OwnerDTO convertModelToDTO()
     {
         var ownerDTO = new OwnerDTO();
-        ownerDTO.id = this.id;
+        ownerDTO.name = this.name;
+        ownerDTO.date_of_birth = this.date_of_birth;
+        ownerDTO.document = this.document;
+        ownerDTO.email = this.email;
+        ownerDTO.phone = this.phone;
+        ownerDTO.login = this.login;
+        ownerDTO.passwd = this.passwd;
 
         return ownerDTO;
     }
 
     public static Owner convertDTOToModel(OwnerDTO obj){
-        return new Owner(obj.id);
+        Owner owner = new Owner(Address.convertDTOToModel(obj.Address));
+        owner.name = obj.name;
+        owner.date_of_birth = obj.date_of_birth;
+        owner.document = obj.document;
+        owner.email = obj.email;
+        owner.phone = obj.phone;
+        owner.login = obj.login;
+        owner.passwd = obj.passwd;
+        return owner;
     }
 }
