@@ -28,16 +28,15 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         this.bar_code = bar_code; 
     }
 
-    public bool validateObject(Product obj)
+    public bool validateObject()
     {
-        if (obj.getBarCode() == null) return false;
-        if (obj.getName() == null) return false;
-        if (obj.getUnitprice() == 0.0) return false;
+        if (this.getBarCode() == null) return false;
+        if (this.getName() == null) return false;
         return true;
     }
 
 
-    public void save()
+    public int save()
     {
         var id = 0;
         using (var context = new LibraryContext())
@@ -51,13 +50,15 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
             context.SaveChanges();
             id = product.id;
         }
+        return id;
     }
     public void delete(ProductDTO obj) { }
     public void update(ProductDTO obj) { }
-    public ProductDTO findByID()
+    public ProductDTO findById(int id)
     {
         return new ProductDTO();
     }
+
     public List<ProductDTO> getAll()
     {
         return this.productDTO;

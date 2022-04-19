@@ -54,12 +54,12 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         return owner;
     }
 
-    public bool validateObject(Store obj)
+    public bool validateObject()
     {
-        if (obj.getCNPJ() == null) return false;
-        if (obj.getName() == null) return false;
-        if (obj.getOwner() == null) return false;
-        if (obj.GetPurchases() == null) return false;
+        if (this.getCNPJ() == null) return false;
+        if (this.getName() == null) return false;
+        if (this.getOwner() == null) return false;
+        if (this.GetPurchases() == null) return false;
         return true;
     }
 

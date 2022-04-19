@@ -5,7 +5,7 @@ using DTO;
 using System.Collections.Generic;
 namespace Model;
 
-public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
+public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
 
 {
     private Store store;
@@ -49,18 +49,18 @@ public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
         this.product = product;
     }
 
-     public bool validateObject(Stocks obj)
+     public bool validateObject()
     {
-        if (obj.getProduct() == null) return false;
-        if (obj.getQuantity() == 0) return false;
-        if (obj.getStore() == null) return false;
-        if (obj.getUnitPrice() == null) return false;
+        if (this.getProduct() == null) return false;
+        if (this.getQuantity() == 0) return false;
+        if (this.getStore() == null) return false;
+        if (this.getUnitPrice() == null) return false;
         return true;
     }
 
     
 
-    public void save()
+    public int save()
     {
         var id = 0;
         using (var context = new DAOContext())
@@ -80,7 +80,7 @@ public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
     }
     public void delete(StocksDTO obj) { }
     public void update(StocksDTO obj) { }
-    public StocksDTO findByID()
+    public StocksDTO findById(int id)
     {
         return new StocksDTO();
     }

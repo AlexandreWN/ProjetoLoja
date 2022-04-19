@@ -27,7 +27,7 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
         this.uuid = uuid;
     }
 
-    public bool validateObject(Owner obj)
+    public bool validateObject()
     {
         if(this.getId() == null) return false;
         if(this.getAddress() == null) return false;
