@@ -5,7 +5,7 @@ using DTO;
 using System.Collections.Generic;
 namespace Model;
 
-public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
+public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
 
 {
     private Store store;
@@ -49,7 +49,7 @@ public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
         this.product = product;
     }
 
-    public bool validateObject()
+     public bool validateObject()
     {
         if (this.getProduct() == null) return false;
         if (this.getQuantity() == 0) return false;

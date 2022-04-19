@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Enums;
 using DAO;
 using DTO;
-
 using Interfaces;
 namespace Model;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
@@ -110,6 +109,8 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public void delete(PurchaseDTO obj){
 
     }
+    
+
 
     public int save(){
         var id = 0;

@@ -58,6 +58,7 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     {
         return new ProductDTO();
     }
+
     public List<ProductDTO> getAll()
     {
         return this.productDTO;
