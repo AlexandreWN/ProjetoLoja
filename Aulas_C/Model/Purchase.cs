@@ -114,7 +114,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public int save(){
         var id = 0;
 
-        using(var context = new DAOContext())
+        using(var context = new LibraryContext())
         {
             var purchase = new DAO.Purchase{
                 purchase.date_purchase = this.date_purchase,

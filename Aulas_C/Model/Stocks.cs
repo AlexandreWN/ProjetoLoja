@@ -63,7 +63,7 @@ public class Stocks: IValidateDataObject,IDataController<StocksDTO, Stocks>
     public int save()
     {
         var id = 0;
-        using (var context = new DAOContext())
+        using (var context = new LibraryContext())
         {
             var stoks = new DAO.Stoks
             {
