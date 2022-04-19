@@ -23,7 +23,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public List<Product> getProducts() { 
-        return product; 
+        return products; 
     }
 
     public Client getClient() {
