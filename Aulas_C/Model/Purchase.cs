@@ -155,22 +155,14 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
    
     public PurchaseDTO convertModelToDTO()
     {
-        
+        var PurchaseDTO = new PurchaseDTO();
+        PurchaseDTO.purchase_value = this.purchase_value;
+        PurchaseDTO.date_purchase = this.date_purchase;
+        PurchaseDTO.purchase_status =(int)this.purchase_status;
+        PurchaseDTO.number_nf=this.number_nf;
+        PurchaseDTO.purchase_value = this.purchase_value;
 
         return PurchaseDTO;
-    }
-
-
-     public static Client convertDTOToModel(ClientDTO obj){
-        Client client = new Client(Address.convertDTOToModel(obj.Address));
-        client.name = obj.name;
-        client.date_of_birth = obj.date_of_birth;
-        client.document = obj.document;
-        client.email = obj.email;
-        client.phone = obj.phone;
-        client.login = obj.login;
-        client.id = obj.id;
-        return client;
     }
 
 
