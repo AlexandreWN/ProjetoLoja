@@ -29,10 +29,10 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
         return client;
     }
 
-    public bool validateObject(WishList obj)
+    public bool validateObject()
     {
-        if(obj.getProducts() == null) return false;
-        if(obj.getClient() == null) return false;
+        if(this.getProducts() == null) return false;
+        if(this.getClient() == null) return false;
         return true;
     }
 

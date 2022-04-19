@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Enums;
+using DAO;
+using DTO;
 
 using Interfaces;
 namespace Model;
@@ -15,7 +17,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private string number_confirmation;
     private string number_nf;
     private PaymentEnum payment_type;
-    private purchaseStatusEnum purchase_status;
+    private PurchaseStatusEnum purchase_status;
     private double purchase_value;
 
     public List<Product> getProducts()
@@ -105,7 +107,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public void updateStatus(){
 
     }
-    public void delete(Purchase obj){
+    public void delete(PurchaseDTO obj){
 
     }
 
