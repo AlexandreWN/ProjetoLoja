@@ -11,6 +11,7 @@ namespace Model;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
 {
     private List<Product> products = new List<Product>();
+    public List<Product> PurchaseDTO = new List<Product> ();
     private Client client;
     private DateTime date_purchase;
     private string number_confirmation;
@@ -84,10 +85,10 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     }
 
     public double getValue(){
-        return value;
+        return purchase_value;
     }
-    public void setValue(){
-        this.value = value;
+    public void setValue(double purchase_value){
+        this.purchase_value = purchase_value;
     }
 
     public bool validateObject()
@@ -155,16 +156,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public PurchaseDTO convertModelToDTO()
     {
         var PurchaseDTO = new PurchaseDTO();
-
-        PurchaseDTO.street = this.street;
-
-        PurchaseDTO.state = this.state;
-
-        PurchaseDTO.city = this.city;
-
-        PurchaseDTO.country = this.country;
-
-        PurchaseDTO.postal_code = this.postal_code;
+        PurchaseDTO.purchase_value = this.purchase_value;
+        PurchaseDTO.date_purchase = this.date_purchase;
+        PurchaseDTO.purchase_status =(int)this.purchase_status;
+        PurchaseDTO.number_nf=this.number_nf;
+        PurchaseDTO.purchase_value = this.purchase_value;
 
         return PurchaseDTO;
     }
