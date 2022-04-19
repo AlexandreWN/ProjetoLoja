@@ -87,10 +87,10 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public static WishList convertDTOToModel(WishListDTO obj){
-        var wishListDTO = new WishList(Client.convertDTOToModel(obj.client));
+        var wishList = new WishList(Client.convertDTOToModel(obj.client));
         foreach(var prod in obj.product)
         {
-            wishListDTO.product.Add(prod.convertDTOToModel()); 
+           wishList.addProductToWishList(Product.convertDTOToModel(prod));
         }
         
     }
