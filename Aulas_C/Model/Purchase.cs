@@ -20,6 +20,15 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private PurchaseStatusEnum purchase_status;
     private double purchase_value;
 
+    public Purchase(DateTime date_purchase, string number_confirmation, string number_nf, int payment_type, int purchase_status, double purchase_value){
+        this.date_purchase = date_of_purchase;
+        this.number_confirmation = number_confirmation;
+        this.number_nf = number_nf;
+        this. payment_type = payment_type;
+        this.purchase_status = purchase_status;
+        this.purchase_value = purchase_value;
+    }
+
     public List<Product> getProducts()
     {
         return products;
@@ -119,12 +128,12 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         using(var context = new LibraryContext())
         {
             var purchase = new DAO.Purchase{
-                purchase.date_purchase = this.date_purchase,
-                purchase.number_confirmation = this.number_confirmation,
-                purchase.number_nf = this.number_nf,
-                purchase.payment_type = this.payment_type,
-                purchase.purchase_status = this.purchase_status,
-                purchase.purchase_value = this.purchase_value
+                date_purchase = this.date_purchase,
+                number_confirmation = this.number_confirmation,
+                number_nf = this.number_nf,
+                payment_type = this.payment_type,
+                purchase_status = this.purchase_status,
+                purchase_value = this.purchase_value
             };
 
             context.Purchase.Add(purchase);
