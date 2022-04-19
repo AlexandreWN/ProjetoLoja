@@ -89,7 +89,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     public void update(StoreDTO obj){
 
     }
-
+    public void delete(StoreDTO obj) { }
     public StoreDTO findById(int id)
     {
 

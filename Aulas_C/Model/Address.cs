@@ -59,11 +59,11 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
 
     public string getPostalCode() 
     {
-        return post_code; 
+        return postal_code; 
     }
-    public void setPostalCode(string post_code) 
+    public void setPostalCode(string postal_code) 
     { 
-        this.post_code = post_code; 
+        this.postal_code = postal_code; 
     }
 
     public bool validateObject()
