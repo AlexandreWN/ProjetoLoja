@@ -20,15 +20,6 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private PurchaseStatusEnum purchase_status;
     private double purchase_value;
 
-    public Purchase(DateTime date_purchase, string number_confirmation, string number_nf, int payment_type, int purchase_status, double purchase_value){
-        this.date_purchase = date_of_purchase;
-        this.number_confirmation = number_confirmation;
-        this.number_nf = number_nf;
-        this. payment_type = payment_type;
-        this.purchase_status = purchase_status;
-        this.purchase_value = purchase_value;
-    }
-
     public List<Product> getProducts()
     {
         return products;
@@ -165,7 +156,6 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public PurchaseDTO convertModelToDTO()
     {
         var PurchaseDTO = new PurchaseDTO();
-        PurchaseDTO.purchase_value = this.purchase_value;
         PurchaseDTO.date_purchase = this.date_purchase;
         PurchaseDTO.purchase_status =(int)this.purchase_status;
         PurchaseDTO.number_nf=this.number_nf;
@@ -176,6 +166,11 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
 
     public static Purchase convertDTOToModel(PurchaseDTO obj){
-        return new Purchase(obj.date_purchase, obj.number_confirmation, obj.number_nf, obj.payment_type, obj.purchase_status, obj.purchase_value);
+        Purchase purchase = new Purchase();
+        purchase.date_purchase = obj.date_purchase;
+        purchase.purchase_status = obj.purchase_status;
+        purchase.number_nf = obj.number_nf;
+        purchase.purchase_value = obj.purchase_value;
+        return purchase;
     }
 }

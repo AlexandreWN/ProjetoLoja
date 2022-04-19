@@ -10,7 +10,6 @@ namespace Model;
 public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
 {
     private Owner owner;
-    private Purchase purchase;
     private string name;
     private string CNPJ;
 
@@ -106,14 +105,16 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
 
         StoreDTO.name = this.name;
         StoreDTO.CNPJ = this.CNPJ;    
-        StoreDTO.Owner = this.owner;
-        StoreDTO.Purchase = this.purchase;
-
+        StoreDTO.Owner = this.owner.convertModelToDTO();
         return StoreDTO;
     }
 
     public static Store convertDTOToModel(StoreDTO obj){
-        return new Store(obj.name,obj.CNPJ.obj.Owner,obj.purchases);
+        Store store = new Store();
+        store.name = obj.name;
+        store.CNPJ = obj.CNPJ;
+        store.Owner = Owner.convertDTOToModel(obj.owner);
+        return store;
     }
 
 }
