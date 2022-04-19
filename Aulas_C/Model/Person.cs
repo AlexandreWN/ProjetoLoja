@@ -10,12 +10,19 @@ public class Person
     protected string phone;
     protected string login;
     protected int id;
+    protected string passwd;
 
     protected Person(Address addres)
     {
         this.address = addres;
     }
 
+    public string getPasswd(){
+        return passwd;
+    }
+    public void setPasswd(string passwd){
+        this.passwd = passwd;
+    }
     public Address getAddress()
     {
         return address;

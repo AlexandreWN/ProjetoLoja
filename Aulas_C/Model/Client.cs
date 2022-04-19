@@ -7,7 +7,7 @@ namespace Model;
 public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Client>
 {
     private Guid uuid;
-    public List<Client> client = new List<Client>();
+    public List<ClientDTO> clientDTO = new List<ClientDTO>();
     private static Client instance;
     private Client(Address address) : base(address) { }
     public static Client getInstance(Address address) {
