@@ -7,7 +7,7 @@ namespace Model;
 public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Client>
 {
     private Guid uuid;
-    public List<Client> client = new List<Client>();
+    public List<ClientDTO> clientDTO = new List<ClientDTO>();
     private static Client instance;
     private Client(Address address) : base(address) { }
     public static Client getInstance(Address address) {
@@ -79,14 +79,12 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     public ClientDTO convertModelToDTO()
     {
         var clientDTO = new ClientDTO();
-        clientDTO.id = this.id;
         clientDTO.name = this.name;
         clientDTO.date_of_birth = this.date_of_birth;
         clientDTO.document = this.document;
         clientDTO.email = this.email;
         clientDTO.phone = this.phone;
         clientDTO.login = this.login;
-        clientDTO.id = this.id;
         clientDTO.passwd = this.passwd;
         return clientDTO;
     }
@@ -99,7 +97,6 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         client.email = obj.email;
         client.phone = obj.phone;
         client.login = obj.login;
-        client.id = obj.id;
         client.passwd = obj.passwd;
         return client;
     }
