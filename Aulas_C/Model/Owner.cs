@@ -99,7 +99,7 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
     }
 
     public static Owner convertDTOToModel(OwnerDTO obj){
-        Owner owner = new Owner(Address.convertDTOToModel(obj.Address));
+        Owner owner = new Owner(Address.convertDTOToModel(obj.address));
         owner.name = obj.name;
         owner.date_of_birth = obj.date_of_birth;
         owner.document = obj.document;
