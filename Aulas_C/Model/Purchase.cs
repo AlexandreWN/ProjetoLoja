@@ -10,7 +10,7 @@ namespace Model;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
 {
     private List<Product> products = new List<Product>();
-    private Client client;// dependencia com Client
+    private Client client;
     private DateTime date_purchase;
     private string number_confirmation;
     private string number_nf;
