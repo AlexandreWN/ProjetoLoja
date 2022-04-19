@@ -62,22 +62,25 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         if (this.GetPurchases() == null) return false;
         return true;
     }
-
-
-    public int save(){
+    public int save(int owner)
+    {
         var id = 0;
 
-        using(var context = new LibraryContext())
+        using(var context = new DAOContext())
         {
-            var store = new DAO.Store
-            {
+          
+            var ownerDAO = context.Owner.Where(c => c.id == owner).Single();
+
+            var store = new DAO.Store{
                 name = this.name,
                 CNPJ = this.CNPJ,
-                owner = this.owner,
+                owner = ownerDAO
             };
 
             context.Store.Add(store);
+            context.Entry(store.owner).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.SaveChanges();
+
             id = store.id;
 
         }
@@ -102,18 +105,22 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
    
     public StoreDTO convertModelToDTO()
     {
-        var StoreDTO = new StoreDTO();
+        var storeDTO = new StoreDTO();
 
-        StoreDTO.name = this.name;
-        StoreDTO.CNPJ = this.CNPJ;    
-        StoreDTO.Owner = this.owner;
-        StoreDTO.Purchase = this.purchase;
+        storeDTO.name = this.name;
+        storeDTO.CNPJ = this.CNPJ;    
+        storeDTO.Owner = this.owner;
+        storeDTO.Purchase = this.purchase;
 
-        return StoreDTO;
+        return storeDTO;
     }
 
     public static Store convertDTOToModel(StoreDTO obj){
-        return new Store(obj.name,obj.CNPJ.obj.Owner,obj.purchases);
+       var storeDTO = new StoreDTO();
+        storeDTO.name = obj.name;
+        storeDTO.CNPJ = obj.CNPJ;
+        storeDTO.owner = obj.owner.convertDTOToModel();
+        return storeDTO;
     }
 
 }
