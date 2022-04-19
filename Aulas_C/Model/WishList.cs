@@ -10,7 +10,7 @@ namespace Model;
 public class WishList : IValidateDataObject, IDataController<WishListDTO,WishList>
 {
     private Client client;
-    private List<Product> product = new List<Product>();
+    private List<Product> products = new List<Product>();
     private List<WishListDTO> wishListDTO = new List<WishListDTO>();
 
     public WishList(Client client)
@@ -19,11 +19,11 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     }
 
     public void addProductToWishList(Product product) {
-        product.Add(product);
+        products.Add(product);
     }
 
     public List<Product> getProducts() { 
-        return product; 
+        return products; 
     }
 
     public Client getClient() {

@@ -101,11 +101,11 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
     }
     public static Stocks convertDTOToModel(StocksDTO obj)
     {
-        var stocksDTO = new StocksDTO();
-        stocksDTO.quantity = obj.quantity;
-        stocksDTO.unit_price=obj.unit_price;
-        stocksDTO.product=obj.product.convertModelToDTO();
-        stocksDTO.store=obj.store.convertModelToDTO();
-        return stocksDTO;
+        Stocks stocks = new Stocks();
+        stocks.quantity = obj.quantity;
+        stocks.unit_price = obj.unit_price;
+        stocks.product = Product.convertDTOToModel(obj.product);
+        stocks.store = Store.convertDTOToModel(obj.store);
+        return stocks;
     }
 }
