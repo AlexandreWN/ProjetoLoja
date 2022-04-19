@@ -63,6 +63,11 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
          return id;
     }
 
+
+
+
+
+
     public void update(OwnerDTO obj){
 
     }

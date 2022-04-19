@@ -74,6 +74,9 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     }
     public static Product convertDTOToModel(ProductDTO obj)
     {
-        return new Product(obj.name,obj.bar_code);
+       Product product = new Product(); 
+        product.name = obj.name;
+        product.bar_code = obj.bar_code;
+        return product;
     }
 }

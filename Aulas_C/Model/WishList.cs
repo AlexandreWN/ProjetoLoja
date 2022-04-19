@@ -10,7 +10,7 @@ namespace Model;
 public class WishList : IValidateDataObject, IDataController<WishListDTO,WishList>
 {
     private Client client;
-    private List<Product> products = new List<Product>();
+    private List<Product> product = new List<Product>();
     private List<WishListDTO> wishListDTO = new List<WishListDTO>();
 
     public WishList(Client client)
@@ -78,10 +78,20 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     public WishListDTO convertModelToDTO()
     {
         var wishListDTO = new WishListDTO();
+        wishListDTO.client = this.client.convertModelToDTO();
+        foreach(var prod in this.products)
+        {
+            wishListDTO.product.Add(prod.convertModelToDTO());
+        }
         return wishListDTO;
     }
 
     public static WishList convertDTOToModel(WishListDTO obj){
-        return new WishList(obj.client);
+        var wishListDTO = new WishList(Client.convertDTOToModel(obj.client));
+        foreach(var prod in obj.product)
+        {
+            wishListDTO.product.Add(prod.convertDTOToModel()); 
+        }
+        
     }
 }
