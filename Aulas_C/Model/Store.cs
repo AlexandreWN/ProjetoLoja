@@ -74,8 +74,6 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
                 name = this.name,
                 CNPJ = this.CNPJ,
                 owner = this.owner,
-                purchase = this.purchase
-
             };
 
             context.Store.Add(store);

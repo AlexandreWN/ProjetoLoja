@@ -1,6 +1,7 @@
 namespace DTO;
 public class OwnerDTO
 {
+    public int id;
     public string name;
     public DateTime date_of_birth;
     public string document;

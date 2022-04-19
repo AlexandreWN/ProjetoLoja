@@ -32,7 +32,6 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     {
         if (this.getBarCode() == null) return false;
         if (this.getName() == null) return false;
-        if (this.getUnitprice() == 0.0) return false;
         return true;
     }
 

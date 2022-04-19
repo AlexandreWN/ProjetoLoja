@@ -82,12 +82,12 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
     public OwnerDTO convertModelToDTO()
     {
         var ownerDTO = new OwnerDTO();
-        ownerDTO.uuid = this.uuid;
+        ownerDTO.id = this.id;
 
         return ownerDTO;
     }
 
     public static Owner convertDTOToModel(OwnerDTO obj){
-        return new Owner(obj.uuid);
+        return new Owner(obj.id);
     }
 }

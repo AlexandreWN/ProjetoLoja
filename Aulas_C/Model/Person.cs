@@ -44,11 +44,11 @@ public class Person
         this.name = name;
     }
 
-    public int getDateOfBirth()
+    public DateTime getDateOfBirth()
     {
         return date_of_birth;
     }
-    public void setDateOfBirth(int date_of_birth)
+    public void setDateOfBirth(DateTime date_of_birth)
     {
         this.date_of_birth = date_of_birth;
     }
