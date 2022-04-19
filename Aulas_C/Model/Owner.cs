@@ -8,7 +8,7 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
 {
     private Guid uuid;
     private static Owner instance;
-
+    private List<OwnerDTO> ownerDTO = new List<OwnerDTO>();
     private Owner(Address address) : base(address)  { }
 
     public static Owner getInstance(Address address)
