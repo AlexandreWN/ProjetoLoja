@@ -60,19 +60,19 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
 
     
 
-    public int save()
+    public int save(int lojaID, int productID, int quantidade, double unit_price)
     {
         var id = 0;
         using (var context = new LibraryContext())
         {
-            var stoks = new DAO.Stocks
+            var stocks = new DAO.Stocks
             {
-                quantity = this.quantity,
+                quantity = this.quantidade,
                 unit_price = this.unit_price,
-                store = this.store.convertModelToDTO(),
-                product = this.product.convertModelToDTO()
+                store = this.lojaID,
+                product = this.productID
             };
-            context.Product.Add(stoks);
+            context.Product.Add(stocks);
             context.SaveChanges();
             id = stoks.id;
         }
