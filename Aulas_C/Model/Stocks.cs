@@ -64,12 +64,14 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
         var id = 0;
         using (var context = new LibraryContext())
         {
+            var store = context.Store.FirstOrDefault(s=>s.id==lojaID);
+            var product = context.Product.FirstOrDefault(p=>p.id==productID);
             var stocks = new DAO.Stocks
             {
                 quantity = quantity,
                 unit_price = unit_price,
-                store = this.lojaID,
-                product = this.productID
+                store = store,
+                product = product
             };
             context.Stocks.Add(stocks);
             context.SaveChanges();
