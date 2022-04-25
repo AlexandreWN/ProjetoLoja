@@ -17,6 +17,10 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     {
         this.client = client;
     }
+    public WishList()
+    {
+
+    }
 
     public void addProductToWishList(Product product) {
         products.Add(product);
@@ -41,17 +45,20 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
 
     }
 
-    public int save(){
+    public int save(string document, int product){
         var id = 0;
+
 
         using(var context = new LibraryContext())
         {
+            var clientDAO = context.Client.FirstOrDefault(c=>c.document == document);
+            var productsDAO = context.Product.Where(p=>p.id == product).Single();
             var wishList = new DAO.WishList{
-
+                client = clientDAO,
+                product = productsDAO
             };
 
             context.WishList.Add(wishList);
-
             context.SaveChanges();
 
             id = wishList.id;

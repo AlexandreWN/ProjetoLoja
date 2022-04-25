@@ -586,9 +586,9 @@ namespace testesAutomatizados
 
             var purchaseDTO = new PurchaseDTO();
 
-            purchaseDTO.data_purchase = new DateTime(2022, 4, 1, 8, 30, 3);
+            purchaseDTO.date_purchase = new DateTime(2022, 4, 1, 8, 30, 3);
 
-            purchaseDTO.confirmation_number = "1258458785254";
+            purchaseDTO.number_confirmation = "1258458785254";
 
             purchaseDTO.number_nf = "5246824687";
 
