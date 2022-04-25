@@ -561,7 +561,7 @@ namespace testesAutomatizados
         {
             int id = 0;
 
-            using(var context = new DAOContext())
+            using(var context = new LibraryContext())
             {
                 for(int client= 1; client < 5; client++){
                     var cliente = context.Client.Where(c=> c.id == client).Single();

@@ -74,6 +74,8 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
                 product = product
             };
             context.Stocks.Add(stocks);
+            context.Entry(stocks.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+            context.Entry(stocks.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.SaveChanges();
             id = stocks.id;
         }
