@@ -11,7 +11,7 @@ namespace Model;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
 {
     private List<Product> products = new List<Product>();
-    public List<Product> PurchaseDTO = new List<Product> ();
+    public List<PurchaseDTO> purchaseDTO = new List<PurchaseDTO> ();
     private Client client;
     private DateTime date_purchase;
     private string number_confirmation;
@@ -149,7 +149,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
     public List<PurchaseDTO> getAll()
     {        
-        return this.PurchaseDTO;      
+        return this.purchaseDTO;      
     }
 
    
