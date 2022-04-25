@@ -79,6 +79,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     {
         var wishListDTO = new WishListDTO();
         wishListDTO.client = this.client.convertModelToDTO();
+
         foreach(var prod in this.products)
         {
             wishListDTO.product.Add(prod.convertModelToDTO());

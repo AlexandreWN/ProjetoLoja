@@ -8,5 +8,5 @@ public class PurchaseDTO
     public string number_confirmation;
     public string number_nf;
 
-    List<ProductDTO> product = new List<ProductDTO>();
+    public List<ProductDTO> product = new List<ProductDTO>();
 }

@@ -122,7 +122,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
                 date_purchase = this.date_purchase,
                 number_confirmation = this.number_confirmation,
                 number_nf = this.number_nf,
-                payment_type = this.payment_type,
+                payment_type = (int)this.payment_type,
                 purchase_status = this.purchase_status,
                 purchase_value = this.purchase_value
             };
