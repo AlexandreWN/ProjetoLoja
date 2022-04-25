@@ -69,8 +69,8 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
             {
                 quantity = this.quantity,
                 unit_price = this.unit_price,
-                store = this.store,
-                product = this.product
+                store = this.store.convertModelToDTO(),
+                product = this.product.convertModelToDTO()
             };
             context.Product.Add(stoks);
             context.SaveChanges();
@@ -86,18 +86,18 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
     }
     public List<StocksDTO> getAll()
     {
-        return this.StocksDTO;
+        return this.stocksDTO;
     }
 
 
     public StocksDTO convertModelToDTO()
     {
-        var StocksDTO = new StocksDTO();
+        var stocksDTO = new StocksDTO();
         stocksDTO.quantity = this.quantity;
         stocksDTO.unit_price = this.unit_price;
-        stocksDTO.product = this.product;
-        stocksDTO.store = this.store;
-        return StocksDTO;
+        stocksDTO.product = this.product.convertModelToDTO();
+        stocksDTO.store = this.store.convertModelToDTO();
+        return stocksDTO;
     }
     public static Stocks convertDTOToModel(StocksDTO obj)
     {
