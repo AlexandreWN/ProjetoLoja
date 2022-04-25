@@ -93,6 +93,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
         {
            wishList.addProductToWishList(Product.convertDTOToModel(prod));
         }
+       return wishList;
         
     }
 }

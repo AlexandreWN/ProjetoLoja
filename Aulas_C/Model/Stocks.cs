@@ -69,8 +69,8 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
             {
                 quantity = this.quantity,
                 unit_price = this.unit_price,
-                store = this.store.convertModelToDTO(),
-                product = this.product.convertModelToDTO()
+                store = this.store,
+                product = this.product
             };
             context.Product.Add(stoks);
             context.SaveChanges();
