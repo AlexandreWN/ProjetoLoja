@@ -10,6 +10,6 @@ public class Purchase
     public string number_nf;
     public int payment_type;
     public DateTime date_purchase;
-    public string purchase_status;
+    public int purchase_status;
     public double purchase_value;
 }
