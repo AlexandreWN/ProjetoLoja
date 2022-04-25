@@ -321,7 +321,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp6.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -329,8 +329,11 @@
         },
         "frameworks": {
           "net6.0": {
-            "targetAlias": "netcoreapp6.0",
+            "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
+              },
               "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
                 "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
               }
@@ -345,7 +348,7 @@
       },
       "frameworks": {
         "net6.0": {
-          "targetAlias": "netcoreapp6.0",
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
