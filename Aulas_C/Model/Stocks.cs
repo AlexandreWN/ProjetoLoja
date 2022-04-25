@@ -65,7 +65,7 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
         var id = 0;
         using (var context = new LibraryContext())
         {
-            var stoks = new DAO.Stoks
+            var stoks = new DAO.Stocks
             {
                 quantity = this.quantity,
                 unit_price = this.unit_price,

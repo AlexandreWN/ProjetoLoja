@@ -72,7 +72,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     }
     public void setPaymentType(PaymentEnum payment_type)
     {
-        this.payment_type = (int)payment_type;
+        this.payment_type = payment_type;
     } 
 
     public PurchaseStatusEnum getPurchaseStatus()
@@ -81,7 +81,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     }
     public void setPurchaseStatus(PurchaseStatusEnum purchase_status)
     {
-        this.purchase_status =(int)purchase_status;
+        this.purchase_status = purchase_status;
     }
 
     public double getValue(){
