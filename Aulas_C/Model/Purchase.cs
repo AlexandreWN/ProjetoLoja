@@ -79,9 +79,9 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     {
         return purchase_status;
     }
-    public void setPurchaseStatus(PurchaseStatusEnum purchase_status)
+    public void setPurchaseStatus(int purchase_status)
     {
-        this.purchase_status = purchase_status;
+        this.purchase_status = (PurchaseStatusEnum)purchase_status;
     }
 
     public double getValue(){
@@ -168,7 +168,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public static Purchase convertDTOToModel(PurchaseDTO obj){
         Purchase purchase = new Purchase();
         purchase.date_purchase = obj.date_purchase;
-        purchase.purchase_status = obj.purchase_status;
+        purchase.purchase_status =(PurchaseStatusEnum)obj.purchase_status;
         purchase.number_nf = obj.number_nf;
         purchase.purchase_value = obj.purchase_value;
         return purchase;

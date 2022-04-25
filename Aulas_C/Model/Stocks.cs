@@ -58,7 +58,6 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
         return true;
     }
 
-    
 
     public int save(int lojaID, int productID, int quantity, double unit_price)
     {
