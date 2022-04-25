@@ -16,11 +16,11 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     private List<Purchase> purchases = new List<Purchase>();
     public  List<StoreDTO> storeDTO = new List<StoreDTO>();
 
-
+    /* não sei se fica
     public Store(Owner owner)
     {
         this.owner = owner;
-    }
+    }*/
 
     public void addNewPurchase(Purchase purchase)
     {
@@ -105,17 +105,17 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     public StoreDTO convertModelToDTO()
     {
         var storeDTO = new StoreDTO();
-        StoreDTO.name = this.name;
-        StoreDTO.CNPJ = this.CNPJ;    
-        StoreDTO.Owner = this.owner.convertModelToDTO();
-        return StoreDTO;
+        storeDTO.name = this.name;
+        storeDTO.CNPJ = this.CNPJ;    
+        storeDTO.owner = this.owner.convertModelToDTO();
+        return storeDTO;
     }
 
     public static Store convertDTOToModel(StoreDTO obj){
         Store store = new Store();
         store.name = obj.name;
         store.CNPJ = obj.CNPJ;
-        store.Owner = Owner.convertDTOToModel(obj.owner);
+        store.owner = Owner.convertDTOToModel(obj.owner);
         return store;
     }
 
