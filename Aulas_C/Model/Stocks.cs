@@ -13,8 +13,8 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
 
     private int quantity;
     private double unit_price;
-    public List<StocksDTO> stocksDTO = new List<StocksDTO>();
 
+    public List<StocksDTO> stocksDTO = new List<StocksDTO>();
 
     public int getQuantity() 
     { 
@@ -60,21 +60,21 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
 
     
 
-    public int save(int lojaID, int productID, int quantidade, double unit_price)
+    public int save(int lojaID, int productID, int quantity, double unit_price)
     {
         var id = 0;
         using (var context = new LibraryContext())
         {
             var stocks = new DAO.Stocks
             {
-                quantity = this.quantidade,
-                unit_price = this.unit_price,
+                quantity = quantity,
+                unit_price = unit_price,
                 store = this.lojaID,
                 product = this.productID
             };
-            context.Product.Add(stocks);
+            context.Stocks.Add(stocks);
             context.SaveChanges();
-            id = stoks.id;
+            id = stocks.id;
         }
        return id;
     }
