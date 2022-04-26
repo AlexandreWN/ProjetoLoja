@@ -16,8 +16,8 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private DateTime date_purchase;
     private string number_confirmation;
     private string number_nf;
-    private PaymentEnum payment_type;
-    private PurchaseStatusEnum purchase_status;
+    private int payment_type;
+    private int purchase_status;
     private double purchase_value;
 
     public List<Product> getProducts()
@@ -66,22 +66,22 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         this.number_nf = number_nf; 
     }
 
-    public PaymentEnum getPaymentType()
+    public int getPaymentType()
     {
         return payment_type;
     }
-    public void setPaymentType(PaymentEnum payment_type)
+    public void setPaymentType(int payment_type)
     {
         this.payment_type = payment_type;
     } 
 
-    public PurchaseStatusEnum getPurchaseStatus()
+    public int getPurchaseStatus()
     {
         return purchase_status;
     }
     public void setPurchaseStatus(int purchase_status)
     {
-        this.purchase_status = (PurchaseStatusEnum)purchase_status;
+        this.purchase_status = purchase_status;
     }
 
     public double getValue(){
@@ -93,17 +93,19 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
     public bool validateObject()
     {
+        Console.WriteLine("a");
         if (this.getDatePurchase() == null) return false;
+        Console.WriteLine("b");
         if (this.getNumberConfirmation() == null) return false;
+        Console.WriteLine("c");
         if (this.getNumberNf() == null) return false;
-        if (this.getPaymentType() == null) return false;
-        if (this.getPurchaseStatus() == null) return false;
-        if (this.getValue() == null) return false;
+        Console.WriteLine("a");
+        if (this.getValue() == 0.0) return false;
         return true;
     }
 
-    public void updateStatus(){
-
+    public void updateStatus(int purchaseStatusEnum){
+        this.purchase_status = purchaseStatusEnum;
     }
     public void delete(PurchaseDTO obj){
 
@@ -123,8 +125,8 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
                 date_purchase = this.date_purchase,
                 number_confirmation = this.number_confirmation,
                 number_nf = this.number_nf,
-                payment_type = (int)this.payment_type,
-                purchase_status = (int)this.purchase_status,
+                payment_type =this.payment_type,
+                purchase_status = this.purchase_status,
                 purchase_value = this.purchase_value,
                 client =  clientDAO,
                 store = storeDAO,
@@ -162,7 +164,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     {
         var PurchaseDTO = new PurchaseDTO();
         PurchaseDTO.date_purchase = this.date_purchase;
-        PurchaseDTO.purchase_status =(int)this.purchase_status;
+        PurchaseDTO.purchase_status =this.purchase_status;
         PurchaseDTO.number_nf=this.number_nf;
         PurchaseDTO.purchase_value = this.purchase_value;
 
@@ -173,7 +175,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public static Purchase convertDTOToModel(PurchaseDTO obj){
         Purchase purchase = new Purchase();
         purchase.date_purchase = obj.date_purchase;
-        purchase.purchase_status =(PurchaseStatusEnum)obj.purchase_status;
+        purchase.purchase_status =obj.purchase_status;
         purchase.number_nf = obj.number_nf;
         purchase.purchase_value = obj.purchase_value;
         return purchase;

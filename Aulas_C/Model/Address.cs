@@ -135,7 +135,10 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
         return addressDTO;
     }
 
-    public static Address convertDTOToModel(AddressDTO obj){
+   
+    public static Address convertDTOToModel(AddressDTO obj)
+    {
         return new Address(obj.street, obj.city, obj.state, obj.country, obj.postal_code);
     }
+
 }   

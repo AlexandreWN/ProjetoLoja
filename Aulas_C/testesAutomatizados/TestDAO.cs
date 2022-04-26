@@ -654,6 +654,7 @@ namespace testesAutomatizados
             if(purchase.validateObject()){
                 id=purchase.save();
             }
+            Assert.That(id,Is.Not.EqualTo(0));
         }
 
         
