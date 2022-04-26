@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {}
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\DAO.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -122,14 +122,14 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\Enums.csproj",
         "projectName": "Enums",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\Enums.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -176,14 +176,14 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -230,14 +230,14 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -254,17 +254,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
+              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\DAO.csproj": {
+                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DAO\\DAO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
+              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj"
+              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\Enums.csproj": {
+                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Enums\\Enums.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\Interfaces\\Interfaces.csproj"
               }
             }
           }

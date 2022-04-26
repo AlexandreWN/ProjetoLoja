@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {}
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\aulas_c\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",

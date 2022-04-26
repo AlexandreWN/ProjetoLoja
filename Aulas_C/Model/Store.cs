@@ -15,13 +15,12 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
 
     private List<Purchase> purchases = new List<Purchase>();
     public  List<StoreDTO> storeDTO = new List<StoreDTO>();
-
-    /* não sei se fica
+/*
     public Store(Owner owner)
     {
         this.owner = owner;
-    }*/
-
+    }
+*/
     public void addNewPurchase(Purchase purchase)
     {
         purchases.Add(purchase);
@@ -118,5 +117,4 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         }
         return store;
     }
-
 }
