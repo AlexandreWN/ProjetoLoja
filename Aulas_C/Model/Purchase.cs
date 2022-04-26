@@ -96,11 +96,13 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         Console.WriteLine("a");
         if (this.getDatePurchase() == null) return false;
         Console.WriteLine("b");
-        if (this.getNumberConfirmation() == null) return false;
+      if (this.getValue() == 0.0) return false;
         Console.WriteLine("c");
         if (this.getNumberNf() == null) return false;
-        Console.WriteLine("a");
-        if (this.getValue() == 0.0) return false;
+        Console.WriteLine("d");
+        
+          if (this.getNumberConfirmation() == null) return false;
+            Console.WriteLine("e");
         return true;
     }
 
@@ -167,6 +169,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         PurchaseDTO.purchase_status =this.purchase_status;
         PurchaseDTO.number_nf=this.number_nf;
         PurchaseDTO.purchase_value = this.purchase_value;
+        PurchaseDTO.number_confirmation = this.number_confirmation;
 
         return PurchaseDTO;
     }
@@ -178,6 +181,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         purchase.purchase_status =obj.purchase_status;
         purchase.number_nf = obj.number_nf;
         purchase.purchase_value = obj.purchase_value;
+        purchase.number_confirmation = obj.number_confirmation;
         return purchase;
     }
 }
