@@ -93,16 +93,10 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
     public bool validateObject()
     {
-        Console.WriteLine("a");
         if (this.getDatePurchase() == null) return false;
-        Console.WriteLine("b");
       if (this.getValue() == 0.0) return false;
-        Console.WriteLine("c");
         if (this.getNumberNf() == null) return false;
-        Console.WriteLine("d");
-        
           if (this.getNumberConfirmation() == null) return false;
-            Console.WriteLine("e");
         return true;
     }
 
