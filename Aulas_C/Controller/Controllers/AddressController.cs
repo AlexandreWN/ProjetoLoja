@@ -1,13 +1,16 @@
+using System;
+using Model;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Controller.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[address]")]
 public class AddressController : ControllerBase{
     [HttpPost]
     [Route()]
-    public void registerAddress(AddressDTO address){
+    public void registerAddress([FromBody] AddressDTO address){
 
     }
     [HttpDelete]
