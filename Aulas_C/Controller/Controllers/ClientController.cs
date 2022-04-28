@@ -5,12 +5,15 @@ namespace Controller.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class ClientController : ControllerBase{
+    [HttpPost]
+    [Route()]
     public void registerOwner(ClientDTO client){
 
     }
 
     [HttpGet]
-    public int getInformations(){
+    [Route()]
+    public void getInformations(){
 
     }
 }

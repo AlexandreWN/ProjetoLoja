@@ -6,15 +6,19 @@ namespace Controller.Controllers;
 [Route("[controller]")]
 public class PurchaseController : ControllerBase{
     [HttpGet]
-    public int getClientPurchase(int clientID){
+    [Route()]
+    public void getClientPurchase(int clientID){
         
     }
 
     [HttpGet]
-    public int getStorePurchase(int storeID){
+    [Route()]
+    public void getStorePurchase(int storeID){
 
     }
 
+    [HttpPost]
+    [Route()]
     public void makePurchase(PurchaseDTO purchase){
         
     }
