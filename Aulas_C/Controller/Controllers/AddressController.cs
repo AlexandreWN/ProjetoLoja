@@ -13,7 +13,10 @@ public class AddressController : ControllerBase {
     public object registerAddress([FromBody] AddressDTO address){
         return new {
             street = address.street,
-            state = address.state
+            state = address.state,
+            city = address.city,
+            country = address.country,
+            postal_code = address.postal_code
         };
     }
 }
