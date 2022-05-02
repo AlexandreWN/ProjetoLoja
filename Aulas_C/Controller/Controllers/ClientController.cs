@@ -1,22 +1,26 @@
+using System;
+using Model;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
+
 [ApiController]
 [Route("[controller]")]
 public class ClientController : ControllerBase{
 
     [HttpPost]
     [Route("register")]
-    public object resgisterClient([FromBody] ClinentDTO clinent){
+    public object resgisterClient([FromBody] ClientDTO client){
         return new {
-            id = clinent.id,
-            name = clinent.name,
-            date_of_birth = clinent.date_of_birth,
-            document = clinent.document,
-            email = clinent.email,
-            phone = clinent.phone,
-            login = clinent.login,
-            passwd = clinent.passwd,
-            address = clinent.address
+            id = client.id,
+            name = client.name,
+            date_of_birth = client.date_of_birth,
+            document = client.document,
+            email = client.email,
+            phone = client.phone,
+            login = client.login,
+            passwd = client.passwd,
+            address = client.address
         };
     }
 }

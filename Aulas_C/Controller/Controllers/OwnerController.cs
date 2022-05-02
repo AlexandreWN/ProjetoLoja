@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
 
 [ApiController]
-[Route("Owner")]
+[Route("[controller]")]
 public class OwnerController : ControllerBase{
     
     [HttpPost]
