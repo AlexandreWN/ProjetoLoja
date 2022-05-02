@@ -9,7 +9,7 @@ namespace Controller.Controllers;
 public class OwnerController : ControllerBase{
     
     [HttpPost]
-    [Route("register1")]
+    [Route("register")]
     public object registerOwner([FromBody] OwnerDTO owner){
         return new {
             id = owner.id,
