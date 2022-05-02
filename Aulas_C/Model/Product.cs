@@ -36,6 +36,15 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     }
 
 
+    public ProductDTO find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var product = convertDAOToDTO(context.Product.Where(a => a.id == id).Single());
+              return product;
+        }
+      
+    }
+
     public int save()
     {
         var id = 0;

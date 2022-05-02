@@ -25,8 +25,8 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
     public AddressDTO find(int id){
         using(var context = new DAO.LibraryContext())
         {
-            var address = context.Address.Where(a => a.id == id).Single();
-              return Address.convertDAOToDTO(address);
+            var address = convertDAOToDTO(context.Address.Where(a => a.id == id).Single());
+              return address;
         }
       
     }
