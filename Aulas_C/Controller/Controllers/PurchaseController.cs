@@ -12,7 +12,6 @@ public class PurchaseController : ControllerBase{
     [Route("register")]
     public object makePurchase([FromBody] PurchaseDTO purchase){
               return new{
-                    id = purchase.id,
                     date_purchase = purchase.date_purchase,
                     purchase_value = purchase.purchase_value,
                     payment_type = purchase.payment_type,

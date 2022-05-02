@@ -22,6 +22,15 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
         this.postal_code = postal_code;
     }
 
+    public AddressDTO find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var address = context.Address.Where(a => a.id == id).Single();
+              return Address.convertDAOToDTO(address);
+        }
+      
+    }
+
     public string getStreet() 
     {  
         return street; 
@@ -139,6 +148,21 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
     public static Address convertDTOToModel(AddressDTO obj)
     {
         return new Address(obj.street, obj.city, obj.state, obj.country, obj.postal_code);
+    }
+    public static AddressDTO convertDAOToDTO(DAO.Address obj){
+        var addressDTO = new AddressDTO();
+
+        addressDTO.street = obj.street;
+
+        addressDTO.state = obj.state;
+
+        addressDTO.city = obj.city;
+
+        addressDTO.country = obj.country;
+
+        addressDTO.postal_code = obj.postal_code;
+
+        return addressDTO;
     }
 
 }   
