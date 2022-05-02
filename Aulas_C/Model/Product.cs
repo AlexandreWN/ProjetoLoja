@@ -79,4 +79,11 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         product.bar_code = obj.bar_code;
         return product;
     }
+    public ProductDTO convertDAOToDTO(DAO.Product obj)
+    {
+        var productDTO = new ProductDTO();
+        productDTO.name = obj.name;
+        productDTO.bar_code = obj.bar_code;
+        return productDTO;
+    }
 }
