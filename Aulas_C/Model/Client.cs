@@ -4,6 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Client>
 {
     private Guid uuid;
@@ -25,6 +26,14 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         this.uuid = uuid;
     }
 
+        public ClientDTO find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var client = convertDAOToDTO(context.Client.Include(e=> e.address).FirstOrDefault(a => a.id == id));
+              return client;
+        }
+      
+    }
     public bool validateObject()
     {
         if (this.getAddress() == null) return false;
@@ -113,5 +122,18 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         client.login = obj.login;
         client.passwd = obj.passwd;
         return client;
+    }
+
+        public ClientDTO convertDAOToDTO(DAO.Client obj)
+    {
+        var clientDTO = new ClientDTO();
+        clientDTO.name = obj.name;
+        clientDTO.date_of_birth = obj.date_of_birth;
+        clientDTO.document = obj.document;
+        clientDTO.email = obj.email;
+        clientDTO.phone = obj.phone;
+        clientDTO.login = obj.login;
+        clientDTO.passwd = obj.passwd;
+        return clientDTO;
     }
 }
