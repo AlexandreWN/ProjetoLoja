@@ -19,7 +19,7 @@ public class PurchaseController : ControllerBase{
                     number_confirmation = purchase.number_confirmation,
                     number_nf = purchase.number_nf,
                     client = purchase.client,
-                    store = purchase.state,
+                    store = purchase.store,
                     productsDTO = purchase.productsDTO
               };
     }

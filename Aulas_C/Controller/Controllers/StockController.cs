@@ -9,13 +9,12 @@ namespace Controller.Controllers;
 public class StockController : ControllerBase{
     [HttpPost]
     [Route("register")]
-    public object addProductToStock([FromBody] StockDTO stock){
-              return new {
-                        unit_price = stock.unit_price,
-                        quantity = stock.quantity,
-                        store = stock.store,
-                        product = stock.product
-                        
-              };
+    public object addProductToStock([FromBody] StocksDTO stock){
+        return new {
+            unit_price = stock.unit_price,
+            quantity = stock.quantity,
+            store = stock.store,
+            product = stock.product
+        };
     }
 }
