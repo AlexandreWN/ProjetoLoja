@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
 
 [ApiController]
-[Route("Address")]
+[Route("[controller]")]
 public class AddressController : ControllerBase {
     [HttpPost]
     [Route("register")]
