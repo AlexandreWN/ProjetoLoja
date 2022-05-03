@@ -36,11 +36,28 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     }
 
 
-    public ProductDTO find(int id){
+    public static object find(int id){
         using(var context = new DAO.LibraryContext())
         {
-            var product = convertDAOToDTO(context.Product.Where(a => a.id == id).Single());
+            var productDTO = context.Product.FirstOrDefault(a => a.id == id);
               return product;
+        }
+      
+    }
+    public static object find(string document){
+        using(var context = new DAO.LibraryContext())
+        {
+            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+                return new{
+                nome = clientDTO.name,
+                date_of_birth = clientDTO.date_of_birth,
+                document = clientDTO.document,
+                email  = clientDTO.email,
+                phone = clientDTO.phone,
+                login = clientDTO.login,
+                passwd = clientDTO.passwd,
+                address = clientDTO.address
+            };
         }
       
     }
@@ -87,12 +104,5 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         product.name = obj.name;
         product.bar_code = obj.bar_code;
         return product;
-    }
-    public ProductDTO convertDAOToDTO(DAO.Product obj)
-    {
-        var productDTO = new ProductDTO();
-        productDTO.name = obj.name;
-        productDTO.bar_code = obj.bar_code;
-        return productDTO;
     }
 }

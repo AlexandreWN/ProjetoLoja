@@ -15,5 +15,12 @@ public class ProductController : ControllerBase{
             bar_code = product.bar_code,
         };
     }
+
+    [HttpPost]
+    [Route("get")]
+    public object allProducts(){
+        var prod = Model.Product.getAll();
+        return prod;
+    }
 }
 
