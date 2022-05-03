@@ -27,8 +27,8 @@ public class ClientController : ControllerBase{
 
     [HttpPost]
     [Route("get/{id}")]
-    public object getInformation(int id){
-        var client = Model.Client.find(id);
+    public object getInformations(int id){
+        var client = Model.Client.findClient(id);
         return client;
     }
 }

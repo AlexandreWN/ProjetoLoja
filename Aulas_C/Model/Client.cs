@@ -26,7 +26,7 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         this.uuid = uuid;
     }
 
-        public static object find(int id){
+        public static object findClient(int id){
         using(var context = new DAO.LibraryContext())
         {
             var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.id == id);
