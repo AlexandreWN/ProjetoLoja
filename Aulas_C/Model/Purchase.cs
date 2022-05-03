@@ -172,7 +172,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         public static List<object> getClientPurchases(int clientID){
         using(var context = new DAO.LibraryContext())
         {
-            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.id == storeID);
+            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.id == clientID);
 
             List<object> compras = new List<object>();
             foreach(var comp in clientPurchase){
