@@ -17,4 +17,12 @@ public class StoreController : ControllerBase{
             purchase = store.purchase,
         };
     }
+
+     [HttpGet]
+    [Route("get/{id}")]
+     public object getStoreInformations(string id){
+        var store = Model.Store.find(id);
+        return store;
+    }
+
 }

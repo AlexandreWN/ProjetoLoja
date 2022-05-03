@@ -156,19 +156,20 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         return this.purchaseDTO;      
     }
 
-    public static List<PurchaseDTO> getClientPurchases(int clientID){
+        public static List<object> getStorePurchases(int storeID){
         using(var context = new DAO.LibraryContext())
         {
-            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.store).Where(p => p.client.id == clientID);
-            List<PurchaseDTO> compras = new List<PurchaseDTO>();
-            foreach(var comp in clientPurchase){
-                compras.Add(convertDAOToModel(comp).convertModelToDTO());
+            var storePurchase = context.Purchase.Where(p => p.store.id == storeID);
+
+            List<object> compras = new List<object>();
+            foreach(var comp in storePurchase){
+               compras.Add(comp);
             }
             return compras;
         }
       
     }
-        public static List<object> getStorePurchases(int storeID){
+        public static List<object> getClientPurchases(int clientID){
         using(var context = new DAO.LibraryContext())
         {
             var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.id == storeID);
@@ -181,7 +182,6 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         }
       
     }
-
 
 
     public PurchaseDTO convertModelToDTO()

@@ -7,6 +7,7 @@ using Interfaces;
 using DAO;
 using DTO;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
 {
     private Owner owner;
@@ -47,6 +48,18 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         return purchases; 
     }
 
+     public static object find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var storeDTO = context.Store.Include(p=> p.owner).FirstOrDefault(a => a.id == id);
+                return new{
+                    name = storeDTO.name,
+                    CNPJ = storeDTO.CNPJ,
+                    owner = storeDTO.owner
+            };
+        }
+      
+    }
     public Owner getOwner()
     {
         return owner;
