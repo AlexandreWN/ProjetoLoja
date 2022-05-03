@@ -199,4 +199,15 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         purchase.number_confirmation = obj.number_confirmation;
         return purchase;
     }
+
+    public static Purchase convertDAOToModel(DAO.Purchase obj){
+        var purchase = new Purchase();
+        purchase.date_purchase = obj.date_purchase;
+        purchase.purchase_status = obj.purchase_status;
+        purchase.number_nf= obj.number_nf;
+        purchase.purchase_value = obj.purchase_value;
+        purchase.number_confirmation = obj.number_confirmation;
+
+        return purchase;
+    }
 }
