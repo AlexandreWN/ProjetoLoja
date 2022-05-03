@@ -2,6 +2,7 @@ using System;
 using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 namespace Controller.Controllers;
 
 [ApiController]
@@ -28,6 +29,7 @@ public class ClientController : ControllerBase{
     [Route("get/{id}")]
     public object getInformation(int id){
         var client = Model.Client.find(id);
+        return client;
     }
 }
 
