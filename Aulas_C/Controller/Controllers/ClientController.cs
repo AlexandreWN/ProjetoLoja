@@ -2,6 +2,7 @@ using System;
 using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 namespace Controller.Controllers;
 
 [ApiController]
