@@ -4,7 +4,6 @@ using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
 
-
 [ApiController]
 [Route("[controller]")]
 public class PurchaseController : ControllerBase{
@@ -25,16 +24,16 @@ public class PurchaseController : ControllerBase{
     }
 
     [HttpGet]
-    [Route("get/{id}")]
+    [Route("getClient/{id}")]
     public List<PurchaseDTO> getClientPurchase(int id){
         var purchase = Model.Purchase.getClientPurchases(id);
         return purchase;
     }
 
     [HttpGet]
-    [Route("get/{id}")]
-    public PurchaseDTO getStorePurchase(int id){
-        var purchase = Model.Purchase.find(id);
+    [Route("getStore/{id}")]
+    public List<object> getStorePurchase(int id){
+        var purchase = Model.Purchase.getStorePurchases(id);
         return purchase;
     }
 }

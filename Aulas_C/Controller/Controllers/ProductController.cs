@@ -16,10 +16,10 @@ public class ProductController : ControllerBase{
         };
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("get")]
-    public object allProducts(){
-        var prod = Model.Product.getAll();
+    public object getAllProducts(){
+        var prod = Model.Product.getAllProducts();
         return prod;
     }
 }

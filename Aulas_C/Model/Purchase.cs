@@ -8,6 +8,7 @@ using DAO;
 using DTO;
 using Interfaces;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchase>
 {
     private List<Product> products = new List<Product>();
@@ -158,7 +159,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public static List<PurchaseDTO> getClientPurchases(int clientID){
         using(var context = new DAO.LibraryContext())
         {
-            var clientPurchase = context.Purchase.Where(p => p.client.id == clientID);
+            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.store).Where(p => p.client.id == clientID);
             List<PurchaseDTO> compras = new List<PurchaseDTO>();
             foreach(var comp in clientPurchase){
                 compras.Add(convertDAOToModel(comp).convertModelToDTO());
@@ -170,7 +171,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         public static List<object> getStorePurchases(int storeID){
         using(var context = new DAO.LibraryContext())
         {
-            var clientPurchase = context.Purchase.Where(p => p.client.id == storeID);
+            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.id == storeID);
 
             List<object> compras = new List<object>();
             foreach(var comp in clientPurchase){

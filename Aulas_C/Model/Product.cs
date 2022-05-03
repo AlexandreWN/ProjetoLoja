@@ -4,6 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
 { 
     private string name;
@@ -40,26 +41,21 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         using(var context = new DAO.LibraryContext())
         {
             var productDTO = context.Product.FirstOrDefault(a => a.id == id);
-              return product;
+              return productDTO;
         }
       
     }
-    public static object find(string document){
+    public static List<object> getAllProducts(){
         using(var context = new DAO.LibraryContext())
         {
-            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.document == document);
-                return new{
-                nome = clientDTO.name,
-                date_of_birth = clientDTO.date_of_birth,
-                document = clientDTO.document,
-                email  = clientDTO.email,
-                phone = clientDTO.phone,
-                login = clientDTO.login,
-                passwd = clientDTO.passwd,
-                address = clientDTO.address
-            };
+            var allProducts = context.Product;
+
+            List<object> products = new List<object>();
+            foreach(var prod in allProducts){
+               products.Add(prod);
+            }
+            return products;
         }
-      
     }
 
     public int save()
