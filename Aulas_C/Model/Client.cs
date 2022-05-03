@@ -26,11 +26,11 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         this.uuid = uuid;
     }
 
-        public static object find(int id){
+    public static object find(string document){
         using(var context = new DAO.LibraryContext())
         {
-            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.id == id);
-              return new{
+            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+                return new{
                 nome = clientDTO.name,
                 date_of_birth = clientDTO.date_of_birth,
                 document = clientDTO.document,
@@ -39,7 +39,7 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
                 login = clientDTO.login,
                 passwd = clientDTO.passwd,
                 address = clientDTO.address
-              };
+            };
         }
       
     }

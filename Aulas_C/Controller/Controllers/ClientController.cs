@@ -24,10 +24,11 @@ public class ClientController : ControllerBase{
         };
     }
 
-    [HttpPost]
-    [Route("get/{id}")]
-    public object getInformation(int id){
-        var client = Model.Client.find(id);
+    [HttpGet]
+    [Route("get/{document}")]
+    public object getInformations(string document){
+        var client = Model.Client.find(document);
+        return client;
     }
 }
 
