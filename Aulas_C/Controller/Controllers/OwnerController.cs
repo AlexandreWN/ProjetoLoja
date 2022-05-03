@@ -23,4 +23,11 @@ public class OwnerController : ControllerBase{
             address = owner.address
         };
     }
+
+     [HttpGet]
+    [Route("get/{document}")]
+    public object getInformations(string document){
+        var owner = Model.Owner.find(document);
+        return owner;
+    }
 }

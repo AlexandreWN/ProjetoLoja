@@ -4,6 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner> 
 {
     private Guid uuid;
@@ -27,6 +28,25 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
         this.uuid = uuid;
     }
 
+
+ public static object find(string document){
+
+        using(var context = new DAO.LibraryContext())
+        {
+            var ownerDTO = context.Owner.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+                return new{
+                nome = ownerDTO.name,
+                date_of_birth = ownerDTO.date_of_birth,
+                document = ownerDTO.document,
+                email  = ownerDTO.email,
+                phone = ownerDTO.phone,
+                login = ownerDTO.login,
+                passwd = ownerDTO.passwd,
+                address = ownerDTO.address
+            };
+        }
+      
+    }
     public bool validateObject()
     {
         if(this.getId() == null) return false;
