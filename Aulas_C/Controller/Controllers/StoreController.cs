@@ -20,7 +20,7 @@ public class StoreController : ControllerBase{
 
      [HttpGet]
     [Route("get/{id}")]
-     public object getStoreInformations(string id){
+     public object getStoreInformations(int id){
         var store = Model.Store.find(id);
         return store;
     }

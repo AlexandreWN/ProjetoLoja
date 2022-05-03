@@ -56,7 +56,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
                     name = storeDTO.name,
                     CNPJ = storeDTO.CNPJ,
                     owner = storeDTO.owner
-            };
+                };
         }
       
     }

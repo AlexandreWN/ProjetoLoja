@@ -10,7 +10,10 @@ public class ProductController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object createProduct([FromBody] ProductDTO product){
+        var productModel = Model.Product.convertDTOToModel(product);
+        var id = productModel.save();
         return new{
+            id = id,
             name = product.name,
             bar_code = product.bar_code,
         };

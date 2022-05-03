@@ -11,8 +11,10 @@ public class OwnerController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object registerOwner([FromBody] OwnerDTO owner){
+        var ownerModel = Model.Owner.convertDTOToModel(owner);
+        var id = ownerModel.save();
         return new {
-            id = owner.id,
+            id = id,
             name = owner.name,
             date_of_birth = owner.date_of_birth,
             document = owner.document,

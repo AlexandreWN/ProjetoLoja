@@ -10,7 +10,10 @@ public class PurchaseController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object makePurchase([FromBody] PurchaseDTO purchase){
+        var purchaseModel = Model.Purchase.convertDTOToModel(purchase);
+        var id = purchaseModel.save();
         return new{
+            id = id,
             date_purchase = purchase.date_purchase,
             purchase_value = purchase.purchase_value,
             payment_type = purchase.payment_type,
@@ -25,7 +28,7 @@ public class PurchaseController : ControllerBase{
 
     [HttpGet]
     [Route("getClient/{id}")]
-    public List<PurchaseDTO> getClientPurchase(int id){
+    public List<object> getClientPurchase(int id){
         var purchase = Model.Purchase.getClientPurchases(id);
         return purchase;
     }
