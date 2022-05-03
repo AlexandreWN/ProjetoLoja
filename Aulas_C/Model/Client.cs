@@ -26,11 +26,20 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         this.uuid = uuid;
     }
 
-        public ClientDTO find(int id){
+        public static object find(int id){
         using(var context = new DAO.LibraryContext())
         {
-            var client = convertDAOToDTO(context.Client.Include(e=> e.address).FirstOrDefault(a => a.id == id));
-              return client;
+            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.id == id);
+              return new{
+                nome = clientDTO.name,
+                date_of_birth = clientDTO.date_of_birth,
+                document = clientDTO.document,
+                email  = clientDTO.email,
+                phone = clientDTO.phone,
+                login = clientDTO.login,
+                passwd = clientDTO.passwd,
+                address = clientDTO.address
+              };
         }
       
     }
@@ -122,18 +131,5 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         client.login = obj.login;
         client.passwd = obj.passwd;
         return client;
-    }
-
-        public ClientDTO convertDAOToDTO(DAO.Client obj)
-    {
-        var clientDTO = new ClientDTO();
-        clientDTO.name = obj.name;
-        clientDTO.date_of_birth = obj.date_of_birth;
-        clientDTO.document = obj.document;
-        clientDTO.email = obj.email;
-        clientDTO.phone = obj.phone;
-        clientDTO.login = obj.login;
-        clientDTO.passwd = obj.passwd;
-        return clientDTO;
     }
 }

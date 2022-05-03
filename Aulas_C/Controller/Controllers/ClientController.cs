@@ -23,4 +23,11 @@ public class ClientController : ControllerBase{
             address = client.address
         };
     }
+
+    [HttpPost]
+    [Route("get/{id}")]
+    public object getInformation(int id){
+        var client = Model.Client.find(id);
+    }
 }
+
