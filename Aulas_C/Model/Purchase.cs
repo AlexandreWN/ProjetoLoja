@@ -155,7 +155,28 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         return this.purchaseDTO;      
     }
 
-   
+    public static List<PurchaseDTO> getClientPurchases(int clientID){
+        using(var context = new DAO.LibraryContext())
+        {
+            var clientPurchase = context.Purchase.Where(p => p.client.id == clientID);
+            List<PurchaseDTO> compras = new List<PurchaseDTO>();
+            foreach(var comp in clientPurchase){
+                compras.Add(convertDAOToModel(comp).convertModelToDTO());
+            }
+            return compras;
+        }
+      
+    }
+
+    public static PurchaseDTO find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var clientPurchase = convertDAOToModel(context.Purchase.FirstOrDefault(p => p.id == id)).convertModelToDTO();
+            return clientPurchase;
+        }
+      
+    }
+
     public PurchaseDTO convertModelToDTO()
     {
         var PurchaseDTO = new PurchaseDTO();
