@@ -30,11 +30,11 @@ public class PurchaseController : ControllerBase{
         var purchase = Model.Purchase.getClientPurchases(id);
         return purchase;
     }
-/*
+
     [HttpGet]
     [Route("get/{id}")]
     public PurchaseDTO getStorePurchase(int id){
         var purchase = Model.Purchase.find(id);
         return purchase;
-    }*/
+    }
 }
