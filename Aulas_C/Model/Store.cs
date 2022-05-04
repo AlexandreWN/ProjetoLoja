@@ -60,6 +60,14 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         }
       
     }
+    public static int findID(string CNPJ){
+        using(var context = new DAO.LibraryContext())
+        {
+            var storeDTO = context.Store.Include(p=> p.owner).FirstOrDefault(a => a.CNPJ == CNPJ);
+            return storeDTO.id;
+        }
+      
+    }
     public Owner getOwner()
     {
         return owner;

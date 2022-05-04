@@ -45,6 +45,15 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         }
       
     }
+
+    public static int findID(string bar_code){
+        using(var context = new DAO.LibraryContext())
+        {
+            var product = context.Product.FirstOrDefault(a => a.bar_code == bar_code);
+            return product.id;
+        }
+      
+    }
     public static List<object> getAllProducts(){
         using(var context = new DAO.LibraryContext())
         {

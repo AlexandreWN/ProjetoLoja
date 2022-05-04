@@ -20,7 +20,7 @@ public class ProductController : ControllerBase{
     }
 
     [HttpGet]
-    [Route("get")]
+    [Route("getAll")]
     public object getAllProducts(){
         var prod = Model.Product.getAllProducts();
         return prod;
