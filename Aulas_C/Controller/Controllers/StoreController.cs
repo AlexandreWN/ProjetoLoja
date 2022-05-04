@@ -11,7 +11,7 @@ public class StoreController : ControllerBase{
     [Route("register")]
     public object registerStore([FromBody] StoreDTO store){
         var storeModel = Model.Store.convertDTOToModel(store);
-        var id = storeModel.save();
+        var id = storeModel.save(Owner.findId(storeModel.getOwner().getDocument()));
         return new{
             id = id,
             name = store.name,

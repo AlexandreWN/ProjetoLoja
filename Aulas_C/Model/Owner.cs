@@ -33,20 +33,28 @@ public class Owner : Person, IValidateDataObject,IDataController<OwnerDTO,Owner>
 
         using(var context = new DAO.LibraryContext())
         {
-            var ownerDTO = context.Owner.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+            var ownerDAO = context.Owner.Include(e=> e.address).FirstOrDefault(a => a.document == document);
                 return new{
-                nome = ownerDTO.name,
-                date_of_birth = ownerDTO.date_of_birth,
-                document = ownerDTO.document,
-                email  = ownerDTO.email,
-                phone = ownerDTO.phone,
-                login = ownerDTO.login,
-                passwd = ownerDTO.passwd,
-                address = ownerDTO.address
+                id = ownerDAO.id,
+                nome = ownerDAO.name,
+                date_of_birth = ownerDAO.date_of_birth,
+                document = ownerDAO.document,
+                email  = ownerDAO.email,
+                phone = ownerDAO.phone,
+                login = ownerDAO.login,
+                passwd = ownerDAO.passwd,
+                address = ownerDAO.address
             };
         }
       
     }
+public static int findId(string document){
+    using(var context = new DAO.LibraryContext()){
+        var ownerDAO = context.Owner.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+        int id = ownerDAO.id;
+        return id;
+    }
+}
     public bool validateObject()
     {
         if(this.getId() == null) return false;
