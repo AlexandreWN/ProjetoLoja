@@ -7,16 +7,23 @@ namespace Controller.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WishListController : ControllerBase{
-    /*
     [HttpPost]
     [Route("register")]
     public object addProductToWishList([FromBody] WishListDTO wishList){
-        var wishListModel = Model.WishList.convertDTOToModel(wishList);
-        var id = wishListModel.save();
+        WishList wishList1 = WishList.convertDTOToModel(wishList);
+
+        List<object> products = new List<object>();
+        foreach(var prod in wishList1.getProducts()){
+            wishList.save((wishList.getClient.getDocument(), prod.findID));
+            products.Add(new{
+                nome = prod.getName(),
+                bar_code = prod.getBarCode()
+            });
+        }
+
         return new{
             client = wishList.client,
-            product = wishList.product
+            produtos = products
         };
     }
-    */
 }
