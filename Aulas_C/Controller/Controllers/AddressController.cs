@@ -11,7 +11,10 @@ public class AddressController : ControllerBase {
     [HttpPost]
     [Route("register")]
     public object registerAddress([FromBody] AddressDTO address){
+        var addressModel = Model.Address.convertDTOToModel(address);
+        var id = addressModel.save();
         return new {
+            id = id,
             street = address.street,
             state = address.state,
             city = address.city,
