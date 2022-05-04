@@ -10,7 +10,10 @@ public class StoreController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object registerStore([FromBody] StoreDTO store){
+        var storeModel = Model.Store.convertDTOToModel(store);
+        var id = storeModel.save();
         return new{
+            id = id,
             name = store.name,
             CNPJ = store.CNPJ,
             owner  = store.owner,
