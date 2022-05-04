@@ -11,6 +11,7 @@ public class StockController : ControllerBase{
     [Route("register")]
     public object addProductToStock([FromBody] StocksDTO stock){
         var stockModel = Model.Stocks.convertDTOToModel(stock);
+        var id = stockModel.save();
         return new {
             unit_price = stock.unit_price,
             quantity = stock.quantity,
