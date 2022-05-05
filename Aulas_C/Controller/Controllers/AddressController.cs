@@ -22,6 +22,18 @@ public class AddressController : ControllerBase {
             postal_code = address.postal_code
         };
     }
+
+    [HttpDelete]
+    [Route("delete/{id}")]
+    public object removeAdress(int id){
+        try{
+            var address = Model.Address.removeAdress(id);
+            return address;
+        }
+        catch(Exception){
+            return ("Erro ao deletar");
+        }  
+    }
 }
 
 

@@ -60,7 +60,17 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     public void delete(ClientDTO obj){
 
     }
-
+    public static string removeClient(string document){
+         using(var context = new LibraryContext())
+        {
+            
+            var client = context.Client.FirstOrDefault(e=>e.document == document);
+           
+            context.Remove(client);
+            context.SaveChanges();
+            return " foi removido!";
+        }
+    }
     public int save(){
         var id = 0;
 

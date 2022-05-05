@@ -4,6 +4,7 @@ using DAO;
 using DTO;
 using System.Collections.Generic;
 namespace Model;
+using Microsoft.EntityFrameworkCore;
 public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
 { 
     private string street;
@@ -31,6 +32,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
       
     }
 
+    
     public string getStreet() 
     {  
         return street; 
@@ -109,6 +111,20 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
 
         }
          return id;
+    }
+    public static string removeAdress(int id){
+        using(var context = new LibraryContext())
+        {
+            
+            var address = context.Address.FirstOrDefault(e=>e.id == id);
+            var clientesEndereco = context.Client.Include(c=>c.address).Where(c=>c.address.id == id);
+            
+            context.Remove(address);
+            context.SaveChanges();
+            return id+" Endereço removido!";
+        }
+        
+        
     }
 
     public void update(AddressDTO obj){
