@@ -10,11 +10,11 @@ public class WishListController : ControllerBase{
     [HttpPost]
     [Route("register")]
     public object addProductToWishList([FromBody] WishListDTO wishList){
-        WishList wishList1 = WishList.convertDTOToModel(wishList);
+        WishList wishListDAO = WishList.convertDTOToModel(wishList);
 
         List<object> products = new List<object>();
-        foreach(var prod in wishList1.getProducts()){
-            wishList.save((wishList.getClient.getDocument(), prod.findID));
+        foreach(var prod in wishListDAO.getProducts()){
+            wishListDAO.save((wishListDAO.get, prod.findID));
             products.Add(new{
                 nome = prod.getName(),
                 bar_code = prod.getBarCode()
