@@ -13,8 +13,9 @@ public class WishListController : ControllerBase{
         WishList wishListDAO = WishList.convertDTOToModel(wishList);
 
         List<object> products = new List<object>();
-        foreach(var prod in wishListDAO.getProducts()){
-            wishListDAO.save((wishListDAO.get, prod.findID));
+
+        foreach(var prod in wishList1.getProducts()){
+            wishList1.save((wishList1.getClient().getDocument(), Product.findID(prod.getBarCode())));
             products.Add(new{
                 nome = prod.getName(),
                 bar_code = prod.getBarCode()
