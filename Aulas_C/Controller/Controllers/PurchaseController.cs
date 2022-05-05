@@ -39,4 +39,16 @@ public class PurchaseController : ControllerBase{
         var purchase = Model.Purchase.getStorePurchases(id);
         return purchase;
     }
+
+    [HttpDelete]
+    [Route("delete/{id}")]
+    public object removePurchase(int id){
+        try{
+            var purchase = Model.Purchase.removePurchase(id);
+            return purchase;
+        }
+        catch(Exception){
+            return ("Erro ao deletar");
+        }  
+    }
 }

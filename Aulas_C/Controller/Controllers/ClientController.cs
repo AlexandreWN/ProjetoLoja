@@ -39,13 +39,13 @@ public class ClientController : ControllerBase{
      [HttpDelete]
     [Route("delete/{document}")]
     public object removeClient(string document){
-      //  try{
+        try{
             var client = Model.Client.removeClient(document);
             return client;
-       // }
-       // catch(Exception){
-      //      return ("Erro ao deletar");
-       // }  
+        }
+        catch(Exception){
+            return ("Erro ao deletar");
+        }  
     }
 }
 
