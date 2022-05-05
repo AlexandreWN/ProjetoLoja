@@ -9,12 +9,12 @@ namespace Controller.Controllers;
 public class WishListController : ControllerBase{
     [HttpPost]
     [Route("register")]
-    public object addProductToWishList([FromBody] WishListDTO wishList){
-        WishList wish = WishList.convertDTOToModel(wishList);
+    public object addProductToWishList([FromBody] WishListDTO request){
+        WishList wishlist = WishList.convertDTOToModel(request);
 
         List<object> products = new List<object>();
-        foreach(var prod in wish.getProducts()){
-            WishList.save(wish.getClient().getDocument(), Product.findID(prod.getBarCode()));
+        foreach(var prod in wishlist.getProducts()){
+            wishlist.save(wishlist.getClient().getDocument(), prod.findID());
             products.Add(new{
                 nome = prod.getName(),
                 bar_code = prod.getBarCode()
@@ -22,7 +22,7 @@ public class WishListController : ControllerBase{
         }
 
         return new{
-            client = wishList.client,
+            client = request.client,
             produtos = products
         };
     }
