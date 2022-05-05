@@ -1,0 +1,9 @@
+<div class="productComponent" *ngFor="let product of products">
+    <h3>
+        <a [title]="product.name + 'product.description'">
+            {{product.name}}
+            {{product.description}}
+        </a>
+
+    </h3>
+</div>
