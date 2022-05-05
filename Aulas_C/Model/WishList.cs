@@ -45,7 +45,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
 
     }
 
-    public static int save(string document, int product){
+    public int save(string document, int product){
         var id = 0;
 
 

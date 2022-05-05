@@ -2,12 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\console",
+    "\\Controller",
+    "\\Controller\\Controllers",
     "\\DAO",
     "\\DTO",
     "\\Interfaces",
     "\\Model",
     "\\testesAutomatizados"
   ],
-  "SelectedNode": "\\Model\\Client.cs",
+  "SelectedNode": "\\Model\\WishList.cs",
   "PreviewInSolutionExplorer": false
 }
