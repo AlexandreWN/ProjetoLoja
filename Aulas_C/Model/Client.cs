@@ -43,6 +43,15 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         }
       
     }
+
+    public static int findID(string document){
+        using(var context = new DAO.LibraryContext())
+        {
+            var clientDTO = context.Client.Include(e=> e.address).FirstOrDefault(a => a.document == document);
+            return clientDTO.id;
+        }
+      
+    }
     public bool validateObject()
     {
         if (this.getAddress() == null) return false;

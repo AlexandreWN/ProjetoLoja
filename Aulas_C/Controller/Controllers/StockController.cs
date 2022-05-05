@@ -12,7 +12,7 @@ public class StockController : ControllerBase{
     public object addProductToStock([FromBody] StocksDTO stock){
         var stockModel = Model.Stocks.convertDTOToModel(stock);
         var StoreID = Store.findID(stockModel.getStore().getCNPJ());
-        var ProductID = Product.findID(stockModel.getProduct().getBarCode());
+        var ProductID = (stockModel.getProduct()).findID();
         var quantity = stock.quantity;
         var unit_price = stock.unit_price;
         var id = stockModel.save(StoreID,ProductID,quantity,unit_price);

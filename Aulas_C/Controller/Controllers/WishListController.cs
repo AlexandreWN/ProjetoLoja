@@ -11,8 +11,10 @@ public class WishListController : ControllerBase{
     [Route("register")]
 
     public object addProductToWishList([FromBody] WishListDTO request){
-        WishList wishlist = WishList.convertDTOToModel(request);
+        var wishlistModel = Model.WishList.convertDTOToModel(request);
+        var clientModel = wishlistModel.getClient();
 
+<<<<<<< HEAD
         List<object> products = new List<object>();
         foreach(var prod in wishlist.getProducts()){
             wishlist.save(wishlist.getClient().getDocument(), 1);
@@ -21,11 +23,14 @@ public class WishListController : ControllerBase{
                 nome = prod.getName(),
                 bar_code = prod.getBarCode()
             });
+=======
+        foreach(var prod in wishlistModel.getProducts()){
+            wishlistModel.save(clientModel.getDocument(), prod.findID());
+>>>>>>> dfba4c61b3a22c480ba5b45b6b28097482009303
         }
 
         return new{
-            client = request.client,
-            produtos = products
+            response= "salvou no banco"
         };
     }
 }

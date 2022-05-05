@@ -46,10 +46,10 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
       
     }
 
-    public static int findID(string bar_code){
+    public int findID(){
         using(var context = new DAO.LibraryContext())
         {
-            var product = context.Product.FirstOrDefault(a => a.bar_code == bar_code);
+            var product = context.Product.FirstOrDefault(a => a.bar_code == this.bar_code);
             return product.id;
         }
       
