@@ -84,7 +84,20 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         return id;
     }
     public void delete(ProductDTO obj) { }
-    public void update(ProductDTO obj) { }
+    public void update(ProductDTO obj) {
+        using (var context = new DAO.LibraryContext())
+        {
+            var product = context.Product.FirstOrDefault(i => i.bar_code == obj.bar_code);
+
+            if (product != null)
+            {
+                context.Entry(product).State = EntityState.Modified;
+                product.name = obj.name;
+                product.bar_code = obj.bar_code;
+            }
+            context.SaveChanges();
+        }
+     }
     public ProductDTO findById(int id)
     {
         return new ProductDTO();

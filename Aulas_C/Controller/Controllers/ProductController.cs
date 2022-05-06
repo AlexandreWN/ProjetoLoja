@@ -25,5 +25,14 @@ public class ProductController : ControllerBase{
         var prod = Model.Product.getAllProducts();
         return prod;
     }
+
+    [HttpPut]
+    [Route("update")]
+    public object updateProduct([FromBody] ProductDTO product){
+        var productModel =  Model.Product.convertDTOToModel(product); 
+        
+        productModel.update(product);
+        return new { status = "sucess"};
+    }
 }
 
