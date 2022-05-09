@@ -36,12 +36,12 @@ public class OwnerController : ControllerBase{
      [HttpDelete]
     [Route("delete/{document}")]
     public object removeOwner(string document){
-        //try{
+        try{
             var owner = Model.Owner.removeOwner(document);
             return owner;
-       // }
-       // catch(Exception){
-       //     return ("Erro ao deletar");
-       // }  
+        }
+            catch(Exception){
+            return ("Erro ao deletar");
+       }  
     }
 }

@@ -34,5 +34,16 @@ public class ProductController : ControllerBase{
         productModel.update(product);
         return new { status = "sucess"};
     }
+     [HttpDelete]
+    [Route("delete/{id}")]
+    public object removeProduct(int id){
+        try{
+            var product = Model.Product.removeProduct(id);
+            return product;
+        }
+            catch(Exception){
+            return ("Erro ao deletar");
+       }  
+    }
 }
 

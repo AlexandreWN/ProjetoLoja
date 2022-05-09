@@ -115,7 +115,7 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
     public static string removeAdress(int id){
         using(var context = new LibraryContext())
         {
-            
+     
             var address = context.Address.FirstOrDefault(e=>e.id == id);
             var clientesEndereco = context.Client.Include(c=>c.address).Where(c=>c.address.id == id);
             
