@@ -140,7 +140,20 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
     {        
         return this.storeDTO;      
     }
+    
+    public static List<Object> getAllStore()
+    {     
+        using(var context = new DAO.LibraryContext())
+        {
+            var allStores = context.Store;
 
+            List<object> stores = new List<object>();
+            foreach(var prod in allStores){
+               stores.Add(prod);
+            }
+            return stores;
+        }      
+    }
    
     public StoreDTO convertModelToDTO()
     {
