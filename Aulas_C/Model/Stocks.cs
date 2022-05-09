@@ -80,6 +80,15 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
         }
        return id;
     }
+    public static string removeStocks(int id){
+        using(var context = new LibraryContext())
+        {
+            var stocks = context.Stocks.FirstOrDefault(e=>e.id == id);
+            context.Remove(stocks);
+            context.SaveChanges();
+            return stocks.id + " foi removido!";
+        }
+    }
     public void delete(StocksDTO obj) { }
     public void update(StocksDTO obj) { }
     public StocksDTO findById(int id)

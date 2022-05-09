@@ -68,6 +68,28 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         }
       
     }
+    public static string removeStore(int id){
+        using(var context = new LibraryContext())
+        {
+
+             var stocks = context.Stocks.Where(s=> s.store.id == id);
+            foreach(var stock in stocks){
+                Stocks.removeStocks(stock.id);
+            } 
+            context.SaveChanges();
+            var purchases = context.Purchase.Where(s=> s.store.id == id);
+            foreach (var purchase in purchases)
+            {
+                Purchase.removePurchase(purchase.id);
+            }
+            context.SaveChanges();
+
+            var store = context.Store.FirstOrDefault(e=>e.id == id);
+            context.Remove(store);
+            context.SaveChanges();
+            return store.id + " foi removido!";
+        }
+    }
     public Owner getOwner()
     {
         return owner;
