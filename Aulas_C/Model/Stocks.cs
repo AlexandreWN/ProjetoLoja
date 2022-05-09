@@ -3,6 +3,8 @@ using Interfaces;
 using DAO;
 using DTO;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+
 namespace Model;
 
 public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
@@ -81,7 +83,19 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
        return id;
     }
     public void delete(StocksDTO obj) { }
-    public void update(StocksDTO obj) { }
+    public void update(StocksDTO obj) {
+        using (var context = new DAO.LibraryContext())
+        {
+            var stock = context.Stocks.FirstOrDefault(s=> s.product.bar_code == obj.product.bar_code && s.store.CNPJ == obj.store.CNPJ);   
+            if (stock != null)
+            {
+                stock.unit_price = obj.unit_price;
+                stock.quantity = obj.quantity;
+                context.SaveChanges();
+            }
+            
+        }
+    }
     public StocksDTO findById(int id)
     {
         return new StocksDTO();

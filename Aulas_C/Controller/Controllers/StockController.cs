@@ -23,4 +23,12 @@ public class StockController : ControllerBase{
             product = stock.product
         };
     }
+
+    [HttpPut]
+    [Route("update")]
+    public object updateStock([FromBody] StocksDTO obj){
+        Stocks stockModel = Model.Stocks.convertDTOToModel(obj);
+        stockModel.update(obj);
+        return new {status = "sucess"};
+    }
 }

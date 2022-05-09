@@ -60,6 +60,7 @@ public class Store:IValidateDataObject,IDataController<StoreDTO, Store>
         }
       
     }
+
     public static int findID(string CNPJ){
         using(var context = new DAO.LibraryContext())
         {
