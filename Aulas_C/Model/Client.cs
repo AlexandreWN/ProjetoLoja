@@ -74,9 +74,12 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         {
             var wishList = context.WishList.Where(e => e.client.document == document);
             foreach(var wish in wishList){
-                context.Remove(wish); 
+                WishList.removeWishList(wish.id);
             }
-            context.SaveChanges();
+            var purchases = context.Purchase.Where(e => e.client.document == document);
+            foreach(var purchase in purchases){
+              Purchase.removePurchase(purchase.id);  
+            }
             var client = context.Client.FirstOrDefault(e=>e.document == document);
             context.Remove(client);  
             context.SaveChanges();

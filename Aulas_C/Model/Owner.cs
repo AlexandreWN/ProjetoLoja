@@ -107,7 +107,20 @@ public static int findId(string document){
     }
 
 
-
+  public static string removeOwner(string document){
+         using(var context = new LibraryContext())
+        {
+            var stores = context.Store.Where(e => e.owner.document == document);
+            foreach(var store in stores){
+                Store.removeStore(store.id);
+            }
+            context.SaveChanges();
+            var owner = context.Owner.FirstOrDefault(e=>e.document == document);
+            context.Remove(owner);  
+            context.SaveChanges();
+            return " foi removido!";
+        }
+    }
 
 
 

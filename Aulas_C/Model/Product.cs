@@ -66,7 +66,25 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
             return products;
         }
     }
-
+    public static string removeProduct(int id){
+        using(var context = new LibraryContext())
+        {
+            var purchases = context.Purchase.Where(p => p.product.id == id);
+            foreach(var purchase in purchases){
+                Purchase.removePurchase(purchase.id);
+            }
+            context.SaveChanges();
+            var stocks = context.Stocks.Where(s=> s.product.id == id);
+            foreach(var stock in stocks){
+                Stocks.removeStocks(stock.id);
+            } 
+            context.SaveChanges();
+            var product = context.Product.FirstOrDefault(e=>e.id == id);
+            context.Remove(product);
+            context.SaveChanges();
+            return "foi removido!";
+            }
+        }
     public int save()
     {
         var id = 0;

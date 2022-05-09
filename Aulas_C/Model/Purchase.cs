@@ -142,16 +142,14 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     }
 
         public static string removePurchase(int id){
-         using(var context = new LibraryContext())
-        {
-            
-            var purchase = context.Purchase.FirstOrDefault(e=>e.id == id);
-           
-            context.Remove(purchase);
-            context.SaveChanges();
-            return purchase.id + " foi removido!";
+            using(var context = new LibraryContext())
+            {
+                var purchase = context.Purchase.FirstOrDefault(e=>e.id == id);
+                context.Remove(purchase);
+                context.SaveChanges();
+                return purchase.id + " foi removido!";
+            }
         }
-    }
     public void update(PurchaseDTO obj){
 
     }
