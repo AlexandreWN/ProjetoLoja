@@ -55,6 +55,7 @@ public static int findId(string document){
         return id;
     }
 }
+    
     public bool validateObject()
     {
         if(this.getId() == null) return false;
