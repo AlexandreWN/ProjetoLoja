@@ -21,4 +21,16 @@ public class WishListController : ControllerBase{
             response= "salvou no banco"
         };
     }
+
+      [HttpDelete]
+    [Route("delete/{id}")]
+    public object removeWishList(int id){
+        try{
+            var purchase = Model.WishList.removeWishList(id);
+            return purchase;
+        }
+        catch(Exception){
+            return ("Erro ao deletar");
+        }  
+    }
 }
