@@ -128,7 +128,20 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
     }
 
     public void update(AddressDTO obj){
-
+        using (var context = new DAO.LibraryContext())
+        {
+            var address = context.Address.FirstOrDefault(s=> s.postal_code == obj.postal_code);   
+            if (address != null)
+            {
+                address.city = obj.city;
+                address.country = obj.country;
+                address.state = obj.state;
+                address.street = obj.state;
+                address.postal_code = obj.state;
+                context.SaveChanges();
+            }
+            
+        }
     }
 
     public AddressDTO findById(int id)
