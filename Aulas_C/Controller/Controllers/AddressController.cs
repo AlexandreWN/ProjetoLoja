@@ -34,6 +34,14 @@ public class AddressController : ControllerBase {
             return ("Erro ao deletar");
         }  
     }
+
+    [HttpPut]
+    [Route("update")]
+    public object updateAddress([FromBody] AddressDTO obj){
+        Address addressModel = Model.Address.convertDTOToModel(obj);
+        addressModel.update(obj);
+        return new {status = "sucess"};
+    }
 }
 
 
