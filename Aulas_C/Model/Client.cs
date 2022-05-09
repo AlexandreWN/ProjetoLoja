@@ -72,10 +72,13 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
     public static string removeClient(string document){
          using(var context = new LibraryContext())
         {
-            
+            var wishList = context.WishList.Where(e => e.client.document == document);
+            foreach(var wish in wishList){
+                context.Remove(wish); 
+            }
+            context.SaveChanges();
             var client = context.Client.FirstOrDefault(e=>e.document == document);
-           
-            context.Remove(client);
+            context.Remove(client);  
             context.SaveChanges();
             return " foi removido!";
         }
