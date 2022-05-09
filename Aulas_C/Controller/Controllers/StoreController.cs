@@ -9,15 +9,15 @@ namespace Controller.Controllers;
 public class StoreController : ControllerBase{
     [HttpPost]
     [Route("register")]
-    public object registerStore([FromBody] StoreDTO store){
-        var storeModel = Model.Store.convertDTOToModel(store);
-        var id = storeModel.save(Owner.findId(storeModel.getOwner().getDocument()));
+    public object registerStore([FromBody] StoreDTO obj){
+        var storeModel = Model.Store.convertDTOToModel(obj);
+        var ownerModel = obj.owner.id;
+        storeModel.save(ownerModel);
         return new{
-            id = id,
-            name = store.name,
-            CNPJ = store.CNPJ,
-            owner  = store.owner,
-            purchase = store.purchase,
+            name = obj.name,
+            CNPJ = obj.CNPJ,
+            owner  = obj.owner,
+            purchase = obj.purchase,
         };
     }
 
