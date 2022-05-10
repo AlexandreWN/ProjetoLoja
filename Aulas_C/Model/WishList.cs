@@ -76,6 +76,18 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
             return " foi removido!";
         }
     }
+     public static string removeProductToWishList(int  idProd){
+         using(var context = new LibraryContext())
+        {
+            var wishListProducts = context.WishList.Where(w => w.product.id == idProd);
+            foreach(var prod in wishListProducts){
+                context.Remove(prod);    
+            }
+             context.SaveChanges(); 
+            return " foi removido!";
+        }
+    }
+    
     public void update(WishListDTO obj){
 
     }

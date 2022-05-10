@@ -24,13 +24,14 @@ public class WishListController : ControllerBase{
 
       [HttpDelete]
     [Route("delete/{id}")]
-    public object removeWishList(int id){
+    public object removeProductToWishList(int id){
         try{
-            var purchase = Model.WishList.removeWishList(id);
-            return purchase;
+            var whishList = Model.WishList.removeProductToWishList(id);
+            return whishList;
         }
         catch(Exception){
             return ("Erro ao deletar");
         }  
     }
+    
 }

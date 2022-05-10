@@ -79,6 +79,11 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
                 Stocks.removeStocks(stock.id);
             } 
             context.SaveChanges();
+             var whishList = context.WishList.Where(s=> s.product.id == id);
+            foreach(var whish in whishList){
+                WishList.removeWishList(whish.id);
+            } 
+            context.SaveChanges();
             var product = context.Product.FirstOrDefault(e=>e.id == id);
             context.Remove(product);
             context.SaveChanges();
