@@ -28,4 +28,10 @@ public class StoreController : ControllerBase{
         return store;
     }
 
+    [HttpGet]
+    [Route("getAll")]
+    public object getAllStore(){
+        var stor = Model.Store.getAllStore();
+        return stor;
+    }
 }
