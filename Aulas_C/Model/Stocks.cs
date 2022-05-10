@@ -100,9 +100,8 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
             {
                 stock.unit_price = obj.unit_price;
                 stock.quantity = obj.quantity;
-                context.SaveChanges();
             }
-            
+            context.SaveChanges();
         }
     }
     public StocksDTO findById(int id)
