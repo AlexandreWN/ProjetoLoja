@@ -126,10 +126,11 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
         
         
     }
-
+/*
     public void update(AddressDTO obj){
         using (var context = new DAO.LibraryContext())
         {
+            var Person = context.Owner.FirstOrDefault(c => c.document == obj.);
             var address = context.Address.FirstOrDefault(s=> s.postal_code == obj.postal_code);   
             if (address != null)
             {
@@ -138,11 +139,10 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
                 address.state = obj.state;
                 address.street = obj.state;
                 address.postal_code = obj.state;
-                context.SaveChanges();
             }
-            
+            context.SaveChanges();
         }
-    }
+    }*/
 
     public AddressDTO findById(int id)
     {
