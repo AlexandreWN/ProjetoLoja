@@ -117,11 +117,23 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
         {
      
             var address = context.Address.FirstOrDefault(e=>e.id == id);
-            var clientesEndereco = context.Client.Include(c=>c.address).Where(c=>c.address.id == id);
-            
+            var clientsAddress = context.Client.Include(c=>c.address).Where(c=>c.address.id == id);
+            foreach(var clientAdd in clientsAddress){
+                if(clientAdd == null){
+                    context.Remove(clientAdd.address);
+                }
+            }
+
+            var ownersAddress = context.Owner.Include(c=>c.address).Where(c=>c.address.id == id);
+            foreach(var ownerAdd in ownersAddress){
+                if(ownerAdd == null){
+                    context.Remove(ownerAdd.address);
+                }
+            }
+         
             context.Remove(address);
             context.SaveChanges();
-            return id+" Endereço removido!";
+            return "removido!";
         }
         
         

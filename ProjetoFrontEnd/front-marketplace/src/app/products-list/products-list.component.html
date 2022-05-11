@@ -1,15 +1,16 @@
 <div class="productsList">
     <div class="productComponent" *ngFor="let product of products">
-        <h3>
+        
             <a [title]="product.name + 'product.description'"
                 [routerLink]="['/product', product.id]" class = "productTitle">
                 <img class = "imgProd" src={{product.img}}/>
+            <h3>
                 {{product.name}}
+            </h3>
             </a>
-        </h3>
         <h2>
             <p>
-                R$ {{product.price}}
+                {{product.price | currency}}
             </p>
         </h2>
         <h2>
@@ -23,3 +24,4 @@
        
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

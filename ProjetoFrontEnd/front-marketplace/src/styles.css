@@ -13,8 +13,6 @@
 .container {
   display: flex;
   flex-direction:column;
- 
- 
 }
 
 router-outlet + *  {
@@ -116,6 +114,7 @@ app-top-bar {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.294);
 }
 
 app-top-bar h1 {
@@ -143,10 +142,10 @@ app-top-bar h1 {
   background-color: white;
   width: 20%;
   justify-content: center;
-  border-radius: 0.5em;
+  border-radius: 5px;
   padding: 1em;
   border: 1px solid #8888885b;
-  box-shadow: 5px 5px #8888885b;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.294);
  
 }
 .productsList{
@@ -157,7 +156,7 @@ app-top-bar h1 {
 }
 
 .imgProd{
-  width: 100%;
+  width: 40%;
 }
 .imgLike{
   width: 12%;
@@ -168,5 +167,9 @@ app-top-bar h1 {
 .productTitle{
   display:flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+}
+.productTitle h3{
+  margin-top: 0.5em;
+  margin-left: 5px;
 }
