@@ -26,13 +26,10 @@ public class AddressController : ControllerBase {
     [HttpDelete]
     [Route("delete/{id}")]
     public object removeAdress(int id){
-        try{
+
             var address = Model.Address.removeAdress(id);
             return address;
-        }
-        catch(Exception){
-            return ("Erro ao deletar");
-        }  
+
     }
 
     [HttpPut]

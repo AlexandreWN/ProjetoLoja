@@ -12,7 +12,24 @@ export class ProductsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //chamar os componentes para recuperar o json
+    var axios = require('axios');
+var data = '';
+
+var config = {
+  method: 'get',
+  url: 'http://localhost:5141/Product/getAll',
+  headers: { },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+    
   }
 
 }

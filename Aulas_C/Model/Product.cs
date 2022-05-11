@@ -115,8 +115,8 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
             if (product != null)
             {
                 context.Entry(product).State = EntityState.Modified;
-                product.name = obj.name;
-                product.bar_code = obj.bar_code;
+                if(product.name == null) product.name = obj.name;
+                if(product.bar_code == null)product.bar_code = obj.bar_code;
             }
             context.SaveChanges();
         }
