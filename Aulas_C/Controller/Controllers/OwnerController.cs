@@ -13,17 +13,22 @@ public class OwnerController : ControllerBase{
     public object registerOwner([FromBody] OwnerDTO owner){
         var ownerModel = Model.Owner.convertDTOToModel(owner);
         var id = ownerModel.save();
-        return new {
-            id = id,
-            name = owner.name,
-            date_of_birth = owner.date_of_birth,
-            document = owner.document,
-            email = owner.email,
-            phone = owner.phone,
-            login = owner.login,
-            passwd = owner.passwd,
-            address = owner.address
-        };
+        if(id == -1){
+            return "usuario ja cadastrado";
+        }else{
+            return new {
+                id = id,
+                name = owner.name,
+                date_of_birth = owner.date_of_birth,
+                document = owner.document,
+                email = owner.email,
+                phone = owner.phone,
+                login = owner.login,
+                passwd = owner.passwd,
+                address = owner.address
+            };
+        }
+
     }
 
      [HttpGet]

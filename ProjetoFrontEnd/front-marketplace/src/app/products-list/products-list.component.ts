@@ -14,6 +14,7 @@ export class ProductsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
     var config = {
       method: 'get',
       url: 'https://localhost:7273/Product/getAll',
@@ -28,6 +29,7 @@ export class ProductsListComponent implements OnInit {
     .catch(function (error) {
       console.log(error);
     });
+
     
   }
 

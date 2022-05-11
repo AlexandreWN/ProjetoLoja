@@ -92,31 +92,38 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
 
         using(var context = new LibraryContext())
         {
-            var addressDAO = new DAO.Address();
-            addressDAO.street = this.address.getStreet();
-            addressDAO.city = this.address.getCity();
-            addressDAO.state = this.address.getState();
-            addressDAO.postal_code = this.address.getPostalCode();
-            addressDAO.country = this.address.getCountry();
+            var dados = context.Client.FirstOrDefault(o => o.document == document);
 
-            var client = new DAO.Client{
-                address = addressDAO,
-                date_of_birth = this.date_of_birth,
-                document = this.document,
-                email = this.email,
-                login = this.login,
-                name = this.name,
-                passwd = this.passwd,
-                phone = this.phone,
-            };
+            if(dados == null){
+                var addressDAO = new DAO.Address();
+                addressDAO.street = this.address.getStreet();
+                addressDAO.city = this.address.getCity();
+                addressDAO.state = this.address.getState();
+                addressDAO.postal_code = this.address.getPostalCode();
+                addressDAO.country = this.address.getCountry();
 
-            context.Client.Add(client);
+                var client = new DAO.Client{
+                    address = addressDAO,
+                    date_of_birth = this.date_of_birth,
+                    document = this.document,
+                    email = this.email,
+                    login = this.login,
+                    name = this.name,
+                    passwd = this.passwd,
+                    phone = this.phone,
+                };
 
-            context.SaveChanges();
+                context.Client.Add(client);
 
-            id = client.id;
+                context.SaveChanges();
+
+                id = client.id;
+                
+                return id;
+            }else{
+                return -1;
+            }
         }
-        return id;
     }
     public void update(ClientDTO obj){
 

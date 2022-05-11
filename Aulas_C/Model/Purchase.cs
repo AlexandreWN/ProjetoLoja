@@ -165,17 +165,17 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         return this.purchaseDTO;      
     }
 
-        public static List<object> getStorePurchases(int storeID){
-        using(var context = new DAO.LibraryContext())
-        {
-            var storePurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.store.id == storeID);
+    public static List<object> getStorePurchases(int storeID){
+    using(var context = new DAO.LibraryContext())
+    {
+        var storePurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.store.id == storeID);
 
-            List<object> compras = new List<object>();
-            foreach(var comp in storePurchase){
-               compras.Add(comp);
-            }
-            return compras;
+        List<object> compras = new List<object>();
+        foreach(var comp in storePurchase){
+            compras.Add(comp);
         }
+        return compras;
+    }
       
     }
         public static List<object> getClientPurchases(int clientID){
