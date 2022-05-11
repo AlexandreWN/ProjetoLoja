@@ -79,31 +79,38 @@ public static int findId(string document){
 
         using(var context = new LibraryContext())
         {
-            var addressDAO = new DAO.Address();
-            addressDAO.street = this.address.getStreet();
-            addressDAO.city = this.address.getCity();
-            addressDAO.state = this.address.getState();
-            addressDAO.postal_code = this.address.getPostalCode();
-            addressDAO.country = this.address.getCountry();
-            
+            var dados = context.Owner.FirstOrDefault(o => o.document == document);
 
-            var owner = new DAO.Owner{ 
-                address = addressDAO,
-                date_of_birth = this.date_of_birth,
-                document = this.document,
-                email = this.email,
-                login = this.login,
-                name = this.name,
-                passwd = this.passwd,
-                phone = this.phone,
-            };
+            if(dados == null){
+                var addressDAO = new DAO.Address();
+                addressDAO.street = this.address.getStreet();
+                addressDAO.city = this.address.getCity();
+                addressDAO.state = this.address.getState();
+                addressDAO.postal_code = this.address.getPostalCode();
+                addressDAO.country = this.address.getCountry();
+                
+                var owner = new DAO.Owner{ 
+                    address = addressDAO,
+                    date_of_birth = this.date_of_birth,
+                    document = this.document,
+                    email = this.email,
+                    login = this.login,
+                    name = this.name,
+                    passwd = this.passwd,
+                    phone = this.phone,
+                };
+                
+                context.Owner.Add(owner);
+                context.SaveChanges();
 
-            context.Owner.Add(owner);
-            context.SaveChanges();
-
-            id = owner.id;
+                id = owner.id;
+                return id;
+                
+            }else{
+                return -1;
+            }
         }
-         return id;
+        
     }
 
 

@@ -60,6 +60,8 @@ public class LibraryContext : DbContext
                 entity.HasKey(pr => pr.id);
                 entity.Property(pr => pr.name);
                 entity.Property(pr => pr.bar_code);
+                entity.Property(pr => pr.image);
+                entity.Property(pr => pr.description);
             });
             modelBuilder.Entity<Purchase>(entity =>
             {

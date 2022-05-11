@@ -14,17 +14,21 @@ public class ClientController : ControllerBase{
     public object resgisterClient([FromBody] ClientDTO client){
         var clientModel = Model.Client.convertDTOToModel(client);
         var id = clientModel.save();
-        return new {
-            id = id,
-            name = client.name,
-            date_of_birth = client.date_of_birth,
-            document = client.document,
-            email = client.email,
-            phone = client.phone,
-            login = client.login,
-            passwd = client.passwd,
-            address = client.address
-        };
+        if(id == -1){
+            return "usuario ja cadastrado";
+        }else{
+            return new {
+                id = id,
+                name = client.name,
+                date_of_birth = client.date_of_birth,
+                document = client.document,
+                email = client.email,
+                phone = client.phone,
+                login = client.login,
+                passwd = client.passwd,
+                address = client.address
+            };
+        }
     }
 
     [HttpGet]

@@ -35,12 +35,19 @@ public class AddressController : ControllerBase {
         }  
     }
 
-    [HttpPut]
+    [HttpPost]
     [Route("update")]
     public object updateAddress([FromBody] AddressDTO obj){
-        Address addressModel = Model.Address.convertDTOToModel(obj);
-        addressModel.update(obj);
-        return new {status = "sucess"};
+        var addressModel = Model.Address.convertDTOToModel(obj);
+        var id = addressModel.save();
+        return new {
+            id = id,
+            street = obj.street,
+            state = obj.state,
+            city = obj.city,
+            country = obj.country,
+            postal_code = obj.postal_code
+        };
     }
 }
 

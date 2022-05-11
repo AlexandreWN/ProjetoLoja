@@ -9,9 +9,22 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
 { 
     private string name;
     private string bar_code;
+    private string description;
+    private string image;
     public List<ProductDTO> productDTO = new List<ProductDTO>();
 
-
+    public string getDescripton(){
+        return description;
+    }
+    public void setDescription(string description){
+        this.description = description;
+    }
+    public string getImage(){
+        return image;
+    }
+    public void setImage(string image){
+        this.image = image;
+    }
     public string getName() 
     { 
         return name; 
