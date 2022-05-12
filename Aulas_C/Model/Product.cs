@@ -46,6 +46,8 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     {
         if (this.getBarCode() == null) return false;
         if (this.getName() == null) return false;
+        if (this.getImage() == null) return false;
+        if (this.getDescripton() == null) return false;
         return true;
     }
 
@@ -111,7 +113,9 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
             var product = new DAO.Product
             {
                 name = this.name,
-                bar_code = this.bar_code
+                bar_code = this.bar_code,
+                image = this.image,
+                description = this.description
             };
             context.Product.Add(product);
             context.SaveChanges();
@@ -151,6 +155,8 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         var productDTO = new ProductDTO();
         productDTO.name = this.name;
         productDTO.bar_code = this.bar_code;
+        productDTO.image = this.image;
+        productDTO.description = this.description;
         return productDTO;
     }
     public static Product convertDTOToModel(ProductDTO obj)
@@ -158,6 +164,8 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
        Product product = new Product(); 
         product.name = obj.name;
         product.bar_code = obj.bar_code;
+        product.image = obj.image;
+        product.description = obj.description;
         return product;
     }
 }
