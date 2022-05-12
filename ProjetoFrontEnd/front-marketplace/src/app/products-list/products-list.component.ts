@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products} from '../products';   
+import { Product } from '../products';   
 import axios from "axios";
 
 
@@ -10,24 +10,36 @@ import axios from "axios";
 })
 export class ProductsListComponent implements OnInit {
 
-  products = products;
+  products : [Product] | undefined;
   constructor() { }
 
   ngOnInit(): void {
 
+    this.initiliaze();
+   
+  }
+
+  async initiliaze(){
     var config = {
       method: 'get',
       url: 'http://localhost:5141/Product/getAll',
       headers: { },
       data : ''
     };
-    
-    axios(config)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
+
+    /*sincrona
+    var instance  = this;
+    var response = await axios(config);
+
+    this.products = response.data;
+    */
+    var instance  = this;
+    axios(config).then(function (response) {
+      instance.products = response.data;
     })
     .catch(function (error) {
       console.log(error);
     });
+
   }
 }
