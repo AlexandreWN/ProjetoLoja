@@ -48,6 +48,7 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
         if (this.getName() == null) return false;
         if (this.getImage() == null) return false;
         if (this.getDescripton() == null) return false;
+
         return true;
     }
 
