@@ -20,7 +20,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     private int payment_type;
     private int purchase_status;
     private double purchase_value;
-
+    private Store store;
     public List<Product> getProducts()
     {
         return products;
@@ -91,6 +91,12 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public void setValue(double purchase_value){
         this.purchase_value = purchase_value;
     }
+    public Store getStore(){
+        return store;
+    }
+    public void setStore(Store store){
+        this.store = store;
+    }
 
     public bool validateObject()
     {
@@ -115,19 +121,17 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
 
         using(var context = new LibraryContext())
         {
-            var clientDAO = context.Client.FirstOrDefault(c=>c.id == 1);
-            var storeDAO = context.Store.FirstOrDefault(s=>s.id == 1);
-            var productsDAO = context.Product.Where(p=>p.id == 1).Single();
+            if(this.products.Count() <= 0 ){return -1;}
+
             var purchase = new DAO.Purchase{
                 date_purchase = this.date_purchase,
                 number_confirmation = this.number_confirmation,
                 number_nf = this.number_nf,
-                payment_type =this.payment_type,
+                payment_type = this.payment_type,
                 purchase_status = this.purchase_status,
-                purchase_value = this.purchase_value,
-                client =  clientDAO,
-                store = storeDAO,
-                product = productsDAO
+                client = context.Client.FirstOrDefault(c => c.document == this.client.getDocument()),
+                store = context.Store.FirstOrDefault(s => s.CNPJ == this.store.getCNPJ()),
+                product = context.Product.FirstOrDefault(p => p.bar_code == this.products.First().getBarCode())
             };
 
             context.Purchase.Add(purchase);
@@ -135,8 +139,9 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
             context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
             context.SaveChanges();
+            this.products.Remove(products.First());
+            this.save();
             id = purchase.id;
-
         }
          return id;
     }
