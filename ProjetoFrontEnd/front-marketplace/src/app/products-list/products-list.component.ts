@@ -17,7 +17,7 @@ export class ProductsListComponent implements OnInit {
 
     var config = {
       method: 'get',
-      url: 'https://localhost:7273/Product/getAll',
+      url: 'http://localhost:5141/Product/getAll',
       headers: { },
       data : ''
     };
@@ -29,8 +29,5 @@ export class ProductsListComponent implements OnInit {
     .catch(function (error) {
       console.log(error);
     });
-
-    
   }
-
 }
