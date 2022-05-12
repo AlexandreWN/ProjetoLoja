@@ -21,9 +21,11 @@ public class ProductController : ControllerBase{
 
     [HttpGet]
     [Route("getAll")]
-    public object getAllProducts(){
+    public IActionResult getAllProducts(){
         var prod = Model.Product.getAllProducts();
-        return prod;
+         var result = new ObjectResult(prod);
+         Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        return result;
     }
 
     [HttpPut]
