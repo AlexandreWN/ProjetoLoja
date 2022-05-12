@@ -1,6 +1,11 @@
-<div *ngIf="product">
-
-    <h3>{{product.name}}</h3>
-    <h4>{{product.price | currency}}</h4>
-    <p>{{product.description}}</p>
+<div *ngIf="product" class = "productDetail">
+    <div class = "purchaseImg">
+        <img class = "imgProd" src={{product.img}}/>        
+       <a href="">Purchase</a>
+    </div>
+    <div class="detailsProduct">
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>   
+        <h1>{{product.price | currency}}</h1>  
+    </div>  
 </div>

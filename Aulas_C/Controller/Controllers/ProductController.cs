@@ -16,6 +16,8 @@ public class ProductController : ControllerBase{
             id = id,
             name = product.name,
             bar_code = product.bar_code,
+            description = product.description,
+            image = product.image
         };
     }
 
