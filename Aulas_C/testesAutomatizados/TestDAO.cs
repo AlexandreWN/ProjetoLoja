@@ -476,7 +476,8 @@ namespace testesAutomatizados
             productDTO1.name = "produto 1";
 
             productDTO1.bar_code = "12521142521252325";
-
+            productDTO1.description = "descricao";
+            productDTO1.image = "image";
             produtos.Add(productDTO1);
 
              var productDTO2 = new ProductDTO();
@@ -484,7 +485,8 @@ namespace testesAutomatizados
             productDTO2.name = "produto 2";
 
             productDTO2.bar_code = "7854687654865";
-
+            productDTO2.description = "descricao";
+            productDTO2.image = "image";
             produtos.Add(productDTO2);
 
 
@@ -493,7 +495,8 @@ namespace testesAutomatizados
             productDTO3.name = "produto 3";
 
             productDTO3.bar_code = "4524112588543164";
-
+            productDTO3.description = "descricao";
+            productDTO3.image = "image";
             produtos.Add(productDTO3);
 
 
@@ -502,7 +505,8 @@ namespace testesAutomatizados
             productDTO4.name = "produto 4";
 
             productDTO4.bar_code = "632154584531685";
-
+            productDTO4.description = "descricao";
+            productDTO4.image = "image";        
             produtos.Add(productDTO4);
 
 
@@ -511,7 +515,8 @@ namespace testesAutomatizados
             productDTO5.name = "produto 5";
 
             productDTO5.bar_code = "421324862132465";
-
+            productDTO5.description = "descricao";
+            productDTO5.image = "image";
             produtos.Add(productDTO5);
 
             var id = 0;
