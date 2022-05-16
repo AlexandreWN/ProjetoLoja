@@ -154,15 +154,19 @@ app-top-bar h1 {
   flex-direction: row;
   justify-content: center;
 }
+.card{
+  margin: 1em;
+  width: 22em;
+}
+.card a{
+  text-decoration: none;
+}
 @media only screen and (max-width: 900px) {
   .detailsProduct h1{
     order: -1;
   }
 }
 @media only screen and (max-width: 700px) {
-  .productComponent{
-    width: 100%;
-  }
   .purchaseImg a,img{
     width: 100%;
   }
@@ -175,10 +179,15 @@ app-top-bar h1 {
   width: 40%;
 }
 .imgLike{
-  width: 12%;
+  width: 7%;
+  height: 1.5em;
   margin-top: 5%;
-  
-
+ background: url("src/assets/img/like.svg") 0 0;
+ background-repeat: no-repeat;
+ background-size: 2.7em;
+}
+.imgLike:hover{
+  background-position:right;
 }
 .productTitle{
   display:flex;
