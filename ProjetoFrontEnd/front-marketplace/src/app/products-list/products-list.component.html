@@ -4,7 +4,7 @@
 
     <div class="card"  *ngFor="let product of products">
       
-            <img class = "card-img-top"  src={{product.img}}/>
+            <img class = "card-img-top"  src={{product.image}}/>
             <div class="card-body">
         <a [title]="product.name + 'product.description'" [routerLink]="['/product', product.id]" class = "productTitle">
             <h5 class="card-title"> {{product.name}}</h5>

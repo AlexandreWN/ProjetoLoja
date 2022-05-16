@@ -3,7 +3,8 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  img : string;
+  image : string;
+  bar_code : string;
 }
 
 export const products = [
@@ -12,14 +13,14 @@ export const products = [
     name: 'IPhone X',
     price: 799,
     description: 'A large phone with one of the best screens',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 2,
     name: 'IPhone Mini',
     price: 699,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
     
   },
   {
@@ -27,70 +28,70 @@ export const products = [
     name: 'Phone SE',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 4,
     name: 'MacBook Pro',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 5,
     name: 'MacBook ',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 6,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 7,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 8,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 9,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 10,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 11,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   },
   {
     id: 11,
     name: 'Phone',
     price: 299,
     description: 'A great phone with one of the best cameras',
-    img : "assets/img/product.png"
+    image : "assets/img/product.png"
   }
   
 ];
