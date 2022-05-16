@@ -30,6 +30,16 @@ public class ProductController : ControllerBase{
         return result;
     }
 
+    [HttpGet]
+    [Route("get/{id}")]
+    public IActionResult getProductById(int id){
+        var prod = Model.Product.find(id);
+         var result = new ObjectResult(prod);
+         Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        return result;
+    }
+    
+
     [HttpPut]
     [Route("update")]
     public object updateProduct([FromBody] ProductDTO product){
