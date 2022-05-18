@@ -1,0 +1,43 @@
+form{
+    width: 70%;
+    margin-left: 15%; 
+}
+.form-group{
+    margin-top: 1em;
+    display: flex; 
+}
+button{
+    margin-top: 1em;
+    width: 100%;
+}
+form img{
+    width: 2em;
+    margin-right: 0.5em;
+}
+.imgUser{
+    width: 2.2em;
+    height: 2.3em;
+    position: relative;
+    margin-right: 0.5em;
+   background: url("src/assets/img/user.svg");
+   background-position: right;
+   background-repeat: no-repeat;
+
+   opacity: 0.5;
+}
+.imgUser:hover{
+    opacity: 1;
+  }
+  .imgPassword{
+    width: 4.7%;
+    height: 2.3em;
+    margin-right: 0.5em;
+   background: url("src/assets/img/password.svg");
+   background-position: right;
+   background-repeat: no-repeat;
+
+   opacity: 0.5;
+}
+.imgPassword:hover{
+    opacity: 1;
+  }
