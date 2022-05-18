@@ -2,19 +2,17 @@
 <div class="productsList">
 
     <div class="card"  *ngFor="let product of products">
-            <div class = "imgListProd">
-                <img class = "card-img-top"  src={{product.image}}/>
-            </div>
-            
-            <div class="card-body">
-        <a [title]="product.name + 'product.description'" [routerLink]="['/product', product.id]" class = "productTitle">
+        <img class = "card-img-top"  src={{product.image}}/>
+        <div class="card-body">
+        <a [title]="product.name + 'product.description'" [routerLink]="['/product', product.stockId]" class = "productTitle">
             <h5 class="card-title"> {{product.name}}</h5>
         </a>
-            <p class="card-text">{{product.description}}</p>
-            <h1>{{product.price | currency}}</h1>
+        <p class="card-text">{{product.description}}</p>
+        <h1>{{product.price | currency}}</h1>
             
-                <div class="imgLike"></div>
-            
-            </div>
-        
+
+        <div class="imgLike"></div>
+    </div>
 </div>
+
+ 

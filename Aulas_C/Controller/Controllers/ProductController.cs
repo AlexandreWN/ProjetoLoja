@@ -25,11 +25,10 @@ public class ProductController : ControllerBase{
     [Route("getAll")]
     public IActionResult getAllProducts(){
         var prod = Model.Product.getAllProducts();
-         var result = new ObjectResult(prod);
+        var result = new ObjectResult(prod);
          Response.Headers.Add("Access-Control-Allow-Origin", "*");
         return result;
     }
-
     [HttpGet]
     [Route("get/{id}")]
     public IActionResult getProductById(int id){

@@ -5,6 +5,7 @@ export interface Product {
   description: string;
   image : string;
   bar_code : string;
+  stockId : number;
 }
 
 export const products = [
