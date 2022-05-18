@@ -63,7 +63,7 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
                 image = product.product.image,
                 description = product.product.description,
                 bar_code = product.product.bar_code,
-                price = product.unit_price
+                price = Math.Round(product.unit_price, 2)
             };
         }
     }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product,products } from '../products';
+import { Product } from '../products';
 import axios from "axios";
 @Component({
   selector: 'app-product-detail',
