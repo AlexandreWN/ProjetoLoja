@@ -51,13 +51,13 @@ public class ProductController : ControllerBase{
      [HttpDelete]
     [Route("delete/{id}")]
     public object removeProduct(int id){
-        try{
+       // try{
             var product = Model.Product.removeProduct(id);
             return product;
-        }
-            catch(Exception){
-            return ("Erro ao deletar");
-       }  
+       // }
+        //    catch(Exception){
+         //   return ("Erro ao deletar");
+    //   }  
     }
 }
 
