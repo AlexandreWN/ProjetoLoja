@@ -37,6 +37,19 @@ public class ClientController : ControllerBase{
         var client = Model.Client.find(document);
         return client;
     }
+    [HttpPost]
+    [Route("login")]
+    public object loginClient([FromBody] ClientDTO client){
+        var clientLogin = Model.Client.loginClient(client.login,client.passwd);
+        
+       if (clientLogin != null) 
+       {
+           var result = new ObjectResult(clientLogin);
+           Response.Headers.Add("Access-Control-Allow-Origin", "*");
+           return result;
+       }
+       else return null;
+    }
 
 
 

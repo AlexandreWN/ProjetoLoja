@@ -65,6 +65,18 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         return true;
 
     }
+    public static object loginClient(string login,string passwd){
+        using(var context = new DAO.LibraryContext())
+        {
+            var clientDTO = context.Client.FirstOrDefault(a => a.login == login &&  a.passwd == passwd);
+            if(clientDTO != null){
+                return find(clientDTO.document);
+
+            }else{
+                return null;
+            }
+        }
+    }
 
     public void delete(ClientDTO obj){
 
