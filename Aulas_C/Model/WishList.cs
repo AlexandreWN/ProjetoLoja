@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Interfaces;
 using DAO;
 using DTO;
+using Microsoft.EntityFrameworkCore;
 namespace Model;
 public class WishList : IValidateDataObject, IDataController<WishListDTO,WishList>
 {
@@ -103,6 +104,26 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
         return this.wishListDTO;      
     }
    
+    public static List<object> find(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var stocks = context.Stocks;
+            var wishlist = context.WishList.Include(s => s.client).Where(a => a.client.id == id).Join(stocks, w => w.product, s => s.product,(w,s) => new {
+                id = w.product.bar_code,
+                product = w.product.name,
+                price = s.unit_price,
+                description = w.product.description,
+                image = w.product.image
+            }).ToList().GroupBy(x => x.id);
+
+            List<object> dados = new List<object>();
+            foreach(var i in wishlist){
+                var ordenado = i.OrderBy(p => p.price);
+                dados.Add(ordenado.First());
+            }
+            return dados;
+        }
+    }
     public WishListDTO convertModelToDTO()
     {
         var wishListDTO = new WishListDTO();

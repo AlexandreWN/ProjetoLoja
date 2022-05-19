@@ -8,6 +8,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
+import { WishlistDetailComponent } from './wishlist-detail/wishlist-detail.component';
 import { AddressRegisterComponent } from './address-register/address-register.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AddressRegisterComponent } from './address-register/address-register.co
     ProductsListComponent,
     ProductDetailComponent,
     LoginComponent,
+    WishlistDetailComponent,
     AddressRegisterComponent
   ],
   imports: [
@@ -24,7 +26,8 @@ import { AddressRegisterComponent } from './address-register/address-register.co
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:ProductsListComponent},
-      {path: 'product/:productId', component: ProductDetailComponent}
+      {path: 'product/:productId', component: ProductDetailComponent},
+      {path:'wishlist/:userId',component:WishlistDetailComponent}
     ])
   ],
   providers: [],
