@@ -45,7 +45,6 @@ public class ClientController : ControllerBase{
        if (clientLogin != null) 
        {
            var result = new ObjectResult(clientLogin);
-           Response.Headers.Add("Access-Control-Allow-Origin", "*");
            return result;
        }
        else return null;
