@@ -14,20 +14,33 @@ export class AddressRegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async initiliaze(){
-    var config = {
-      method: 'get',
-      url: 'http://localhost:5141/Address/getAll',
-      headers: { },
-      data : ''
-    };
-    var instance  = this;
-    axios(config).then(function (response) {
-      instance.address = response.data;
-    })
-    .catch(function (error) {
-      console.log(error);
+  submit(){
+    let street  = document.getElementById("street") as HTMLInputElement;
+    let postal_code = document.getElementById("postal-code") as HTMLInputElement;
+    let state = document.getElementById("state") as HTMLInputElement;
+    let city = document.getElementById("city") as HTMLInputElement;
+    let country = document.getElementById("country") as HTMLInputElement;
+    console.log(street.value, postal_code.value, state.value, city.value, country.value)
+    var data = JSON.stringify({
+      "street": street,
+      "postal_code": postal_code,
+      "state": state,
+      "city": city,
+      "country": country
     });
-
+    
+    var config = {
+      
+      method: 'post',
+      url: 'http://localhost:5141/Address/register',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
   }
 }
