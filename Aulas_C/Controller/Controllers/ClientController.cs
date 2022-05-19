@@ -3,6 +3,7 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Web.Http.Cors;
 namespace Controller.Controllers;
 
 [ApiController]
@@ -37,22 +38,24 @@ public class ClientController : ControllerBase{
         var client = Model.Client.find(document);
         return client;
     }
+  
     [HttpPost]
     [Route("login")]
-    public object loginClient([FromBody] ClientDTO client){
+    public IActionResult loginClient([FromBody] LoginDTO client){
+
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
         var clientLogin = Model.Client.loginClient(client.login,client.passwd);
-        
-       if (clientLogin != null) 
+
+         if (clientLogin != null) 
        {
            var result = new ObjectResult(clientLogin);
-           Response.Headers.Add("Access-Control-Allow-Origin", "*");
            return result;
        }
-       else return null;
+        return new ObjectResult(new {
+            msg = "error"
+        });
+     
     }
-
-
-
      [HttpDelete]
     [Route("delete/{document}")]
     public object removeClient(string document){
