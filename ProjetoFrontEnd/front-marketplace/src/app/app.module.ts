@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
 import { WishlistDetailComponent } from './wishlist-detail/wishlist-detail.component';
+import { AddressRegisterComponent } from './address-register/address-register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WishlistDetailComponent } from './wishlist-detail/wishlist-detail.compo
     ProductsListComponent,
     ProductDetailComponent,
     LoginComponent,
-    WishlistDetailComponent
+    WishlistDetailComponent,
+    AddressRegisterComponent
   ],
   imports: [
     BrowserModule,

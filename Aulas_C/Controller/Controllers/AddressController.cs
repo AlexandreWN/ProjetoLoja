@@ -46,6 +46,14 @@ public class AddressController : ControllerBase {
             postal_code = obj.postal_code
         };
     }
+    [HttpGet]
+    [Route("getAll")]
+    public IActionResult getAllAddress(){
+        var allAddress = Model.Address.getAllAddress();
+        var result = new ObjectResult(allAddress);
+         Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        return result;
+    }
 }
 
 
