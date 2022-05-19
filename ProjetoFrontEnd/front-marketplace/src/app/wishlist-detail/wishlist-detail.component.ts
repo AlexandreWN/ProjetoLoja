@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../products';
+import { WishList } from '../wishlists';
 import axios from "axios";
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  selector: 'app-wishlist-detail',
+  templateUrl: './wishlist-detail.component.html',
+  styleUrls: ['./wishlist-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
-  titlePage = "Product Detail"
-  product : Product | undefined;
+export class WishlistDetailComponent implements OnInit {
+  titlePage = "WishList"
+  wishlist : [WishList] | undefined;
 
-  constructor(private route: ActivatedRoute){ }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
-    this.initiliaze(Number(routeParams.get('productId')));
+    this.initiliaze(Number(routeParams.get('userId')));
   }
 
   async initiliaze(id){
     var config = {
       method: 'get',
-      url: 'http://localhost:5141/Product/get/' + id,
+      url: 'http://localhost:5141/WishList/get/' + 2,
       headers: { },
       data : ''
     };
@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit {
     var instance  = this;
     axios(config).then(function (response) {
       //console.table(response.data);
-      instance.product = response.data;
+      instance.wishlist = response.data;
     })
     .catch(function (error) {
       console.log(error);

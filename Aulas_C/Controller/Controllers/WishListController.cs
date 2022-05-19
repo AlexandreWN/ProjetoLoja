@@ -22,7 +22,7 @@ public class WishListController : ControllerBase{
         };
     }
 
-      [HttpDelete]
+    [HttpDelete]
     [Route("delete/{id}")]
     public object removeProductToWishList(int id){
         try{
@@ -34,4 +34,12 @@ public class WishListController : ControllerBase{
         }  
     }
     
+    [HttpGet]
+    [Route("get/{id}")]
+    public IActionResult getWishListById(int id){
+        var wish = Model.WishList.find(id);
+        var result = new ObjectResult(wish);
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        return result;
+    }
 }

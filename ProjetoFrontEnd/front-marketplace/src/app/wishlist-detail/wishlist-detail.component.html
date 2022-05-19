@@ -1,0 +1,12 @@
+<div *ngFor="let wishlists of wishlist" class = "productDetail">
+    
+    <div class = "purchaseImg">
+        <img class = "imgProd" src={{wishlists.image}}/>
+       <a href="">wishlist</a>
+    </div>
+    <div class="detailsProduct">
+        <h2>{{wishlists.name}}</h2>
+        <p>{{wishlists.description}}</p>   
+        <h1>{{wishlists.price | currency}}</h1>  
+    </div>  
+</div>
