@@ -8,6 +8,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
+import { AddressRegisterComponent } from './address-register/address-register.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     TopBarComponent,
     ProductsListComponent,
     ProductDetailComponent,
-    LoginComponent
+    LoginComponent,
+    AddressRegisterComponent
   ],
   imports: [
     BrowserModule,

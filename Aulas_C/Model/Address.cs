@@ -139,6 +139,21 @@ public class Address : IValidateDataObject, IDataController<AddressDTO,Address>
         
     }
 
+public static List<object>  getAllAddress(){
+    using(var context = new DAO.LibraryContext())
+    {
+        var allAddress = context.Address;
+        List<object> address = new List<object>();
+        foreach(var add in allAddress){
+            address.Add(new{
+                city = add.city,
+                country = add.country,
+                state = add.state
+            });
+        }
+        return address;
+    }
+}
     public void update(AddressDTO obj){
         /*
         using (var context = new DAO.LibraryContext())
