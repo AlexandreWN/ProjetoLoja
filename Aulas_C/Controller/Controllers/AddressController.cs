@@ -11,7 +11,7 @@ public class AddressController : ControllerBase {
     [HttpPost]
     [Route("register")]
     public object registerAddress([FromBody] AddressDTO address){
-        Response.Headers.Add("Access-Control-Allow-Origin:", "*");
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
         var addressModel = Model.Address.convertDTOToModel(address);
         var id = addressModel.save();
         return new {

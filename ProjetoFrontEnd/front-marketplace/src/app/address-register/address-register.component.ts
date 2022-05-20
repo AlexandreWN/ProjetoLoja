@@ -13,7 +13,6 @@ export class AddressRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   submit(){
     let street  = document.getElementById("street") as HTMLInputElement;
     let postal_code = document.getElementById("postal-code") as HTMLInputElement;
@@ -21,12 +20,13 @@ export class AddressRegisterComponent implements OnInit {
     let city = document.getElementById("city") as HTMLInputElement;
     let country = document.getElementById("country") as HTMLInputElement;
     console.log(street.value, postal_code.value, state.value, city.value, country.value)
+    
     var data = JSON.stringify({
-      "street": street,
-      "postal_code": postal_code,
-      "state": state,
-      "city": city,
-      "country": country
+      "street": street.value,
+      "postal_code": postal_code.value,
+      "state": state.value,
+      "city": city.value,
+      "country": country.value
     });
     
     var config = {
@@ -40,7 +40,7 @@ export class AddressRegisterComponent implements OnInit {
     };
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log(JSON.stringify(data));
     })
   }
 }
