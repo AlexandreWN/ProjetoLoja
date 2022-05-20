@@ -113,7 +113,8 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
                 product = w.product.name,
                 price = s.unit_price,
                 description = w.product.description,
-                image = w.product.image
+                image = w.product.image,
+                name = w.product.name
             }).ToList().GroupBy(x => x.id);
 
             List<object> dados = new List<object>();

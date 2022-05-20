@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    border: 0;
+}
+
+.titulo{
+    font-size: 36px;
+    font-weight: bold;
+    color : #1976d2;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.productsFor{
+    width: 90%;
+    border-width: 1px; 
+    border-style: solid;
+    border-color:  black;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.img{
+    max-width: 150px;
+}
