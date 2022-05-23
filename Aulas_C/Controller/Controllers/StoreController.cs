@@ -3,10 +3,13 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("[controller]")]
 public class StoreController : ControllerBase{
+    
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object registerStore([FromBody] StoreDTO obj){
@@ -21,7 +24,7 @@ public class StoreController : ControllerBase{
         };
     }
 
-     [HttpGet]
+    [HttpGet]
     [Route("get/{id}")]
      public object getStoreInformations(int id){
         var store = Model.Store.find(id);

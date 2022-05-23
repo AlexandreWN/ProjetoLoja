@@ -75,3 +75,4 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\refint\C
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.genruntimeconfig.cache
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\ref\Controller.dll
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

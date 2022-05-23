@@ -3,6 +3,7 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("[controller]")]
@@ -31,14 +32,16 @@ public class OwnerController : ControllerBase{
 
     }
 
-     [HttpGet]
+    [Authorize]
+    [HttpGet]
     [Route("get/{document}")]
     public object getInformations(string document){
         var owner = Model.Owner.find(document);
         return owner;
     }
 
-     [HttpDelete]
+    [Authorize]
+    [HttpDelete]
     [Route("delete/{document}")]
     public object removeOwner(string document){
         try{

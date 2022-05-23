@@ -2,12 +2,14 @@ using System;
 using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controller.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class AddressController : ControllerBase {
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object registerAddress([FromBody] AddressDTO address){
@@ -24,6 +26,7 @@ public class AddressController : ControllerBase {
         };
     }
 
+    [Authorize]
     [HttpDelete]
     [Route("delete/{id}")]
     public object removeAdress(int id){
@@ -33,6 +36,7 @@ public class AddressController : ControllerBase {
 
     }
 
+    [Authorize]
     [HttpPost]
     [Route("update")]
     public object updateAddress([FromBody] AddressDTO obj){
@@ -47,6 +51,8 @@ public class AddressController : ControllerBase {
             postal_code = obj.postal_code
         };
     }
+    
+    [Authorize]
     [HttpGet]
     [Route("getAll")]
     public IActionResult getAllAddress(){

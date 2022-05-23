@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
       url: 'http://localhost:5141/Client/login',
       headers: { 
         'Content-Type': 'application/json'
-     
       },
       data : data
     };

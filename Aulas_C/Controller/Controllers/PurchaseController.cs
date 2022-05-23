@@ -3,10 +3,13 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("[controller]")]
 public class PurchaseController : ControllerBase{
+    
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object makePurchase([FromBody] PurchaseDTO purchase){
@@ -33,6 +36,7 @@ public class PurchaseController : ControllerBase{
         return purchase;
     }
 
+
     [HttpGet]
     [Route("getStore/{id}")]
     public List<object> getStorePurchase(int id){
@@ -40,6 +44,7 @@ public class PurchaseController : ControllerBase{
         return purchase;
     }
 
+    [Authorize]
     [HttpDelete]
     [Route("delete/{id}")]
     public object removePurchase(int id){

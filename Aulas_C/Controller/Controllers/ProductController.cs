@@ -3,10 +3,13 @@ using Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 namespace Controller.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("[controller]")]
 public class ProductController : ControllerBase{
+    
+    [Authorize]
     [HttpPost]
     [Route("register")]
     public object createProduct([FromBody] ProductDTO product){
@@ -29,6 +32,7 @@ public class ProductController : ControllerBase{
          Response.Headers.Add("Access-Control-Allow-Origin", "*");
         return result;
     }
+
     [HttpGet]
     [Route("get/{id}")]
     public IActionResult getProductById(int id){
@@ -38,7 +42,7 @@ public class ProductController : ControllerBase{
         return result;
     }
     
-
+    [Authorize]
     [HttpPut]
     [Route("update")]
     public object updateProduct([FromBody] ProductDTO product){
@@ -47,7 +51,9 @@ public class ProductController : ControllerBase{
         productModel.update(product);
         return new { status = "sucess"};
     }
-     [HttpDelete]
+
+    [Authorize]
+    [HttpDelete]
     [Route("delete/{id}")]
     public object removeProduct(int id){
        // try{

@@ -38,10 +38,10 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
                 phone = clientDTO.phone,
                 login = clientDTO.login,
                 passwd = clientDTO.passwd,
-                address = clientDTO.address
+                address = clientDTO.address,
+                id = clientDTO.id
             };
         }
-      
     }
 
     public static int findID(string document){
@@ -65,17 +65,25 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         return true;
 
     }
-    public static object loginClient(string login,string passwd){
+    public static ClientDTO? loginClient(string login,string passwd){
+        var retorno = new ClientDTO();
         using(var context = new DAO.LibraryContext())
         {
             var clientDTO = context.Client.FirstOrDefault(a => a.login == login &&  a.passwd == passwd);
-            if(clientDTO != null){
-                return find(clientDTO.document);
-
-            }else{
-                return null;
-            }
+            
+            if(clientDTO != null){      
+                retorno.name = clientDTO.name;
+                retorno.date_of_birth = clientDTO.date_of_birth;
+                retorno.document = clientDTO.document;
+                retorno.email  = clientDTO.email;
+                retorno.phone = clientDTO.phone;
+                retorno.login = clientDTO.login;
+                retorno.passwd = clientDTO.passwd;                
+                retorno.id = clientDTO.id;   
+            }    
         }
+
+        return retorno;
     }
 
     public void delete(ClientDTO obj){
