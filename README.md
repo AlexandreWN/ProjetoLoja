@@ -15,4 +15,4 @@ Lista de Tarefas 19/04/2022
     - Purchase
     - Product
     - Stocks
-    - teste de commit para configuração 
+    - teste de commit para configuração sadasda
