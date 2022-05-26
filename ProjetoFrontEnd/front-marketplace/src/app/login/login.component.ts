@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      localStorage.setItem('authToken',response.data);
+      localStorage.setItem('authToken',response.data['token']);
+      localStorage.setItem('id',response.data['id']);
       instance.router.navigate(['/']);
     }).catch(function (error) {
       console.log(error);

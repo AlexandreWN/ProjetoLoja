@@ -20,10 +20,11 @@ export class WishlistDetailComponent implements OnInit {
 
   async initiliaze(id){
     let token = localStorage.getItem('authToken')
+    let idclient = localStorage.getItem('id')
     console.log(token);
     var config = {
       method: 'get',
-      url: 'http://localhost:5141/WishList/get/' + 1,
+      url: 'http://localhost:5141/WishList/get/' + idclient,
       headers: {'Authorization': 'Bearer ' +token},
       data : ''
     };

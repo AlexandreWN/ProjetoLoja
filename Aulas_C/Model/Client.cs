@@ -44,6 +44,15 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         }
     }
 
+    public static int findByLogin (string login, string passwd){
+        using(var context = new DAO.LibraryContext())
+        { 
+            var client = context.Client.Include(e=> e.address).FirstOrDefault(l => l.login == login && l.passwd == passwd);
+            var id = client.id;
+            return id;
+        };
+    }
+
     public static int findID(string document){
         using(var context = new DAO.LibraryContext())
         {
