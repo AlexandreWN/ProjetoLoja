@@ -1,9 +1,8 @@
 .main{
-    width: 100%;
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    left: 15%;
 }
 @media only screen and (max-width: 950px) {
     .main{
@@ -17,14 +16,11 @@
 .btns{
     display: flex;
     justify-content: space-between;
-    width: 22.7em;
 }
 
 .form-group{
     margin-top: 1em;
     display: flex; 
-    width: 100%;
-    max-width: 30em;
 }
 
 button{
@@ -32,4 +28,3 @@ button{
     width: 100%;
     margin-bottom: 2em;
 }
-
