@@ -1,20 +1,16 @@
 .main{
-    text-align: center;
-    width:100%;
-   
-}
-form{
     display: inline-block;
     position: relative;
-    width: 50%;
-
+    width: 70%;
+    left: 15%;
 }
-@media only screen and (max-width: 900px) {
-    form{
-        width: 70%;
+@media only screen and (max-width: 950px) {
+    .main{
+        width: 80%;
+        left: 10%;
     }
 }
-form button{
+.main button{
     width: 45%;
 }
 .btns{
@@ -30,28 +26,4 @@ form button{
 button{
     margin-top: 1em;
     width: 100%;
-}
-form img{
-    width: 2em;
-    margin-right: 0.5em;
-}
-.imgUser{
-    width: 2.2em;
-    height: 2.3em;
-    position: relative;
-    margin-right: 0.5em;
-   background: url("src/assets/img/user.svg");
-   background-repeat: no-repeat;
-   opacity: 1;
-}
-.imgUser:hover{
-    opacity: 1;
-  }
-  .imgPassword{
-    width: 2.2em;
-    height: 2.3em;
-    margin-right: 0.5em;
-   background: url("src/assets/img/password.svg");
-   background-repeat: no-repeat;
-   opacity: 1;
 }
