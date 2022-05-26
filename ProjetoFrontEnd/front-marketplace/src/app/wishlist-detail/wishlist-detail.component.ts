@@ -21,7 +21,7 @@ export class WishlistDetailComponent implements OnInit {
   async initiliaze(id){
     var config = {
       method: 'get',
-      url: 'http://localhost:5141/WishList/get/' + 2,
+      url: 'http://localhost:5141/WishList/get/' + 1,
       headers: { },
       data : ''
     };
