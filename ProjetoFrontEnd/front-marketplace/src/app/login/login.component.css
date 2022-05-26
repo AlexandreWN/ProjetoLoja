@@ -1,50 +1,40 @@
 .main{
-    text-align: center;
-    width:100%;
-   
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
 }
-form{
-    display: inline-block;
-    position: relative;
-    width: 50%;
-
-}
-@media only screen and (max-width: 900px) {
-    form{
-        width: 70%;
-    }
-}
-
 .form-group{
     margin-top: 1em;
     display: flex; 
+    width: 100%;
+    max-width: 30em;
 }
 
 button{
     margin-top: 1em;
     width: 100%;
+    max-width: 30em;  
+    
 }
 form img{
     width: 2em;
     margin-right: 0.5em;
 }
 .imgUser{
-    width: 2.2em;
+    width: 2.5em;
     height: 2.3em;
     position: relative;
     margin-right: 0.5em;
    background: url("src/assets/img/user.svg");
    background-repeat: no-repeat;
-   opacity: 1;
 }
-.imgUser:hover{
-    opacity: 1;
-  }
   .imgPassword{
-    width: 2.2em;
+    width: 2.5em;
     height: 2.3em;
     margin-right: 0.5em;
    background: url("src/assets/img/password.svg");
    background-repeat: no-repeat;
-   opacity: 1;
 }
