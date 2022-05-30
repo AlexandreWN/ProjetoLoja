@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import axios from "axios";
 import { Address } from '../address';
+import { Router } from '@angular/router';
+import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
 
 @Component({
   selector: 'app-address-register',
@@ -9,7 +11,7 @@ import { Address } from '../address';
 })
 export class AddressRegisterComponent implements OnInit {
   address : [Address] | undefined;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +21,7 @@ export class AddressRegisterComponent implements OnInit {
     let state = document.getElementById("state") as HTMLInputElement;
     let city = document.getElementById("city") as HTMLInputElement;
     let country = document.getElementById("country") as HTMLInputElement;
+    let token = localStorage.getItem('authToken')
     console.log(street.value, postal_code.value, state.value, city.value, country.value)
     
     var data = JSON.stringify({
@@ -34,13 +37,16 @@ export class AddressRegisterComponent implements OnInit {
       method: 'post',
       url: 'http://localhost:5141/Address/register',
       headers: { 
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json', 
+        'Authorization': 'Bearer ' + token
       },
       data : data
     };
+    let instance = this;
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(data));
+      instance.router.navigate(['/']);
     })
   }
 }
