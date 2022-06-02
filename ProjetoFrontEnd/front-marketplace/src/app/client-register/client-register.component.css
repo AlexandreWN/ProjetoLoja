@@ -6,10 +6,21 @@
     justify-content: space-around;
 
 }
+.register{
+    width: 40%;
+}
+
 @media only screen and (max-width: 950px) {
     .main{
-        width: 80%;
-        left: 10%;
+      flex-direction: column;
+      width: 100%;
+
+    }
+    .register{
+
+        height: auto;
+        width: 100%;
+        margin-bottom: 5em;
     }
 }
 .main button{
@@ -30,7 +41,4 @@ button{
     margin-top: 2em;
     width: 20%;
     margin-bottom: 2em;
-}
-.register{
-    width: 40%;
 }
