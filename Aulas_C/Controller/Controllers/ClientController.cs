@@ -73,7 +73,7 @@ public class ClientController : ControllerBase{
                     _configuration["Jwt:Issuer"],
                     _configuration["Jwt:Audience"],
                     claims,
-                    expires: DateTime.UtcNow.AddMinutes(10),
+                    expires: DateTime.UtcNow.AddMinutes(1000),
                     signingCredentials: signIn);
                 var clientResponse = new{
                     id = clientLogin.id,
