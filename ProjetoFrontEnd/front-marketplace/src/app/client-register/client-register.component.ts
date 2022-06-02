@@ -54,7 +54,8 @@ export class ClientRegisterComponent implements OnInit {
     let instance = this;
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(data));
+      console.log(response.data);
+      console.log();
       instance.router.navigate(['/']);
     })
   }
