@@ -77,6 +77,7 @@ public class ClientController : ControllerBase{
                     signingCredentials: signIn);
                 var clientResponse = new{
                     id = clientLogin.id,
+                    document = clientLogin.document,
                     token = new JwtSecurityTokenHandler().WriteToken(token)
                 };
                 return Ok(clientResponse);
