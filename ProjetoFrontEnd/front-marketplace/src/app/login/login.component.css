@@ -16,6 +16,7 @@ button{
     margin-top: 1em;
     width: 100%;
     max-width: 30em;  
+
     
 }
 form img{
@@ -36,4 +37,12 @@ form img{
     margin-right: 0.5em;
    background: url("src/assets/img/password.svg");
    background-repeat: no-repeat;
+}
+.title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3em;
+}
+.title h1{
+    font-size: 3em;
 }

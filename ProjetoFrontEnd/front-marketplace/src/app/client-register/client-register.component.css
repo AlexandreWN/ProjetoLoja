@@ -1,44 +1,60 @@
-.main{
-    display: inline-block;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+.main {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.register{
-    width: 40%;
+.register {
+  width: 40%;
+}
+.btns {
+  display: flex;
+  justify-content: end;
+  width: 96.7%;
+}
+button {
+  font-size: large;
+  width: 10%;
+  height: 2.5em;
+  margin-bottom: 2em;
+  margin: 1em;
+}
+.main button {
+  width: 45%;
+}
+
+.form-group {
+  margin-top: 1em;
+  display: flex;
 }
 
 @media only screen and (max-width: 950px) {
-    .main{
-      flex-direction: column;
-      width: 100%;
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+  .register {
+    height: auto;
+    width: 100%;
+    margin-bottom: 5em;
+  }
 
-    }
-    .register{
-
-        height: auto;
-        width: 100%;
-        margin-bottom: 5em;
-    }
-}
-.main button{
-    width: 45%;
-}
-.btns{
+  .btns {
     display: flex;
     justify-content: space-around;
-
-   
+  }
+  .btns button {
+    width: 50%;
+    height: auto;
+  }
 }
 
-.form-group{
-    margin-top: 1em;
-    display: flex; 
+.title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3em;
 }
-button{
-    margin-top: 2em;
-    width: 20%;
-    margin-bottom: 2em;
+.title h1{
+    font-size: 3em;
 }

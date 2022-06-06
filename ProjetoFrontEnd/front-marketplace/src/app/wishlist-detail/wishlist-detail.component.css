@@ -5,20 +5,29 @@
     padding: 20px;
     margin: 0;
 }
+button{
+    margin: 5px;
+    width: 7em;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.price{
+    font-size: 1.5rem;
+}
 @media only screen and (max-width: 991px) {
     .img{
       display: none;
     }
-    .bt button{
+    .btn{
         width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .btn svg{
+        margin-right: 10px;
     }
 
-}
-button{
-    margin: 5px;
-    width: 15%;
-    height: 4em;
-}
-.price{
-    font-size: 1.5rem;
 }

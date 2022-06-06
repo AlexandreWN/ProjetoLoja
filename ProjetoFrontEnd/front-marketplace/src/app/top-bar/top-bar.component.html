@@ -43,10 +43,12 @@
 				  </svg>
 			  </a>
 			  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<li><a class="dropdown-item" [routerLink]="['/login']">Sign</a></li>	
-				<li><a class="dropdown-item" [routerLink]="['/client-register']">Sign up</a></li>
-				<li><hr class="dropdown-divider"></li>
 				<li><a class="dropdown-item"  [routerLink]="['/wishlist-detail']">Wishlist</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" [routerLink]="['/profile']">Profile</a></li>
+					<li><a class="dropdown-item" [routerLink]="['/login']">Sign in</a></li>	
+					<li><a class="dropdown-item" [routerLink]="['/client-register']">Sign up</a></li>
+					<li><a class="dropdown-item" [routerLink]="['/client-register']">Sign out</a></li>
 			  </ul>
 			</li>
 		  

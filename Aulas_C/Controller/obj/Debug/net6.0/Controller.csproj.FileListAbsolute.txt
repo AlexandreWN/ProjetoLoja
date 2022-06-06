@@ -9,6 +9,7 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\System.W
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\System.Web.Http.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\System.Web.Http.Cors.dll
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -75,4 +76,3 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\refint\C
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.genruntimeconfig.cache
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\ref\Controller.dll
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
