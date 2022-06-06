@@ -18,7 +18,6 @@ export class ProductsListComponent implements OnInit {
     this.initiliaze();
    
   }
-
   async initiliaze(){
     var config = {
       method: 'get',
@@ -41,5 +40,30 @@ export class ProductsListComponent implements OnInit {
       console.log(error);
     });
 
+  }
+  
+  AddToWish(id : number){
+    let token = localStorage.getItem('authToken')
+    let document = localStorage.getItem('document')
+  
+    var data = JSON.stringify({
+      "document": document,
+      "productID" : id
+    });
+    
+    var config = {
+      method: 'post',
+      url: 'http://localhost:5141/WishList/register',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +token
+      },
+      data : data
+    };
+    let instance = this;
+    axios(config)
+    .then(function (response) {
+      console.log(data);
+    })
   }
 }

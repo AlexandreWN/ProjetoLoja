@@ -46,26 +46,34 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
 
     }
 
-    public int save(string document, int product){
+    public int save(string document, int productid){
         var id = 0;
 
 
         using(var context = new LibraryContext())
         {
-            var clientDAO = context.Client.FirstOrDefault(c=>c.document == document);
-            var productsDAO = context.Product.Where(p=>p.id == product).Single();
-            var wishList = new DAO.WishList{
-                client = clientDAO,
-                product = productsDAO
-            };
+            try{
+                var clientDAO = context.Client.FirstOrDefault(c=>c.document == document);
+                var productsDAO = context.Product.Where(p=>p.id == productid).Single();
+                var wishList = new DAO.WishList{
+                    client = clientDAO,
+                    product = productsDAO
+                };
 
-            context.WishList.Add(wishList);
-            context.SaveChanges();
+                context.WishList.Add(wishList);
+                context.SaveChanges();
 
-            id = wishList.id;
+                id = wishList.id;
+            }catch(Exception e){
 
+                Console.Write(e);
+
+            }
+           
+
+           
         }
-         return id;
+        return id;
     }
 
      public static string removeWishList(int  id){
@@ -77,7 +85,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
             return " foi removido!";
         }
     }
-     public static string removeProductToWishList(int  idProd){
+     public static string removeProductToWishList(int idProd){
          using(var context = new LibraryContext())
         {
             var wishListProducts = context.WishList.Where(w => w.product.id == idProd);

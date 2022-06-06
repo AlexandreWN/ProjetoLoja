@@ -12,15 +12,14 @@ public class WishListController : ControllerBase{
     [Authorize]
     [HttpPost]
     [Route("register")]
-    public object addProductToWishList([FromBody] WishListDTO request){
-        var wishlistModel = Model.WishList.convertDTOToModel(request);
-        var clientModel = wishlistModel.getClient();
+    public object addProductToWishList([FromBody] WishListRegisterDTO request){      
 
-        foreach(var prod in wishlistModel.getProducts()){
-            wishlistModel.save(clientModel.getDocument(), prod.findID());
-        }
+        var wishlistModel = new Model.WishList();
+
+        var newID =  wishlistModel.save(request.document,request.productID);      
 
         return new{
+            id = newID,
             response= "salvou no banco"
         };
     }
@@ -40,8 +39,9 @@ public class WishListController : ControllerBase{
     
     [Authorize]
     [HttpGet]
-    [Route("get/{id}")]
-    public IActionResult getWishListById(int id){
+    [Route("get/{document}")]
+    public IActionResult getWishListById(string document){
+        var id = Model.Client.findID(document);
         var wish = Model.WishList.find(id);
         var result = new ObjectResult(wish);
         Response.Headers.Add("Access-Control-Allow-Origin", "*");
