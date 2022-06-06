@@ -1,0 +1,13 @@
+.register{
+    margin-top: 3em;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+  }
+.btns  button {
+    width: 7em;
+    height: 2.5em;
+    margin-bottom: 2em;
+    margin: 1em;
+  }

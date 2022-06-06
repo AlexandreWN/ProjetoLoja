@@ -19,30 +19,3 @@ button{
 
     
 }
-form img{
-    width: 2em;
-    margin-right: 0.5em;
-}
-.imgUser{
-    width: 2.5em;
-    height: 2.3em;
-    position: relative;
-    margin-right: 0.5em;
-   background: url("src/assets/img/user.svg");
-   background-repeat: no-repeat;
-}
-  .imgPassword{
-    width: 2.5em;
-    height: 2.3em;
-    margin-right: 0.5em;
-   background: url("src/assets/img/password.svg");
-   background-repeat: no-repeat;
-}
-.title {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 3em;
-}
-.title h1{
-    font-size: 3em;
-}
