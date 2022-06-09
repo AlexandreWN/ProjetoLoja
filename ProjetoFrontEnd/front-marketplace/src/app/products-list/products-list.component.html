@@ -8,7 +8,7 @@
         </a>
         <p class="card-text">{{product.description}}</p>
         <h1>{{product.price | currency}}</h1>
-        <div class="imgLike" (click) ="AddToWish(product.id)"></div>
+        <div class="imgLike" (click) ="AddToWish(product.id,product.stockId)"></div>
     </div>
 </div>
 

@@ -42,13 +42,14 @@ export class ProductsListComponent implements OnInit {
 
   }
   
-  AddToWish(id : number){
+  AddToWish(id : number, stockId : number){
     let token = localStorage.getItem('authToken')
     let document = localStorage.getItem('document')
   
     var data = JSON.stringify({
       "document": document,
-      "productID" : id
+      "productID" : id,
+      "stockID" : stockId
     });
     
     var config = {

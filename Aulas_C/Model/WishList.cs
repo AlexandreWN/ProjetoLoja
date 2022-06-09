@@ -69,9 +69,6 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
                 Console.Write(e);
 
             }
-           
-
-           
         }
         return id;
     }
@@ -122,7 +119,8 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
                 price = s.unit_price,
                 description = w.product.description,
                 image = w.product.image,
-                name = w.product.name
+                name = w.product.name,
+                StockId = s.id
             }).ToList().GroupBy(x => x.id);
 
             List<object> dados = new List<object>();
