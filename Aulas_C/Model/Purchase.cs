@@ -183,10 +183,10 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     }
       
     }
-        public static List<object> getClientPurchases(int clientID){
+        public static List<object> getClientPurchases(string document){
         using(var context = new DAO.LibraryContext())
         {
-            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.id == clientID);
+            var clientPurchase = context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.client.document == document);
 
             List<object> compras = new List<object>();
             foreach(var comp in clientPurchase){
@@ -195,6 +195,13 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
             return compras;
         }
       
+    }
+    public static object getPurchase(int id){
+        using(var context = new DAO.LibraryContext())
+        {
+            var purchase =  context.Purchase.Include(p=>p.client).Include(p=>p.client.address).Include(p=>p.store).Include(p=>p.product).Include(p=>p.store.owner).Include(p=>p.store.owner.address).Where(p => p.id == id).Single();
+            return purchase;
+        }
     }
 
 
