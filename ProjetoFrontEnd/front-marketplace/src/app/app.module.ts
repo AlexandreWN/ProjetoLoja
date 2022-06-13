@@ -12,6 +12,9 @@ import { WishlistDetailComponent } from './wishlist-detail/wishlist-detail.compo
 import { ClientRegisterComponent } from './client-register/client-register.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PurchaseDetailsComponent } from './purchase-details/purchase-details.component';
+import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
+import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ProfileComponent } from './profile/profile.component';
     WishlistDetailComponent,
     ClientRegisterComponent,
     StoreRegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    PurchaseDetailsComponent,
+    SalesDetaisComponent,
+    PurchaseDetailComponent
   ],
   imports: [
     BrowserModule,

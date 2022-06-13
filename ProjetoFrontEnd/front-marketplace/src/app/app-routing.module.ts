@@ -5,13 +5,20 @@ import { WishlistDetailComponent } from './wishlist-detail/wishlist-detail.compo
 import { ClientRegisterComponent } from './client-register/client-register.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { PurchaseDetailsComponent } from './purchase-details/purchase-details.component';
+import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
+import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'wishlist-detail',component:WishlistDetailComponent},
   {path:'client-register',component:ClientRegisterComponent},
   {path:'store-register',component:StoreRegisterComponent},
-  {path:'profile',component:ProfileComponent}
+  {path:'profile',component:ProfileComponent},
+  {path:'purchase-details',component:PurchaseDetailsComponent},
+  {path:'sales-details',component:SalesDetaisComponent},
+  {path:'purchase-detail',component:PurchaseDetailComponent},
+  
+  
 ];
 
 @NgModule({

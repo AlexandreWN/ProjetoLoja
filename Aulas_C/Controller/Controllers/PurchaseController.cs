@@ -28,13 +28,26 @@ public class PurchaseController : ControllerBase{
             productsDTO = purchase.productsDTO
         };
     }
-
+    [Authorize]
     [HttpGet]
-    [Route("getClient/{id}")]
-    public List<object> getClientPurchase(int id){
-        var purchase = Model.Purchase.getClientPurchases(id);
+    [Route("getClient/{document}")]
+    public List<object> getClientPurchase(string document){
+        var purchase = Model.Purchase.getClientPurchases(document);
         return purchase;
     }
+
+   
+    [HttpGet]
+    [Route("getPurchase/{id}")]
+    public object getPurchase(int id){
+        var purchase = Model.Purchase.getPurchase(id);
+        return purchase;
+    }
+
+
+
+
+
 
 
     [HttpGet]
@@ -56,4 +69,8 @@ public class PurchaseController : ControllerBase{
             return ("Erro ao deletar");
         }  
     }
+
+
+
+
 }

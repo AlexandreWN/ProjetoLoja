@@ -9,6 +9,14 @@
   text-decoration: no;
 }
 
+.title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3em;
+}
+.title h1{
+  font-size: 3em;
+}
 
 .container {
   display: flex;
