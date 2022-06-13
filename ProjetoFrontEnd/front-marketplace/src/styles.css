@@ -174,17 +174,8 @@ label {
   height: 60%;
 }
 
-.imgLike{
-  width: 7%;
-  height: 1.5em;
-  margin-top: 5%;
- background: url("src/assets/img/like.svg") 0 0;
- background-repeat: no-repeat;
- background-size: 2.7em;
-}
-.imgLike:hover{
-  background-position:right;
-}
+
+
 .productTitle{
   display:flex;
   flex-wrap: wrap;

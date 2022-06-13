@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PurchaseDetailsComponent } from './purchase-details/purchase-details.component';
 import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
+import { MakePurchaseComponent } from './make-purchase/make-purchase.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.compo
     ProfileComponent,
     PurchaseDetailsComponent,
     SalesDetaisComponent,
-    PurchaseDetailComponent
+    PurchaseDetailComponent,
+    MakePurchaseComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.compo
     RouterModule.forRoot([
       {path:'',component:ProductsListComponent},
       {path: 'product/:productId', component: ProductDetailComponent},
-      {path:'wishlist/:userId',component:WishlistDetailComponent}
+      {path:'wishlist/:userId',component:WishlistDetailComponent},
+      {path: 'purchase-detail/:purchaseId', component: PurchaseDetailComponent}
     ])
   ],
   providers: [],
