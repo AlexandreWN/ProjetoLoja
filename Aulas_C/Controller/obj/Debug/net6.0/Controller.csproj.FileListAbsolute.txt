@@ -1,3 +1,10 @@
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.csproj.AssemblyReference.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.AssemblyInfo.cs
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\appsettings.json
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Controller.exe
@@ -60,13 +67,6 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Model.pd
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\DAO.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Enums.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\bin\Debug\net6.0\Interfaces.pdb
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.csproj.AssemblyReference.cache
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.AssemblyInfoInputs.cache
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.AssemblyInfo.cs
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.csproj.CoreCompileInputs.cache
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\Controller.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Controller\obj\Debug\net6.0\scopedcss\bundle\Controller.styles.css

@@ -3,5 +3,5 @@ export interface WishList {
     price : number;
     image : string,
     description : string,
-
+    stockId : number
 }

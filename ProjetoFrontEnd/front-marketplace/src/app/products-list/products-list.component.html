@@ -2,20 +2,18 @@
     <div class="card" *ngFor="let product of products">
         <img class="card-img-top" src={{product.image}} />
         <div class="card-body">
-            <a [title]="product.name + 'product.description'" [routerLink]="['/product', product.stockId]"
-                class="productTitle">
-                <h5 class="card-title"> {{product.name}}</h5>
-            </a>
-            <p class="card-text">{{product.description}}</p>
-            <h1>{{product.price | currency}}</h1>
-            <div >
-
-            </div>
+        <a [title]="product.name + 'product.description'" [routerLink]="['/product', product.stockId]" class = "productTitle">
+            <h5 class="card-title"> {{product.name}}</h5>
+        </a>
+        <p class="card-text">{{product.description}}</p>
+        <h1>{{product.price | currency}}</h1>
+        <div class="imgLike" (click) ="AddToWish(product.id,product.stockId)">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16" class="on" (click)="AddToWish(product.id)" class="like">
-                <path fill-rule="evenodd"
-                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-            </svg>
-
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+        </svg>
         </div>
     </div>
+</div>
+

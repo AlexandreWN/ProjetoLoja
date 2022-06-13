@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { WishList } from '../wishlists';
 import axios from "axios";
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 @Component({
   selector: 'app-wishlist-detail',
   templateUrl: './wishlist-detail.component.html',
@@ -11,7 +13,7 @@ export class WishlistDetailComponent implements OnInit {
   titlePage = "WishList"
   wishlist : [WishList] | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -43,6 +45,9 @@ export class WishlistDetailComponent implements OnInit {
     .catch(function (error) {
       console.log(error);
     });
-
+  }
+  detalhe(stockid){
+    var instance  = this;
+    instance.router.navigate(['/product/'+stockid]);
   }
 }
