@@ -71,6 +71,7 @@ public class LibraryContext : DbContext
                 entity.Property(pu => pu.payment_type);
                 entity.Property(pu => pu.purchase_status);
                 entity.Property(pu => pu.purchase_value);
+                entity.Property(pu => pu.date_purchase);
                 entity.HasOne(p => p.product);
                 entity.HasOne(p => p.client);
                 entity.HasOne(p => p.store);

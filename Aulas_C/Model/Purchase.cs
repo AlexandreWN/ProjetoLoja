@@ -214,6 +214,7 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
         PurchaseDTO.purchase_value = this.purchase_value;
         PurchaseDTO.number_confirmation = this.number_confirmation;
 
+
         return PurchaseDTO;
     }
 

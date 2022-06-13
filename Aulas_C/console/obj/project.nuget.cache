@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2VvIGAaeHoXw55jur8XVH5HRzbOYiS9ZDUsKEAE9IAU7Y/rl0b/+bzW0tt7okf+zPHdD3AkVSY3OdhANQCMcMw==",
+=======
+  "dgSpecHash": "K5KEmLAcrgtUjLUFhaX2HakL2V47bhWCLrzT1FBJXpK0sFU2vuNY9L0S8WcrqePfP/wxzdswDUmmpgG8JICV/g==",
+>>>>>>> 5a35e9d33051551c438bfa840b6dcf9c3bbc991d
   "success": true,
   "projectFilePath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\console\\console.csproj",
   "expectedPackageFiles": [
