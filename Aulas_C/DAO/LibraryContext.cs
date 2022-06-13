@@ -99,6 +99,7 @@ public class LibraryContext : DbContext
                 entity.HasKey(w => w.id);
                 entity.HasOne(c => c.client);
                 entity.HasOne(p => p.product);
+                entity.HasOne(s => s.stocks);
             });
         }
 }

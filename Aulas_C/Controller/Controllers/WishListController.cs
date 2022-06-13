@@ -16,7 +16,7 @@ public class WishListController : ControllerBase{
 
         var wishlistModel = new Model.WishList();
 
-        var newID =  wishlistModel.save(request.document,request.productID);      
+        var newID =  wishlistModel.save(request.document,request.productID,request.stockID);      
 
         return new{
             id = newID,

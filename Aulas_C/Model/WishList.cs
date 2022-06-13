@@ -13,7 +13,12 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
     private Client client;
     private List<Product> products = new List<Product>();
     private List<WishListDTO> wishListDTO = new List<WishListDTO>();
+    private List<Stocks> stocks = new List<Stocks>();
 
+
+    public List<Stocks> GetStocks(){
+        return stocks;
+    }
     public WishList(Client client)
     {
         this.client = client;
@@ -46,7 +51,7 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
 
     }
 
-    public int save(string document, int productid){
+    public int save(string document, int productid, int stocksid){
         var id = 0;
 
 
@@ -55,9 +60,11 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
             try{
                 var clientDAO = context.Client.FirstOrDefault(c=>c.document == document);
                 var productsDAO = context.Product.Where(p=>p.id == productid).Single();
+                var stocksDAO =context.Stocks.FirstOrDefault(s => s.id == stocksid);
                 var wishList = new DAO.WishList{
                     client = clientDAO,
-                    product = productsDAO
+                    product = productsDAO,
+                    stocks = stocksDAO
                 };
 
                 context.WishList.Add(wishList);
@@ -113,20 +120,22 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
         using(var context = new DAO.LibraryContext())
         {
             var stocks = context.Stocks;
-            var wishlist = context.WishList.Include(s => s.client).Where(a => a.client.id == id).Join(stocks, w => w.product, s => s.product,(w,s) => new {
+            var wishlist = context.WishList
+                    .Include(c => c.client)
+                    .Where(c => c.client.id == id)
+                    .Join(stocks, w => w.stocks.id, s => s.id, (w,s) => new {
                 id = w.product.bar_code,
                 product = w.product.name,
                 price = s.unit_price,
                 description = w.product.description,
                 image = w.product.image,
                 name = w.product.name,
-                StockId = s.id
-            }).ToList().GroupBy(x => x.id);
+                stockId = w.stocks.id
+            }).ToList();
 
             List<object> dados = new List<object>();
             foreach(var i in wishlist){
-                var ordenado = i.OrderBy(p => p.price);
-                dados.Add(ordenado.First());
+                dados.Add(i);
             }
             return dados;
         }
