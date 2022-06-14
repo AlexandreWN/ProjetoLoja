@@ -89,15 +89,15 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
             return " foi removido!";
         }
     }
-     public static string removeProductToWishList(int idProd){
+     public static string removeProductToWishList(int idStock, string document){
          using(var context = new LibraryContext())
         {
-            var wishListProducts = context.WishList.Where(w => w.product.id == idProd);
-            foreach(var prod in wishListProducts){
-                context.Remove(prod);    
-            }
-             context.SaveChanges(); 
-            return " foi removido!";
+            var wishListProducts = context.WishList.Include(w => w.stocks).Include(c => c.client).Where(w => w.stocks.id == idStock && w.client.document == document);
+        
+            context.RemoveRange(wishListProducts);
+
+            context.SaveChanges(); 
+            return "foi";
         }
     }
     
