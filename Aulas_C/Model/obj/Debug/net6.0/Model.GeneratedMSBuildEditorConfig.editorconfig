@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Interfaces
-build_property.ProjectDir = C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Interfaces\
+build_property.RootNamespace = Model
+build_property.ProjectDir = c:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\
