@@ -122,8 +122,9 @@ public class Client : Person, IValidateDataObject, IDataController<ClientDTO,Cli
         using(var context = new LibraryContext())
         {
             var dados = context.Client.FirstOrDefault(o => o.document == document);
-
-            if(dados == null){
+            var dadoslogin = context.Client.FirstOrDefault(c => c.login == login);
+            
+            if(dados == null && dadoslogin == null){
                 var addressDAO = new DAO.Address();
                 addressDAO.street = this.address.getStreet();
                 addressDAO.city = this.address.getCity();

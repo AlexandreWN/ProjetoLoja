@@ -16,6 +16,7 @@ export class ClientRegisterComponent implements OnInit {
     let name  = document.getElementById("name") as HTMLInputElement;
     let phone = document.getElementById("phone") as HTMLInputElement;
     let email = document.getElementById("email") as HTMLInputElement;
+    let login = document.getElementById("login") as HTMLInputElement;
     let dateOfBirth = document.getElementById("date-of-birth") as HTMLInputElement;
     let password = document.getElementById("password") as HTMLInputElement;
     let documento = document.getElementById("document") as HTMLInputElement;
@@ -32,7 +33,7 @@ export class ClientRegisterComponent implements OnInit {
       "email": email.value,
       "date_of_birth": dateOfBirth.value,
       "document": documento.value,
-      "login": email.value,
+      "login": login.value,
       "passwd": password.value,
       "address": {
         "street": street.value,
