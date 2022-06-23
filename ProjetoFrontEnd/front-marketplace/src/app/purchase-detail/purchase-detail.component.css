@@ -29,3 +29,6 @@ button{
 .card-title{
     margin-bottom: 1em;
 }
+a svg{
+    margin-right: 1em;
+}

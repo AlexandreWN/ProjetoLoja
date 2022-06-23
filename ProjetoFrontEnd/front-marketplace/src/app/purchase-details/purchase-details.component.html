@@ -1,25 +1,25 @@
 <div class="title">
   <h1>Purchases</h1>
 </div>
-<div class="card text-bg-primary mb-3">
+<div class="card text-bg-primary mb-3" *ngFor="let purchase of purchases">
   <div class="row g-7">
     <div class="col-md-2 img">
       <img
-        src="../../assets/img/product.png"
+        src={{purchase.product.image}}
         class="img-fluid rounded-start"
-        alt="..."
+        
       />
     </div>
 
     <div class="col-md-10 card-content">
       <div class="card-body">
-        <h5 class="card-title">Product Name</h5>
-        <p class="card-text">Store name</p>
-        <p class="card-text">Date of sale</p>
-        <p class="card-text price">Sale amout</p>
+        <h5 class="card-title">{{purchase.product.name}}</h5>
+        <p class="card-text"></p>
+        <!-- <p class="card-text">Date of sale</p> -->
+        <p class="card-text price">{{purchase.purchase_value | currency}}</p>
       </div>
       <div class="col-md-12 d-flex bt justify-content-end">
-        <button [routerLink]="['/purchase-detail']" type="button" class="btn btn-secondary">
+        <button [routerLink]="['/purchase-detail', purchase.id]" type="button" class="btn btn-secondary">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

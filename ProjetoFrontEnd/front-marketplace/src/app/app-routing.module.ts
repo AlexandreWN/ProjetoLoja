@@ -16,7 +16,6 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'purchase-details',component:PurchaseDetailsComponent},
   {path:'sales-details',component:SalesDetaisComponent},
-  {path:'purchase-detail',component:PurchaseDetailComponent},
   
   
 ];
