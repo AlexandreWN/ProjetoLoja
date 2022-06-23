@@ -46,8 +46,35 @@ export class WishlistDetailComponent implements OnInit {
       console.log(error);
     });
   }
+  
   detalhe(stockid){
     var instance  = this;
     instance.router.navigate(['/product/'+stockid]);
+  }
+  
+  remove(stockId){
+    let token = localStorage.getItem('authToken')
+    let document = localStorage.getItem('document')
+  
+    var data = JSON.stringify({
+      "document": document,
+      "stockID" : stockId
+    });
+    
+    var config = {
+      method: 'delete',
+      url: 'http://localhost:5141/WishList/delet/' + stockId +"/"+ document,
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +token
+      },
+      data : data
+    };
+    let instance = this;
+    axios(config)
+    .then(function (response) {
+      console.log(data);
+    })
+    console.log(data);
   }
 }
