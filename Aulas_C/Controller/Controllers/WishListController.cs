@@ -26,15 +26,12 @@ public class WishListController : ControllerBase{
 
     [Authorize]
     [HttpDelete]
-    [Route("delete/{id}")]
-    public object removeProductToWishList(int id){
-        try{
-            var whishList = Model.WishList.removeProductToWishList(id);
-            return whishList;
-        }
-        catch(Exception){
-            return ("Erro ao deletar");
-        }  
+    [Route("delet/{id}/{document}")]
+    public object removeProductToWishList(int id, string document){
+
+        var whishList = Model.WishList.removeProductToWishList(id, document);
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        return whishList;
     }
     
     [Authorize]
