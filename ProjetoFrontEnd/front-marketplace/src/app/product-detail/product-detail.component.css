@@ -1,10 +1,5 @@
 button{
-    margin-top: 2em;
-    height: 4em;
-    display: flex;
-    font-size: 1.5em;
-    flex-direction: row;
-    justify-content: center;
+
 }
 button svg{
     margin-right: 10px;
@@ -13,22 +8,36 @@ button svg{
     display:flex;
     flex-direction: row;
   }
-  .purchaseImg img{
-    width: 100%;
+  .imgProd img{
     align-self: center;
-    max-width: 35em;
+    max-width: 100%;
+  }
+  .imgProd{
+    background-color: black;
+    width: 100%;
   }
   .purchaseImg{
     display:flex;
-    flex-wrap: wrap;
+    width: 50%;
     flex-direction: column;
-    align-content: center;
+  }
+  .purchaseImg button{
+    margin-top: 2em;
+    height: 4em;
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
   }
 
   
 @media only screen and (max-width: 991px) {
     .detailsProduct h1{
       order: -1;
+    }
+    .purchaseImg{
+      width: 100%;
     }
   }
   @media only screen and (max-width: 700px) {
@@ -41,4 +50,5 @@ button svg{
     .productDetail{
         flex-direction: column;
     }
+   
   }
