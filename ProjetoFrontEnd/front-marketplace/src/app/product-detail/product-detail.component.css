@@ -1,5 +1,5 @@
 button{
-    width: 70%;
+    margin-top: 2em;
     height: 4em;
     display: flex;
     font-size: 1.5em;
@@ -9,3 +9,36 @@ button{
 button svg{
     margin-right: 10px;
 }
+.productDetail{
+    display:flex;
+    flex-direction: row;
+  }
+  .purchaseImg img{
+    width: 100%;
+    align-self: center;
+    max-width: 35em;
+  }
+  .purchaseImg{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  
+@media only screen and (max-width: 991px) {
+    .detailsProduct h1{
+      order: -1;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .purchaseImg a,img{
+      width: 100%;
+    }
+    .detailsProduct h1{
+      order: -1;
+    }
+    .productDetail{
+        flex-direction: column;
+    }
+  }

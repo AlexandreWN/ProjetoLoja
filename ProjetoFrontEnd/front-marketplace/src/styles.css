@@ -150,19 +150,6 @@ label {
 .card a{
   text-decoration: none;
 }
-@media only screen and (max-width: 991px) {
-  .detailsProduct h1{
-    order: -1;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .purchaseImg a,img{
-    width: 100%;
-  }
-  .detailsProduct h1{
-    order: -1;
-  }
-}
 .card-img-top{
   margin-top: 1.5em;
   max-width: 40%;
@@ -184,22 +171,8 @@ label {
 .productTitle h3{
   margin-top: 0.5em;
 }
-.productDetail{
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.purchaseImg img{
-  width: 50%;
-  align-self: center;
-  max-width: 35em;
-}
-.purchaseImg{
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-}
+
+
 .purchaseImg a{
   margin-top: 1em;
   background-color: #1976d2; /* Green */
