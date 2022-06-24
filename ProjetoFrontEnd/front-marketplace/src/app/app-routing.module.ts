@@ -8,6 +8,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { PurchaseDetailsComponent } from './purchase-details/purchase-details.component';
 import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
+import { OwnerRegisterComponent } from './owner-register/owner-register.component';
+import { ProductRegisterComponent } from './product-register/product-register.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'wishlist-detail',component:WishlistDetailComponent},
@@ -16,8 +18,8 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'purchase-details',component:PurchaseDetailsComponent},
   {path:'sales-details',component:SalesDetaisComponent},
-  
-  
+  {path:'owner-register', component:OwnerRegisterComponent},
+  {path:'product-register', component:ProductRegisterComponent}
 ];
 
 @NgModule({

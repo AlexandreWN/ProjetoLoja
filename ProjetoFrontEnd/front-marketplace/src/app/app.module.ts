@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { PurchaseDetailsComponent } from './purchase-details/purchase-details.co
 import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 import { MakePurchaseComponent } from './make-purchase/make-purchase.component';
+import { OwnerRegisterComponent } from './owner-register/owner-register.component';
+import { ProductRegisterComponent } from './product-register/product-register.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MakePurchaseComponent } from './make-purchase/make-purchase.component';
     PurchaseDetailsComponent,
     SalesDetaisComponent,
     PurchaseDetailComponent,
-    MakePurchaseComponent
+    MakePurchaseComponent,
+    OwnerRegisterComponent,
+    ProductRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { MakePurchaseComponent } from './make-purchase/make-purchase.component';
       {path:'',component:ProductsListComponent},
       {path: 'product/:productId', component: ProductDetailComponent},
       {path:'wishlist/:userId',component:WishlistDetailComponent},
-      {path: 'purchase-detail/:purchaseId', component: PurchaseDetailComponent}
+      {path: 'purchase-detail/:purchaseId', component: PurchaseDetailComponent},
     ])
   ],
   providers: [],

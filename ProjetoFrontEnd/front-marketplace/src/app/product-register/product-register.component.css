@@ -1,0 +1,27 @@
+.main{
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group{
+    margin-top: 1em;
+    display: flex; 
+    width: 100%;
+    max-width: 30em;
+}
+
+button{
+    margin-top: 1em;
+    width: 45%;
+    max-width: 30em;  
+
+    
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 480px;
+}
