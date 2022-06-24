@@ -1,6 +1,9 @@
 <div *ngIf="product!=undefined" class = "productDetail">
     <div class = "purchaseImg">
-        <img class = "imgProd" src={{product.image}}/>
+      <div class = "imgProd">
+        <img  src={{product.image}}/>
+      </div>
+        
         <button type="button" class="btn btn-primary">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-cart"
