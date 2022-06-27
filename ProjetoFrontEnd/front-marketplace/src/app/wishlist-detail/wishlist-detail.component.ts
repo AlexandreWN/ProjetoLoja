@@ -41,6 +41,7 @@ export class WishlistDetailComponent implements OnInit {
     axios(config).then(function (response) {
       //console.table(response.data);
       instance.wishlist = response.data;
+      console.log(response.data)
     })
     .catch(function (error) {
       console.log(error);
@@ -76,5 +77,9 @@ export class WishlistDetailComponent implements OnInit {
       console.log(data);
     })
     console.log(data);
+  }
+
+  comprar(){
+
   }
 }

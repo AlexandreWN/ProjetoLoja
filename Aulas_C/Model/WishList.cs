@@ -130,7 +130,8 @@ public class WishList : IValidateDataObject, IDataController<WishListDTO,WishLis
                 description = w.product.description,
                 image = w.product.image,
                 name = w.product.name,
-                stockId = w.stocks.id
+                stockId = w.stocks.id,
+                storeId = w.stocks.store.id
             }).ToList();
 
             List<object> dados = new List<object>();
