@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {}
+    "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
+    "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
+        "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\pet2ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,3 +10,15 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\refint\Enums.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\ref\Enums.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\bin\Debug\net6.0\Enums.deps.json
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\bin\Debug\net6.0\Enums.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\bin\Debug\net6.0\Enums.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.csproj.AssemblyReference.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.AssemblyInfoInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.AssemblyInfo.cs
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.csproj.CoreCompileInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\refint\Enums.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\Enums.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Enums\obj\Debug\net6.0\ref\Enums.dll
