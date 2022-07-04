@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\disrct\\.nuget\\packages\\": {}
+    "C:\\Users\\nia1ct\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+      "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
       "projectName": "Enums",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
-      "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
+      "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+      "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

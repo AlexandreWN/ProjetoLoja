@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {}
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
         "projectName": "Controller",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Controller\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
               }
             }
           }
@@ -90,17 +90,17 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -154,17 +154,17 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,17 +208,17 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
         "projectName": "Enums",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -262,17 +262,17 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -316,17 +316,17 @@
         }
       }
     },
-    "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
+    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
+        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -340,17 +340,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj"
               },
-              "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\disrct\\Desktop\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj"
               }
             }
           }
