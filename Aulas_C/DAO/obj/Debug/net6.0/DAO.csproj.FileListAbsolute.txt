@@ -10,6 +10,7 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\refint\DAO.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\ref\DAO.dll
+<<<<<<< HEAD
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.deps.json
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.dll
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.pdb
@@ -22,3 +23,17 @@ C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\refint\DAO.dll
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.pdb
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\ref\DAO.dll
+=======
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.deps.json
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\bin\Debug\net6.0\DAO.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.csproj.AssemblyReference.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.AssemblyInfoInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.AssemblyInfo.cs
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.csproj.CoreCompileInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\refint\DAO.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\DAO.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\obj\Debug\net6.0\ref\DAO.dll
+>>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70

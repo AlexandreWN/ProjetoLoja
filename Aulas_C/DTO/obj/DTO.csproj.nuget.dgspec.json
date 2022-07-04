@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "projectName": "DTO",
+        "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\pet2ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

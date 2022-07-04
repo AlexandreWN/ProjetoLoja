@@ -19,6 +19,7 @@ C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\refint\Model.dll
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\disrct\Desktop\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\ref\Model.dll
+<<<<<<< HEAD
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.deps.json
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.dll
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.pdb
@@ -40,3 +41,26 @@ C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\M
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\refint\Model.dll
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\ref\Model.dll
+=======
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\DAO.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\DTO.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Enums.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Interfaces.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Enums.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\DAO.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\bin\Debug\net6.0\DTO.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.csproj.CopyComplete
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\Model\obj\Debug\net6.0\ref\Model.dll
+>>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70
