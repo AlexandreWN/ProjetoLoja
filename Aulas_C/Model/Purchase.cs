@@ -113,37 +113,42 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO,Purchas
     public void delete(PurchaseDTO obj){
 
     }
-    
-
-
-    public int save(){
+    public int save(string document, string cnpj, string bar_code, int payment_type){
         var id = 0;
 
         using(var context = new LibraryContext())
         {
-            if(this.products.Count() <= 0 ){return -1;}
+            try{
+                var client = context.Client.FirstOrDefault(c => c.document == document);
+                var store = context.Store.FirstOrDefault(s => s.CNPJ == cnpj);
+                var product = context.Product.FirstOrDefault(p => p.bar_code == bar_code);
 
-            var purchase = new DAO.Purchase{
-                date_purchase = this.date_purchase,
-                number_confirmation = this.number_confirmation,
-                number_nf = this.number_nf,
-                payment_type = this.payment_type,
-                purchase_status = this.purchase_status,
-                client = context.Client.FirstOrDefault(c => c.document == this.client.getDocument()),
-                store = context.Store.FirstOrDefault(s => s.CNPJ == this.store.getCNPJ()),
-                product = context.Product.FirstOrDefault(p => p.bar_code == this.products.First().getBarCode())
-            };
-
-            context.Purchase.Add(purchase);
-            context.Entry(purchase.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-            context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-            context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
-            context.SaveChanges();
-            this.products.Remove(products.First());
-            this.save();
-            id = purchase.id;
+                var purchase = new DAO.Purchase{
+                    date_purchase = this.date_purchase,
+                    number_confirmation = this.number_confirmation,
+                    number_nf = this.number_nf,
+                    payment_type = payment_type,
+                    purchase_status = this.purchase_status,
+                    purchase_value = this.purchase_value,
+                    client = client,
+                    store = store,
+                    product = product
+                };
+                
+                context.Entry(purchase.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                
+                context.Purchase.Add(purchase);
+                
+                context.SaveChanges();
+                id = purchase.id;
+            }catch(Exception e){
+                Console.WriteLine(e);
+            }
+            
         }
-         return id;
+        return id;
     }
 
         public static string removePurchase(int id){

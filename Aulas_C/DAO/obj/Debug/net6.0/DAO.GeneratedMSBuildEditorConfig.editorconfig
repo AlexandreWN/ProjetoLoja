@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DAO
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\nia1ct\Desktop\repositorio\ProjetoLoja\Aulas_C\DAO\
-=======
-build_property.ProjectDir = C:\Users\pet2ct\Desktop\Repositorios\ProjetoLoja\Aulas_C\DAO\
->>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70

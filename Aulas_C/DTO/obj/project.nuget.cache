@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "VFuNzuZ9kFQO19iH7DGo0ftR7ho2Q7x4K4KaIC3Ehl8d85Jgvf1WPCsI0DPTbwO2nkAwmY7hMBPYoHK181P4Tg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
-=======
-  "dgSpecHash": "aqHe20OTH+1fC4ZCq8c9XvxdcsPJVSz4RItHBX1UptNhXMZezo7JbXRLoumgXfDYymwsCHBxu76j7jBI8w1DwQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
->>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
