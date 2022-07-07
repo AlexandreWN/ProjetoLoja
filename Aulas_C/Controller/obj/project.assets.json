@@ -2954,16 +2954,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\pet2ct\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\nia1ct\\.nuget\\packages\\": {}
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
       "projectName": "Controller",
       "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
@@ -2972,16 +2967,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
-      "projectName": "Controller",
-      "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
-      "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2995,19 +2980,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
               "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
             },
             "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
-=======
-            "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
-            },
-            "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
             }
           }
         }
@@ -3061,11 +3038,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
       }
     }
   },
@@ -3074,17 +3047,13 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problem reading the cache file C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Controller\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
-      "message": "Problem reading the cache file C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Controller\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Cors 5.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Microsoft.AspNet.Cors 5.2.8' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.Cors",
       "targetGraphs": [
         "net6.0"
@@ -3094,7 +3063,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.2.8' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         "net6.0"
@@ -3104,7 +3073,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Cors 5.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Microsoft.AspNet.WebApi.Cors 5.2.8' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.WebApi.Cors",
       "targetGraphs": [
         "net6.0"

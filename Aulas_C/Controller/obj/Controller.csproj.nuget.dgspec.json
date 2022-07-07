@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
-        "projectName": "Controller",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\Controller.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Controller\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,19 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< HEAD
               "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
                 "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
               },
               "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
                 "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
-=======
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
-              },
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj"
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
               }
             }
           }
@@ -111,7 +86,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
@@ -127,23 +101,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
-        "projectName": "DAO",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -193,7 +150,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
@@ -209,23 +165,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
-        "projectName": "DTO",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -265,7 +204,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
@@ -281,23 +219,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
-        "projectName": "Enums",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -337,7 +258,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
@@ -353,23 +273,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
-        "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -409,7 +312,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
@@ -425,23 +327,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pet2ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Model\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -455,7 +340,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< HEAD
               "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
                 "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
               },
@@ -467,19 +351,6 @@
               },
               "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
                 "projectPath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj"
-=======
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DAO\\DAO.csproj"
-              },
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\DTO\\DTO.csproj"
-              },
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj"
-              },
-              "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj"
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
               }
             }
           }
@@ -518,11 +389,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
         }
       }
     }

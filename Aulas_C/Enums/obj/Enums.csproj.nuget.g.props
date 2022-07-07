@@ -5,20 +5,11 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-<<<<<<< HEAD
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\pet2ct\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.2.1</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\pet2ct\.nuget\packages\" />
-=======
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\nia1ct\.nuget\packages\</NuGetPackageFolders>
-    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.1.0</NuGetToolVersion>
-  </PropertyGroup>
-  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\nia1ct\.nuget\packages\" />
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
   </ItemGroup>
 </Project>
