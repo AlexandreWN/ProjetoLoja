@@ -29,7 +29,7 @@ public class ProductController : ControllerBase{
     public IActionResult getAllProducts(){
         var prod = Model.Product.getAllProducts();
         var result = new ObjectResult(prod);
-         Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
         return result;
     }
 

@@ -56,14 +56,15 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     public static object find(int id){
         using(var context = new DAO.LibraryContext())
         {
-            var product = context.Stocks.Include(s => s.product).FirstOrDefault(a => a.id == id);
+            var product = context.Stocks.Include(s => s.product).Include(st => st.store).FirstOrDefault(a => a.id == id);
             return new{
                 id = id,
                 name = product.product.name,
                 image = product.product.image,
                 description = product.product.description,
                 bar_code = product.product.bar_code,
-                price = Math.Round(product.unit_price, 2)
+                price = Math.Round(product.unit_price, 2),
+                storeCNPJ = product.store.CNPJ
             };
         }
     }
@@ -80,7 +81,7 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
     public static List<object> getAllProducts(){
         using(var context = new DAO.LibraryContext())
         {
-            var allStocks = context.Stocks.Include(s => s.product);
+            var allStocks = context.Stocks.Include(s => s.product).Include(st => st.store);
             List<object> products = new List<object>();
             foreach(var prod in allStocks){
                products.Add(new{
@@ -90,7 +91,8 @@ public class Product: IValidateDataObject, IDataController<ProductDTO, Product>
                    description = prod.product.description,
                    bar_code = prod.product.bar_code,
                    price = prod.unit_price,
-                   StockId = prod.id
+                   StockId = prod.id,
+                   storeCNPJ = prod.store.CNPJ
                });
             }
             return products;

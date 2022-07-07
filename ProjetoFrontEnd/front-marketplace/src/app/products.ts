@@ -6,4 +6,5 @@ export interface Product {
   image : string;
   bar_code : string;
   stockId : number;
+  storeCNPJ : string;
 }

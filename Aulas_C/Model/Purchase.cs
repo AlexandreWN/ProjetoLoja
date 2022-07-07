@@ -119,15 +119,20 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
     {
 
     }
+<<<<<<< HEAD
 
 
 
     public int save()
     {
+=======
+    public int save(string document, string cnpj, string bar_code, int payment_type){
+>>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
         var id = 0;
 
         using (var context = new LibraryContext())
         {
+<<<<<<< HEAD
             if (this.products.Count() <= 0) { return -1; }
 
             var purchase = new DAO.Purchase
@@ -150,6 +155,37 @@ public class Purchase : IValidateDataObject, IDataController<PurchaseDTO, Purcha
             this.products.Remove(products.First());
             this.save();
             id = purchase.id;
+=======
+            try{
+                var client = context.Client.FirstOrDefault(c => c.document == document);
+                var store = context.Store.FirstOrDefault(s => s.CNPJ == cnpj);
+                var product = context.Product.FirstOrDefault(p => p.bar_code == bar_code);
+
+                var purchase = new DAO.Purchase{
+                    date_purchase = this.date_purchase,
+                    number_confirmation = this.number_confirmation,
+                    number_nf = this.number_nf,
+                    payment_type = payment_type,
+                    purchase_status = this.purchase_status,
+                    purchase_value = this.purchase_value,
+                    client = client,
+                    store = store,
+                    product = product
+                };
+                
+                context.Entry(purchase.client).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                context.Entry(purchase.store).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                context.Entry(purchase.product).State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+                
+                context.Purchase.Add(purchase);
+                
+                context.SaveChanges();
+                id = purchase.id;
+            }catch(Exception e){
+                Console.WriteLine(e);
+            }
+            
+>>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
         }
         return id;
     }

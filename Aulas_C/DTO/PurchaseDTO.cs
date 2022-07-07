@@ -9,6 +9,6 @@ public class PurchaseDTO
     public string number_nf;
     public ClientDTO client;
     public StoreDTO store;
-    public List<ProductDTO> productsDTO = new List<ProductDTO>();
+    public ProductDTO productsDTO;
 
 }

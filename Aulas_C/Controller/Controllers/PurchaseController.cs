@@ -14,7 +14,7 @@ public class PurchaseController : ControllerBase{
     [Route("register")]
     public object makePurchase([FromBody] PurchaseDTO purchase){
         var purchaseModel = Model.Purchase.convertDTOToModel(purchase);
-        var id = purchaseModel.save();
+        var id = purchaseModel.save(purchase.client.document, purchase.store.CNPJ, purchase.productsDTO.bar_code, purchase.payment_type);
         return new{
             id = id,
             date_purchase = purchase.date_purchase,
@@ -27,7 +27,9 @@ public class PurchaseController : ControllerBase{
             store = purchase.store,
             productsDTO = purchase.productsDTO
         };
+       
     }
+
     [Authorize]
     [HttpGet]
     [Route("getClient/{document}")]

@@ -4,7 +4,7 @@
         <img  src={{product.image}}/>
       </div>
         
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getDados(product.storeCNPJ, product.bar_code, product.price)">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-cart"
                 viewBox="0 0 16 16">
@@ -20,4 +20,24 @@
         <p>{{product.description}}</p>   
         <h1>{{product.price | currency}}</h1>  
     </div>  
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">By Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <br>
+        <h4>Payment Type</h4>
+        <input type="text" class="form-control" id="type" placeholder="Payment Type" />
+        <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="comprar()" data-bs-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
