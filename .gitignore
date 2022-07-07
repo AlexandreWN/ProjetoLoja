@@ -2,7 +2,9 @@
 ./bin
 ./obj
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+bin
+obj
+node_modules
 # Compiled output
 /dist
 /tmp
