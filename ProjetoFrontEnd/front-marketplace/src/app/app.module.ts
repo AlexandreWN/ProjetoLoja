@@ -16,8 +16,8 @@ import { PurchaseDetailsComponent } from './purchase-details/purchase-details.co
 import { SalesDetaisComponent } from './sales-detais/sales-detais.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 import { MakePurchaseComponent } from './make-purchase/make-purchase.component';
-import { OwnerRegisterComponent } from './owner-register/owner-register.component';
 import { ProductRegisterComponent } from './product-register/product-register.component';
+import { SalesDetailComponent } from './sales-detail/sales-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { ProductRegisterComponent } from './product-register/product-register.co
     SalesDetaisComponent,
     PurchaseDetailComponent,
     MakePurchaseComponent,
-    OwnerRegisterComponent,
-    ProductRegisterComponent
+    ProductRegisterComponent,
+    SalesDetailComponent
   ],
   imports: [
     BrowserModule,

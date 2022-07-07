@@ -49,3 +49,14 @@ button {
     height: auto;
   }
 }
+
+.form-check{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.form-check label{
+  margin-left: 1em;
+  margin-top: 0.2em;
+}

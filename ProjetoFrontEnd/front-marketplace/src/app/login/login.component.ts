@@ -7,8 +7,15 @@ import axios from "axios";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
+
 export class LoginComponent implements OnInit {
   
+  loginType :  string = "Client"
+
+
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -16,6 +23,12 @@ export class LoginComponent implements OnInit {
 
   }
 
+  changeLogin(){
+    let log = document.getElementById('flexSwitchCheckDefault') as HTMLInputElement;
+    console.log(log.checked)
+    if(log.checked) this.loginType = "Owner"
+    else this.loginType = "Client"
+  }
 
   login(){
     let user  = document.getElementById("username") as HTMLInputElement;
@@ -27,12 +40,18 @@ export class LoginComponent implements OnInit {
     console.log(user.value, passwd.value)
     var config = {      
       method: 'post',
-      url: 'http://localhost:5141/Client/login',
+      url: '',
       headers: { 
         'Content-Type': 'application/json'
       },
       data : data
     };
+
+    if(this.loginType == "Client") config.url= 'http://localhost:5141/Client/login'
+    else config.url= 'http://localhost:5141/Owner/login'
+
+    console.log(config)
+
     let instance = this;
     axios(config)
     .then(function (response) {

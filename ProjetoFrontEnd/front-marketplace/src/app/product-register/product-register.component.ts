@@ -10,6 +10,12 @@ export class ProductRegisterComponent implements OnInit {
 
   constructor() { }
 
+  cancel(){
+    //$("input")
+  }
+
+
+
   ngOnInit(): void {
   }
   save(){

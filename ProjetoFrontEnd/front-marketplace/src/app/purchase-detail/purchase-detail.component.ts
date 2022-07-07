@@ -36,4 +36,8 @@ export class PurchaseDetailComponent implements OnInit {
     });
 
   }
+
+  rollback(){
+    history.back()
+  }
 }

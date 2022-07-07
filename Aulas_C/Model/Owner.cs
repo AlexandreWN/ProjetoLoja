@@ -68,8 +68,28 @@ public static int findId(string document){
         if(this.getPhone() == null) return false;
         if(this.getUuid() == null) return false;
         return true;
-  
     }
+     public static OwnerDTO? loginOwner(string login,string passwd){
+        var retorno = new OwnerDTO();
+        using(var context = new DAO.LibraryContext())
+        {
+            var ownerDTO = context.Owner.FirstOrDefault(a => a.login == login &&  a.passwd == passwd);
+            
+            if(ownerDTO != null){      
+                retorno.name = ownerDTO.name;
+                retorno.date_of_birth = ownerDTO.date_of_birth;
+                retorno.document = ownerDTO.document;
+                retorno.email  = ownerDTO.email;
+                retorno.phone = ownerDTO.phone;
+                retorno.login = ownerDTO.login;
+                retorno.passwd = ownerDTO.passwd;                
+                retorno.id = ownerDTO.id;   
+            }    
+        }
+
+        return retorno;
+    }
+
         public void delete(OwnerDTO obj){
 
     }

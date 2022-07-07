@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "46hYR/Ip3QO8R8V/hxIsNTNUgqmPpIdWwiayqTsQZpTWJZViAO3uranr3uSE3Bhkw6xBsGtRMqcKbpcdn2pqxQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
-=======
-  "dgSpecHash": "P5jqZdwTuWR+4hZ5zuZMjPrzcQE+GXJkKfKjcgvhj4fJQgR0wI2s5cmDzWn6e/TAkFIw/X/t09fpLqBxIg0WIQ==",
+  "dgSpecHash": "/HULEZAf4ZasFLdfmDVTn96KkGvGB+tb+TDnUf1pNv8JSAEpcP7YPia13OuiLwGDGpqMCRjfsjYeZuYnkSkbYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Interfaces\\Interfaces.csproj",
->>>>>>> 9cd73689a85cf0f555aff5207313375698f80a70
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Interfaces\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

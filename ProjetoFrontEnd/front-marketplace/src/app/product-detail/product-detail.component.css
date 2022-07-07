@@ -13,8 +13,10 @@ button svg{
     max-width: 100%;
   }
   .imgProd{
-    background-color: black;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .purchaseImg{
     display:flex;

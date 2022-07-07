@@ -7,8 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./client-register.component.css']
 })
 export class ClientRegisterComponent implements OnInit {
-
+  loginType :  string = "Client"
   constructor(private router: Router) { }
+
+  changeLogin(){
+    let log = document.getElementById('flexSwitchCheckDefault') as HTMLInputElement;
+    console.log(log.checked)
+    if(log.checked) this.loginType = "Owner"
+    else this.loginType = "Client"
+  }
+
+
 
   ngOnInit(): void {
   }
@@ -47,12 +56,14 @@ export class ClientRegisterComponent implements OnInit {
     var config = {
       
       method: 'post',
-      url: 'http://localhost:5141/Client/register',
+      url: '',
       headers: { 
         'Content-Type': 'application/json'
       },
       data : data
     };
+    if(this.loginType == "Client") config.url = 'http://localhost:5141/Client/register'
+    else config.url = 'http://localhost:5141/Owner/register'
     let instance = this;
     axios(config)
     .then(function (response) {

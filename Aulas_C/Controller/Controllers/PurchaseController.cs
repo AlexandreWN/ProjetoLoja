@@ -35,7 +35,14 @@ public class PurchaseController : ControllerBase{
         var purchase = Model.Purchase.getClientPurchases(document);
         return purchase;
     }
-
+   
+   
+    [HttpGet]
+    [Route("getOwner/{document}")]
+    public List<object> getOwnerPurchase(string document){
+        var purchase = Model.Purchase.getOwnerPurchases(document);
+        return purchase;
+    }
    
     [HttpGet]
     [Route("getPurchase/{id}")]

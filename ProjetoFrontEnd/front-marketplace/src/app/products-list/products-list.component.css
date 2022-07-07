@@ -3,3 +3,29 @@
     stroke: red;
     stroke-width: 2;
   }
+  .card-text{
+    overflow: auto;
+    width: 100%;
+    height: 6em;
+  }
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
