@@ -1,25 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "XLmJzXikJ8AD43i4B4Y2Y4nmpbv2aZbc0EYU8NWTVj/Y1NoVyoUudH3Qt6DTkma3fozTv3vE21A7knqaMQPrdg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
-=======
   "dgSpecHash": "rAHssAe7ykyWqyXuv/O2h3UOzSmI0PUpRVqqvqLTGBI0wQIaHCJsu9HPi7rycnxbHugPwORqdaq8mcw/6eN69A==",
   "success": true,
   "projectFilePath": "C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\Enums.csproj",
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problem reading the cache file C:\\Users\\pet2ct\\Desktop\\Repositorios\\ProjetoLoja\\Aulas_C\\Enums\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
       "message": "Problem reading the cache file C:\\Users\\nia1ct\\Desktop\\repositorio\\ProjetoLoja\\Aulas_C\\Enums\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> 4ea9eb7855688bb85b53429d0e313986ea33da10
     }
   ]
 }

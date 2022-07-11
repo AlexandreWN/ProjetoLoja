@@ -44,7 +44,12 @@ export class WishlistDetailComponent implements OnInit {
       console.log(response.data)
     })
     .catch(function (error) {
-      console.log(error);
+      if(error.response.status == 401){
+        instance.router.navigate(['/login']);
+      }
+      else{
+        console.log(error)
+      }
     });
   }
   
@@ -74,12 +79,14 @@ export class WishlistDetailComponent implements OnInit {
     let instance = this;
     axios(config)
     .then(function (response) {
-      console.log(data);
     })
-    console.log(data);
-  }
-
-  comprar(){
-
+    .catch(function (error) {
+      if(error.response.status == 401){
+        instance.router.navigate(['/login']);
+      }
+      else{
+        console.log(error)
+      }
+    });
   }
 }

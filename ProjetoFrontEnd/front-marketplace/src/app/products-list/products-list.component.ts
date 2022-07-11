@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../products';   
 import axios from "axios";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import axios from "axios";
 export class ProductsListComponent implements OnInit {
 
   products : [Product] | undefined;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -66,5 +67,13 @@ export class ProductsListComponent implements OnInit {
     .then(function (response) {
       console.log(data);
     })
+    .catch(function (error) {
+      if(error.response.status == 401){
+        instance.router.navigate(['/login']);
+      }
+      else{
+        console.log(error)
+      }
+    });
   }
 }

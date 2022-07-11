@@ -38,7 +38,7 @@ public class PurchaseController : ControllerBase{
         return purchase;
     }
    
-   
+    [Authorize]
     [HttpGet]
     [Route("getOwner/{document}")]
     public List<object> getOwnerPurchase(string document){
@@ -46,19 +46,15 @@ public class PurchaseController : ControllerBase{
         return purchase;
     }
    
+    [Authorize]
     [HttpGet]
     [Route("getPurchase/{id}")]
     public object getPurchase(int id){
         var purchase = Model.Purchase.getPurchase(id);
         return purchase;
     }
-
-
-
-
-
-
-
+    
+    [Authorize]
     [HttpGet]
     [Route("getStore/{id}")]
     public List<object> getStorePurchase(int id){
@@ -78,8 +74,4 @@ public class PurchaseController : ControllerBase{
             return ("Erro ao deletar");
         }  
     }
-
-
-
-
 }

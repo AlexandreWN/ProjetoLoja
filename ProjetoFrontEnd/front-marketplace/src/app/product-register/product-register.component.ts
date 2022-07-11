@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ProductRegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   cancel(){
     //$("input")
@@ -17,6 +17,10 @@ export class ProductRegisterComponent implements OnInit {
 
 
   ngOnInit(): void {
+    let token = localStorage.getItem('authToken')
+    if(token == null){
+      this.router.navigate(['/login']);
+    }
   }
   save(){
     let token = localStorage.getItem('authToken')
@@ -45,7 +49,15 @@ export class ProductRegisterComponent implements OnInit {
     let instance = this;
     axios(config)
     .then(function (response) {
-      console.log(data);
+
     })
+    .catch(function (error) {
+      if(error.response.status == 401){
+        instance.router.navigate(['/login']);
+      }
+      else{
+        console.log(error)
+      }
+    });
   }
 }
