@@ -9,16 +9,16 @@
       
       <ul class="navbar-nav me-auto">
         <li>
-          <a class="nav-link" [routerLink]="['/wishlist-detail']" (click)="reset()">Wishlist</a>
+          <a *ngIf="logado && tipoLogin" class="nav-link" [routerLink]="['/wishlist-detail']" (click)="reset()">Wishlist</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/purchase-details']" (click)="reset()">Purchases</a>
+          <a *ngIf="logado && tipoLogin" class="nav-link" [routerLink]="['/purchase-details']" (click)="reset()">Purchases</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/sales-details']" (click)="reset()">Sales</a>
+          <a *ngIf="logado && tipoLogin == false" class="nav-link" [routerLink]="['/sales-details']" (click)="reset()">Sales</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/product-register']" (click)="reset()">Product-register</a>
+          <a *ngIf="logado && tipoLogin == false" class="nav-link" [routerLink]="['/product-register']" (click)="reset()">Product-register</a>
         </li>
       </ul>
       <ul class="navbar-nav me-end">
