@@ -37,4 +37,13 @@ public class StoreController : ControllerBase{
         var stor = Model.Store.getAllStore();
         return stor;
     }
+
+
+
+    [HttpGet]
+    [Route("getOwnerStore/{document}")]
+    public object getAllStore(string document){
+        var stores = Model.Store.getOwnerStore(document);
+        return stores;
+    }
 }

@@ -61,7 +61,7 @@ public class Stocks: IValidateDataObject, IDataController<StocksDTO,Stocks>
     }
 
 
-    public int save(int lojaID, int productID, int quantity, double unit_price)
+    public static int save(int lojaID, int productID, int quantity, double unit_price)
     {
         var id = 0;
         using (var context = new LibraryContext())

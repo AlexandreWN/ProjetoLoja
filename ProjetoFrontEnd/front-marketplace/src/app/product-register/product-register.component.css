@@ -8,6 +8,7 @@
 .form-group{
     margin-top: 1em;
     display: flex; 
+    flex-direction: column;
     width: 100%;
     max-width: 30em;
 }

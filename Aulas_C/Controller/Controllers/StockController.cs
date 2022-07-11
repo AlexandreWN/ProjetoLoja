@@ -12,18 +12,13 @@ public class StockController : ControllerBase{
     [Authorize]
     [HttpPost]
     [Route("register")]
-    public object addProductToStock([FromBody] StocksDTO stock){
-        var stockModel = Model.Stocks.convertDTOToModel(stock);
-        var StoreID = Store.findID(stockModel.getStore().getCNPJ());
-        var ProductID = (stockModel.getProduct()).findID();
-        var quantity = stock.quantity;
-        var unit_price = stock.unit_price;
-        var id = stockModel.save(StoreID,ProductID,quantity,unit_price);
+    public object addProductToStock([FromBody] Stocks2DTO stock){
+        var id = Stocks.save(stock.storeid,stock.productid,stock.quantity,stock.unit_price);
         return new {
             unit_price = stock.unit_price,
             quantity = stock.quantity,
-            store = stock.store,
-            product = stock.product
+            store = stock.storeid,
+            product = stock.productid
         };
     }
 
