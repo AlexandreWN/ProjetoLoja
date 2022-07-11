@@ -9,16 +9,16 @@
       
       <ul class="navbar-nav me-auto">
         <li>
-          <a class="nav-link" [routerLink]="['/wishlist-detail']">Wishlist</a>
+          <a class="nav-link" [routerLink]="['/wishlist-detail']" (click)="reset()">Wishlist</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/purchase-details']">Purchases</a>
+          <a class="nav-link" [routerLink]="['/purchase-details']" (click)="reset()">Purchases</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/sales-details']">Sales</a>
+          <a class="nav-link" [routerLink]="['/sales-details']" (click)="reset()">Sales</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/product-register']">Product-register</a>
+          <a class="nav-link" [routerLink]="['/product-register']" (click)="reset()">Product-register</a>
         </li>
       </ul>
       <ul class="navbar-nav me-end">
@@ -33,19 +33,19 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" [routerLink]="['/profile']">Profile</a>
+              <a *ngIf="logado==true" class="dropdown-item" [routerLink]="['/profile']" (click)="reset()">Profile</a>
             </li>
             <li>
-              <a *ngIf="{{token == null}}" class="dropdown-item" [routerLink]="['/login']">Sign in</a>
+              <a *ngIf="logado==false" class="dropdown-item" [routerLink]="['/login']" (click)="reset()">Sign in</a>
             </li>
             <li>
-              <a class="dropdown-item" [routerLink]="['/client-register']">Sign up</a>
+              <a class="dropdown-item" [routerLink]="['/client-register']" (click)="reset()">Sign up</a>
             </li>
             <li>
               <hr class="dropdown-divider" />
             </li>
             <li>
-              <a class="dropdown-item" (click)="signOut()" [routerLink]="['/login']">Sign out</a>
+              <a *ngIf="logado==true" class="dropdown-item" (click)="signOut()" [routerLink]="['/login']" (click)="reset()">Sign out</a>
             </li>
           </ul>
         </li>

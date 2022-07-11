@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   
   loginType :  string = "Client"
 
-
+  logado : boolean | null
 
   constructor(private router: Router) { }
 
@@ -63,5 +63,14 @@ export class LoginComponent implements OnInit {
       console.log(error);
       localStorage.removeItem('authToken');
     });
+  }
+
+  reset(){
+    if(localStorage.getItem('authToken')== null){
+      this.logado = false
+    }
+    else{
+      this.logado = true
+    }
   }
 }

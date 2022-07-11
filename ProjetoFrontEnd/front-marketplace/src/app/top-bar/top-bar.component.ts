@@ -8,13 +8,28 @@ import { Router } from '@angular/router';
 })
 export class TopBarComponent implements OnInit {
 
+  logado : boolean | null 
 
   @Input() titulo = ""
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('authToken')== null){
+      this.logado = false
+    }
+    else{
+      this.logado = true
+    }
   }
 
+  reset(){
+    if(localStorage.getItem('authToken')== null){
+      this.logado = false
+    }
+    else{
+      this.logado = true
+    }
+  }
 
   signOut(){
     localStorage.removeItem('authToken');

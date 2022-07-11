@@ -204,3 +204,7 @@ label {
 .detailsProduct{
   padding: 5%;
 }
+
+.topBar{
+  margin-top: -25px;
+}
