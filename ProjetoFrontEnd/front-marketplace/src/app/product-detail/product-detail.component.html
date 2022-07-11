@@ -1,5 +1,6 @@
 <app-top-bar></app-top-bar>
-<div *ngIf="product!=undefined" class = "productDetail">
+<div class="container">
+  <div *ngIf="product!=undefined" class = "productDetail">
     <div class = "purchaseImg">
       <div class = "imgProd">
         <img  src={{product.image}}/>
@@ -41,4 +42,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
