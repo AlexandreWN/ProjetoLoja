@@ -1,62 +1,65 @@
-<div class="card text-bg-primary mb-3" *ngIf="purchase!=undefined">
-  <a (click)="rollback()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-return-left"
-      viewBox="0 0 16 16">
-      <path fill-rule="evenodd"
-        d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
-    </svg>
-  </a>
-
-  <div class="row g-7">
-    <div class="col-md-2 img">
-      <img src={{purchase.product.image}} class="img-fluid rounded-start" alt="..." />
-    </div>
-
-    <div class="col-md-10 card-content">
-      <div class="card-body">
-        <h1 class="card-title">{{purchase.product.name}}</h1>
-        <div class="row">
-          <div class="form-group col">
-            <label>Purchase Amount</label>
-            <input class="form-control" id="purchase-amount" placeholder={{purchase.purchase_value}} disabled />
-
-          </div>
-          <div class="form-group col">
-            <label>Date of Purchase</label>
-            <input class="form-control" id="date-purchase"
-              placeholder="{{purchase.date_purchase | date: 'dd/MM/yyyy' }}" disabled />
-
-          </div>
-          <div class="form-group col">
-            <label>Payment Type</label>
-            <input class="form-control" id="pyment-type" placeholder={{purchase.payment_type}} disabled />
-          </div>
-          <div class="w-100"></div>
-          <div class="form-group col">
-            <label>NF Number</label>
-            <input class="form-control" id="nf-number" placeholder={{purchase.number_nf}} disabled />
-          </div>
-          <div class="form-group col">
-            <label>Client Name</label>
-            <input class="form-control" id="client-name" placeholder={{purchase.client.name}} disabled />
-          </div>
-          <div class="form-group col">
-            <label>Client Document</label>
-            <input class="form-control" id="client-document" placeholder={{purchase.client.document}} disabled />
-          </div>
-          <div class="w-100"></div>
-          <div class="form-group col">
-            <label>Client E-mail</label>
-            <input class="form-control" id="client-email" placeholder={{purchase.client.email}} disabled />
-          </div>
-          <div class="form-group col">
-            <label>Comfirmation number</label>
-            <input class="form-control" id="confirmation-number" placeholder={{purchase.number_confirmation}}
-              disabled />
-          </div>
-          <div class="form-group col">
-            <label>Client Phone</label>
-            <input class="form-control" id="client-phone" placeholder={{purchase.client.phone}} disabled />
+<app-top-bar></app-top-bar>
+<div class="container">
+  <div class="card text-bg-primary mb-3" *ngIf="purchase!=undefined">
+    <a (click)="rollback()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-return-left"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
+      </svg>
+    </a>
+  
+    <div class="row g-7">
+      <div class="col-md-2 img">
+        <img src={{purchase.product.image}} class="img-fluid rounded-start" alt="..." />
+      </div>
+  
+      <div class="col-md-10 card-content">
+        <div class="card-body">
+          <h1 class="card-title">{{purchase.product.name}}</h1>
+          <div class="row">
+            <div class="form-group col">
+              <label>Purchase Amount</label>
+              <input class="form-control" id="purchase-amount" placeholder={{purchase.purchase_value}} disabled />
+  
+            </div>
+            <div class="form-group col">
+              <label>Date of Purchase</label>
+              <input class="form-control" id="date-purchase"
+                placeholder="{{purchase.date_purchase | date: 'dd/MM/yyyy' }}" disabled />
+  
+            </div>
+            <div class="form-group col">
+              <label>Payment Type</label>
+              <input class="form-control" id="pyment-type" placeholder={{purchase.payment_type}} disabled />
+            </div>
+            <div class="w-100"></div>
+            <div class="form-group col">
+              <label>NF Number</label>
+              <input class="form-control" id="nf-number" placeholder={{purchase.number_nf}} disabled />
+            </div>
+            <div class="form-group col">
+              <label>Client Name</label>
+              <input class="form-control" id="client-name" placeholder={{purchase.client.name}} disabled />
+            </div>
+            <div class="form-group col">
+              <label>Client Document</label>
+              <input class="form-control" id="client-document" placeholder={{purchase.client.document}} disabled />
+            </div>
+            <div class="w-100"></div>
+            <div class="form-group col">
+              <label>Client E-mail</label>
+              <input class="form-control" id="client-email" placeholder={{purchase.client.email}} disabled />
+            </div>
+            <div class="form-group col">
+              <label>Comfirmation number</label>
+              <input class="form-control" id="confirmation-number" placeholder={{purchase.number_confirmation}}
+                disabled />
+            </div>
+            <div class="form-group col">
+              <label>Client Phone</label>
+              <input class="form-control" id="client-phone" placeholder={{purchase.client.phone}} disabled />
+            </div>
           </div>
         </div>
       </div>

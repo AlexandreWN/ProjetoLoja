@@ -1,43 +1,47 @@
-<div class="title">
-  <h1>Product Register</h1>
-</div>
-<div class="main">
-  <div class="form-group">
-    <span>Product Name:</span>
-    <input type="text" class="form-control" id="name"/>
+<app-top-bar></app-top-bar>
+<div class="container">
+  <div class="title">
+    <h1>Product Register</h1>
   </div>
-  <div class="form-group">
-    <span>Bar code:</span>
-    <input type="text" class="form-control" id="barcode"  />
+  <div class="main">
+    <div class="form-group">
+      <span>Product Name:</span>
+      <input type="text" class="form-control" id="name"/>
+    </div>
+    <div class="form-group">
+      <span>Bar code:</span>
+      <input type="text" class="form-control" id="barcode"  />
+    </div>
+    <div class="form-group">
+      <span>Description:</span>
+      <input type="text" class="form-control" id="description" />
+    </div>
+    <div class="form-group">
+      <span>Image:</span>
+      <input type="text" class="form-control" id="image"  />
+    </div>
+    <div class="form-group">
+      <span>Quantity:</span>
+      <input type="number" class="form-control" id="quantity"/>
+    </div>
+    <div class="form-group">
+      <span>Unity Price:</span>
+      <input type="text" class="form-control" id="unity_price" placeholder="$" />
+    </div>
+  
+    <div class="form-group" >
+      <span>Store:</span>
+      <select class="form-select" id="storeid" >
+        <option value="{{store.id}}" *ngFor="let store of stores">{{store.name}}</option>
+      </select>  
+    </div>
+  
+   
+  
+    <div class="botoes">
+      <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      <button class="btn btn-primary"(click)="save()">Confirm</button>
+    </div>
   </div>
-  <div class="form-group">
-    <span>Description:</span>
-    <input type="text" class="form-control" id="description" />
-  </div>
-  <div class="form-group">
-    <span>Image:</span>
-    <input type="text" class="form-control" id="image"  />
-  </div>
-  <div class="form-group">
-    <span>Quantity:</span>
-    <input type="number" class="form-control" id="quantity"/>
-  </div>
-  <div class="form-group">
-    <span>Unity Price:</span>
-    <input type="text" class="form-control" id="unity_price" placeholder="$" />
-  </div>
-
-  <div class="form-group" >
-    <span>Store:</span>
-    <select class="form-select" id="storeid" >
-      <option value="{{store.id}}" *ngFor="let store of stores">{{store.name}}</option>
-    </select>  
-  </div>
-
- 
-
-  <div class="botoes">
-    <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
-    <button class="btn btn-primary"(click)="save()">Confirm</button>
-  </div>
+  
 </div>

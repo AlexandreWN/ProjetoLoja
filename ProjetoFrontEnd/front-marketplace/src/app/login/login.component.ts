@@ -14,8 +14,6 @@ export class LoginComponent implements OnInit {
   
   loginType :  string = "Client"
 
-
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -58,6 +56,7 @@ export class LoginComponent implements OnInit {
       console.log(JSON.stringify(response.data));
       localStorage.setItem('authToken',response.data['token']);
       localStorage.setItem('document',response.data['document']);
+      localStorage.setItem('tipoDeLogin', instance.loginType)
       instance.router.navigate(['/']);
     }).catch(function (error) {
       console.log(error);

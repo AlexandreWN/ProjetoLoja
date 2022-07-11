@@ -66,6 +66,7 @@ export class ProductsListComponent implements OnInit {
     axios(config)
     .then(function (response) {
       console.log(data);
+      alert("Adicinado a WishList")
     })
     .catch(function (error) {
       if(error.response.status == 401){
