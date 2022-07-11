@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Purchase } from '../purchases';
 import axios from "axios";
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-details',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PurchaseDetailsComponent implements OnInit {
   titlePage = "Purchases"
   purchases : [Purchase] | undefined;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -34,9 +35,13 @@ export class PurchaseDetailsComponent implements OnInit {
       console.log(response.data);
     })
     .catch(function (error) {
-      console.log(error);
+      if(error.response.status == 401){
+        instance.router.navigate(['/login']);
+      }
+      else{
+        console.log(error)
+      }
     });
-    
   }
   
 }

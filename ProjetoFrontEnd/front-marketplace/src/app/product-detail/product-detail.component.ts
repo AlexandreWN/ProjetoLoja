@@ -104,7 +104,7 @@ export class ProductDetailComponent implements OnInit {
       console.log(response.data)
     })
     .catch(function (error) {
-      console.log(error);
+      console.log(error);  
     });
   }
 }
