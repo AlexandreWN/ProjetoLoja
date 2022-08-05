@@ -63,7 +63,7 @@ public class OwnerController : ControllerBase{
     public OwnerController(IConfiguration config){
         _configuration = config;
     }
-
+    
     [HttpPost]
     [Route("login")]
     public IActionResult loginOwner([FromBody] LoginDTO owner){
